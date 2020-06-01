@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'Gotham Pro';
+  src: url("../fonts/GothamPro/GothamPro.woff") format("woff"), url("../fonts/GothamPro/GothamPro.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Museo Cyrillic';
+  src: url("../fonts/Museo/MuseoCyrillic-700.woff2") format("woff2"), url("../fonts/Museo/MuseoCyrillic-700.woff") format("woff");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Museo Cyrillic-900';
+  src: url("../fonts/Museo/MuseoCyrillic-900.woff2") format("woff2"), url("../fonts/Museo/MuseoCyrillic-900.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gotham Pro-Black';
+  src: url("../fonts/GothamPro-Black/GothamPro-Black.woff2") format("woff2"), url("../fonts/GothamPro-Black/GothamPro-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal; }
+
+.button {
+  background-color: #1a2330;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 1.29rem;
+  font-weight: 400;
+  line-height: 2rem;
+  font-family: 'Gotham Pro-Black';
+  border: 0;
+  cursor: pointer; }
+
+.container {
+  max-width: 1330px;
+  width: 100%;
+  margin: auto; }
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  outline: none; }
+
+html {
+  font-size: 14px; }
+
+body {
+  font-family: 'Gotham Pro';
+  font-size: 1rem;
+  padding: 0;
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+.header {
+  padding-top: 3.57rem;
+  margin: auto; }
+
+.menu {
+  top: 0;
+  z-index: 99;
+  padding-top: 4rem;
+  display: flex;
+  justify-content: space-between; }
+  .menu__logo {
+    margin-right: 21.64rem; }
+
+.nav {
+  text-transform: uppercase; }
+  .nav__item {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.07rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: 2.1px;
+    margin-right: 2rem; }
+
+.account__link {
+  margin-right: 1.5rem; }
+
+.hero {
+  height: 100vh;
+  color: #ffffff; }
+  .hero__container {
+    position: absolute;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0; }
+  .hero__content {
+    margin-top: 15.79rem;
+    text-align: center; }
+  .hero__heading {
+    font-size: 1.43rem;
+    font-weight: 400;
+    line-height: 2rem; }
+    .hero__heading--big {
+      font-family: 'Museo Cyrillic';
+      font-size: 78px;
+      line-height: 28px;
+      text-transform: uppercase;
+      letter-spacing: 8.58px;
+      margin-bottom: 2.07rem; }
+    .hero__heading--largest {
+      font-family: 'Museo Cyrillic-900';
+      font-size: 11.36rem;
+      text-transform: uppercase;
+      margin: 0;
+      margin-bottom: 4.57rem; }
+  .hero__button {
+    padding: 1.5rem 3.64rem;
+    margin-right: 5.07rem; }
+  .hero__price {
+    font-family: 'Gotham Pro-Black';
+    font-size: 4.14rem;
+    text-transform: uppercase; }
+    .hero__price sup, .hero__price small {
+      font-family: 'Gotham Pro';
+      font-weight: 700; }
+    .hero__price sup {
+      margin: 0;
+      font-size: 1.07rem; }
+    .hero__price small {
+      font-size: 1.57rem; }
+  .hero__shopping {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+
+.heroswiper {
+  position: relative; }
+  .heroswiper-wrapper {
+    height: 100vh; }
+  .heroswiper-slide {
+    background-blend-mode: multiply; }
+    .heroswiper-slide--first {
+      background: #5a52a5 url("../img/bg.png") no-repeat center/cover; }
+    .heroswiper-slide--second {
+      background: #5a52a5 url("../img/bg2.jpg") no-repeat center/cover; }
+    .heroswiper-slide--third {
+      background: #5a52a5 url("../img/bg3.jpg") no-repeat center/cover; }
+  .heroswiper-button-prev, .heroswiper-button-next {
+    background-size: 42px;
+    width: 100px;
+    height: 100px;
+    bottom: 0; }
+    .heroswiper-button-prev::after, .heroswiper-button-next::after {
+      display: none; }
+  .heroswiper-button-prev {
+    background: rgba(45, 58, 75, 0.4) url("../img/arrow-prev.svg") no-repeat center;
+    left: 0; }
+  .heroswiper-button-next {
+    right: 0;
+    background: rgba(45, 58, 75, 0.4) url("../img/arrow-next.svg") no-repeat center; }
+
+main {
+  background: #5a52a5; }
