@@ -36,7 +36,7 @@
 
 .container {
   max-width: 1330px;
-  width: 100%;
+  width: 90%;
   margin: auto; }
 
 *, *:before, *:after {
@@ -147,15 +147,27 @@ img {
     background-size: 42px;
     width: 100px;
     height: 100px;
-    bottom: 0; }
+    bottom: 0;
+    z-index: 199; }
     .heroswiper-button-prev::after, .heroswiper-button-next::after {
       display: none; }
   .heroswiper-button-prev {
     background: rgba(45, 58, 75, 0.4) url("../img/arrow-prev.svg") no-repeat center;
     left: 0; }
+    .heroswiper-button-prev:hover {
+      background: #ffffff url("../img/hover-arrow-next.svg") no-repeat center;
+      transform: rotate(180deg); }
   .heroswiper-button-next {
     right: 0;
     background: rgba(45, 58, 75, 0.4) url("../img/arrow-next.svg") no-repeat center; }
+    .heroswiper-button-next:hover {
+      background: #ffffff url("../img/hover-arrow-next.svg") no-repeat center; }
+      .heroswiper-button-next:hover::before {
+        content: '';
+        width: 100px;
+        height: 100px;
+        background: url("../img/hover-next.jpg") no-repeat center;
+        transform: translate(-100px, 0); }
 
 main {
   background: #5a52a5; }

@@ -14,6 +14,7 @@
     z-index: 99
     left: 0
     right: 0
+
   &__content
     margin-top: 15.79rem
     text-align: center
@@ -75,6 +76,7 @@
       width: 100px
       height: 100px
       bottom: 0
+      z-index: 199
       // top: auto
       // background: rgba($dark, 0.4)
       &::after
@@ -82,11 +84,28 @@
     &-prev
       background: rgba($dark, 0.4) url('../img/arrow-prev.svg') no-repeat center
       left: 0
+      &:hover
+        background: $light url('../img/hover-arrow-next.svg') no-repeat center
+        transform: rotate(180deg)
     &-next
       right: 0
       background: rgba($dark, 0.4) url('../img/arrow-next.svg') no-repeat center
+      // display: flex
+      // justify-content: center
+      // align-items: center
+      &:hover
+        // display: flex
+        background: $light url('../img/hover-arrow-next.svg') no-repeat center
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background: url('../img/hover-next.jpg') no-repeat center
+          transform: translate(-100px, 0)
+          
 
 main  
   background: $purple
 
- 
+.wrap
+  
