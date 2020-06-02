@@ -1,0 +1,59 @@
+.sales
+  background-color: $light
+  &__product
+    display: flex
+    flex-wrap: wrap
+  &__card
+    padding: 2.14rem 8.64rem 6.93rem
+    display: flex
+    flex-direction: column
+    flex-basis: 50%
+    &--grey
+      background-color: $grey
+    &--left
+    &--right
+      text-align: right
+
+  &__price
+    color: $pink
+    font-family: 'Gotham Pro-Black'
+    font-size: 1.29rem
+    font-weight: 400
+    line-height: 2rem
+    text-transform: uppercase
+    margin-top: 1.3rem
+    sup
+      font-family: "Gotham Pro"
+      font-size: 0.93rem
+      font-weight: 700
+  &__productinfo
+    display: flex
+    flex-direction: column
+    color: $midblue
+    font-size: 0.93rem
+    font-weight: 400
+    line-height: 1.86rem
+    margin-top: 1.3rem
+  &__name
+    color: $black
+    font-size: 1.5rem
+    font-weight: 700
+    line-height: 1.57rem
+    text-transform: uppercase
+    margin-top: 0.9rem
+  &__buttons
+    margin-top: 2.1rem
+  &__buybutton
+    display: inline-block
+    border-radius: 21px
+    border: 1px solid $dark
+    font-size: 1rem
+    font-weight: 700
+    line-height: 1.57rem
+    padding: 0.64rem 1.57rem
+    color: $black
+    background-color: transparent
+    &:hover
+      background-color: $dark
+      color: $light
+  

@@ -6,6 +6,7 @@
   // align-items: start
   // background: $purple url('../img/bg.png') no-repeat center / cover
   // background-blend-mode: multiply 
+  background: $purple
   height: 100vh
   color: $light
   &__container
@@ -16,7 +17,7 @@
     right: 0
 
   &__content
-    margin-top: 15.79rem
+    margin-top: 14.49rem
     text-align: center
     // position: absolute
     
@@ -26,20 +27,21 @@
     line-height: 2rem
     &--big
       font-family: 'Museo Cyrillic'
-      font-size: 78px
+      font-size: 5.57rem
       // font-weight: 400
-      line-height: 28px
+      line-height: 2rem
       text-transform: uppercase
-      letter-spacing: 8.58px
-      margin-bottom: 2.07rem
+      letter-spacing: 0.45rem
+      margin-bottom: 1.27rem
+      margin-top: 5.2rem
     &--largest
       font-family: 'Museo Cyrillic-900'
       font-size: 11.36rem
       text-transform: uppercase
       margin: 0
-      margin-bottom: 4.57rem
+      margin-bottom: 1.47rem
   &__button
-    padding: 1.5rem 3.64rem
+    padding: 1rem 3.64rem
     margin-right: 5.07rem
     &:hover
       background-color: $pink
@@ -67,7 +69,7 @@
   &-slide
     background-blend-mode: multiply 
     &--first
-      background: $purple url('../img/bg.png') no-repeat center / cover
+      background: $purple url('../img/bg.jpg') no-repeat center / cover
     &--second
       background: $purple url('../img/bg2.jpg') no-repeat center / cover
     &--third
@@ -79,7 +81,7 @@
       height: 100px
       bottom: 0
       z-index: 199
-      // top: auto
+      top: 47%
       // background: rgba($dark, 0.4)
       &::after
         display: none
@@ -92,22 +94,67 @@
     &-next
       right: 0
       background: rgba($dark, 0.4) url('../img/arrow-next.svg') no-repeat center
-      // display: flex
-      // justify-content: center
-      // align-items: center
       &:hover
-        // display: flex
         background: $light url('../img/hover-arrow-next.svg') no-repeat center
-        &::before
-          content: ''
-          width: 100px
-          height: 100px
-          background: url('../img/hover-next.jpg') no-repeat center
-          transform: translate(-100px, 0)
+ 
           
 
-main  
-  background: $purple
-
-.wrap
+.slide1
+  &-next
+    &:hover
+      &::before
+        content: ''
+        width: 100px
+        height: 100px
+        background-blend-mode: multiply 
+        background: $purple url('../img/hover-next.jpg') no-repeat center
+        transform: translate(-100px, 0)
+  &-prev
+    &:hover
+      &::before
+        content: ''
+        width: 100px
+        height: 100px
+        background-blend-mode: multiply 
+        background: $purple url('../img/hover-prev.jpg') no-repeat center
+        transform: translate(-100px, 0) rotate(180deg)
   
+.slide2
+  &-next
+    &:hover
+      &::before
+        content: ''
+        width: 100px
+        height: 100px
+        background-blend-mode: multiply 
+        background: $purple url('../img/hover-prev.jpg') no-repeat center
+        transform: translate(-100px, 0)
+  &-prev
+    &:hover
+      &::before
+        content: ''
+        width: 100px
+        height: 100px
+        background-blend-mode: multiply 
+        background: $purple url('../img/hover-first.jpg') no-repeat center
+        transform: translate(-100px, 0) rotate(180deg)
+
+.slide3
+  &-next
+    &:hover
+      &::before
+        content: ''
+        width: 100px
+        height: 100px
+        background-blend-mode: multiply 
+        background: $purple url('../img/hover-first.jpg') no-repeat center
+        transform: translate(-100px, 0)
+  &-prev
+    &:hover
+      &::before
+        content: ''
+        width: 100px
+        height: 100px
+        background-blend-mode: multiply 
+        background: $purple url('../img/hover-next.jpg') no-repeat center
+        transform: translate(-100px, 0) rotate(180deg)

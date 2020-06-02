@@ -1,0 +1,109 @@
+.popular
+  background-color: $light
+  padding: 11rem 0
+  &__heading
+    max-width: 37rem
+    margin: auto
+    margin-bottom: 6.28rem
+  &__container
+    // padding: 0 2rem
+  &__title
+    text-align: center
+    font-size: 1.86rem
+    font-weight: 700
+    letter-spacing: 4.68px
+    text-transform: uppercase
+    color: $dark
+  &__subtitle
+    text-align: center
+    color: $midblue
+    font-size: 1rem
+    font-weight: 400
+  &__name
+    font-family: 'Gotham Pro-Black'
+    color: $dark
+    font-size: 1.57rem
+    font-weight: 700
+    text-transform: uppercase
+    letter-spacing: 2.64px
+    text-align: center
+    margin-top: 2.64rem
+  &__color
+    color: $midblue
+    font-size: 0.93rem
+    font-weight: 400
+    text-align: center
+    margin-top: 1.5rem
+  &__price
+    color: $pink
+    font-family: 'Gotham Pro-Black'
+    font-size: 1.28rem
+    font-weight: 400
+    text-transform: uppercase
+    text-align: center
+    margin-top: 2.28rem
+  &__photo
+    margin: auto
+    position: relative
+  &__hover
+    &1, &2, &3, &4
+      visibility: hidden
+      display: flex
+      align-items: center
+      justify-content: space-between
+      top: 0
+      left: 0
+      position: absolute
+      width: 100%
+      height: 100%
+      background: rgba($purple, 0.8)
+      padding: 11.43rem 5.38rem
+      &--visible
+        opacity: 1
+        visibility: visible
+  &__iconzoom
+    &:hover
+      background: url(../img/popular/hover-zoom.png)
+  &__iconbasket
+    &:hover
+      background: url(../img/popular/hover-basket.png)
+  &__iconheart
+    &:hover
+      background: url(../img/popular/hover-heart.png)    
+     
+
+
+.popularswiper
+  // padding-left: 5.35rem
+  &-container
+    // padding: 0 5.35rem
+  &-wrapper
+    // width: 90%
+  &-slide
+    display: flex
+    flex-direction: column
+    cursor: pointer
+  &-button
+    &-prev, &-next
+      background-size: 38px
+      width: 38px
+      height: 38px
+      bottom: 0
+      z-index: 199
+      top: 35.3%
+      &::after
+        display: none
+    &-prev
+      background: url('../img/popular/arrow-prev.png') no-repeat center
+      left: 0
+      // transform: translate(-5rem, 0)
+      &:hover
+  
+    &-next
+      right: 0
+      background: url('../img/popular/arrow-next.png') no-repeat center
+      &:hover
+        
+.sliderwrap
+  max-width: 84.29rem
+  margin: auto

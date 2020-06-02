@@ -14,13 +14,11 @@
     visibility: visible
   &__dialog
     position: relative
-    width: 25rem
+    width: 25.8rem
     background-color: $light
-    // height: 30.5rem
-    // padding: 0.96rem 2.07rem 1.43rem 
-    padding: 2rem 2.07rem 1.43rem 
+    padding: 1.9rem 2.57rem 1.43rem
     &::after
-      bottom: 99.9%
+      bottom: 99.8%
       left: 82%
       border: solid transparent
       content: ''
@@ -40,7 +38,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    margin-bottom: 2.93rem
+    margin-bottom: 2.23rem
   &__about
     display: flex
     flex-direction: column
@@ -56,12 +54,12 @@
   &__price, &__count
     font-size: 0.86rem
     font-weight: 700
-    line-height: 2rem
+    margin-top: 0.8rem
   &__buttons
     display: flex
     justify-content: space-between
   &__total
-    margin-bottom: 3.07rem
+    margin-bottom: 2.17rem
     &::before, &::after
       content: ''
       width: 100%
@@ -69,19 +67,20 @@
       background-color: #c9c9c9
       display: block
     &::before
-      margin-bottom: 0.86rem
+      margin-bottom: 0.16rem
     &::after
-      margin-top: 0.86rem  
+      margin-top: 0.36rem  
   &__amount
     font-family: "Gotham Pro-Black"
-    font-size: 1.14rem
+    font-size: 1.24rem
+    letter-spacing: 0.7px
     font-weight: 700
     line-height: 2rem
     text-transform: uppercase
     text-align: center
     display: block
   &__buttonbasket, &__buttonbuy
-    padding: 1.21rem 1.86rem
+    padding: 0.69rem 1.76rem
     font-size: 1rem
     &:hover
       background-color: $purple
