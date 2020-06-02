@@ -17,6 +17,8 @@
   justify-content: space-between
   &__logo
     margin-right: 21.64rem
+    &:hover
+      filter: invert(1)
 .nav
   text-transform: uppercase
   &__item
@@ -27,7 +29,20 @@
     line-height: 2rem
     letter-spacing: 2.1px
     margin-right: 2rem
+    cursor: pointer
+    &:hover
+      color: $pink
+    &--active
+      position: relative
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        width: 69px
+        height: 2px
+        background-color: $light
 
 .account
+  float: right
   &__link
     margin-right: 1.5rem

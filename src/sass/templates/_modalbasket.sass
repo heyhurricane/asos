@@ -1,0 +1,91 @@
+.modalbasket
+  visibility: hidden
+  position: fixed
+  z-index: 99
+  right: 16%
+  top: 7rem
+  // width: 100%
+  // height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    width: 25rem
+    background-color: $light
+    // height: 30.5rem
+    // padding: 0.96rem 2.07rem 1.43rem 
+    padding: 2rem 2.07rem 1.43rem 
+    &::after
+      bottom: 99.9%
+      left: 82%
+      border: solid transparent
+      content: ''
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+      border-bottom-color: white
+      border-width: 14px
+      margin-left: -8px
+  &__square
+    width: 14px
+    height: 14px
+    background-color: $light
+    transform: translate(18.4rem, -1.4rem) rotate(45deg)
+  &__product
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 2.93rem
+  &__about
+    display: flex
+    flex-direction: column
+    align-items: start
+    text-transform: uppercase
+    color: $black
+    margin-left: 1.14rem
+  &__name
+    font-family: "Gotham Pro-Black"
+    font-size: 1.07rem
+    font-weight: 700
+    line-height: 1.57rem
+  &__price, &__count
+    font-size: 0.86rem
+    font-weight: 700
+    line-height: 2rem
+  &__buttons
+    display: flex
+    justify-content: space-between
+  &__total
+    margin-bottom: 3.07rem
+    &::before, &::after
+      content: ''
+      width: 100%
+      height: 1px
+      background-color: #c9c9c9
+      display: block
+    &::before
+      margin-bottom: 0.86rem
+    &::after
+      margin-top: 0.86rem  
+  &__amount
+    font-family: "Gotham Pro-Black"
+    font-size: 1.14rem
+    font-weight: 700
+    line-height: 2rem
+    text-transform: uppercase
+    text-align: center
+    display: block
+  &__buttonbasket, &__buttonbuy
+    padding: 1.21rem 1.86rem
+    font-size: 1rem
+    &:hover
+      background-color: $purple
+  &__buttonbuy
+    background-color: $pink
+   
+    

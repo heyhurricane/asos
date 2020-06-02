@@ -31,3 +31,12 @@
   font-weight: 900;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'Gotham Pro-Medium';
+  src: url('../fonts/GothamPro-Medium/GothamPro-Medium.woff2') format('woff2'),
+      url('../fonts/GothamPro-Medium/GothamPro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+}
+
