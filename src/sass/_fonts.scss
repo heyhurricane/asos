@@ -9,27 +9,31 @@
 }
 
 @font-face {
-  font-family: 'Museo Cyrillic';
-  src: url('../fonts/Museo/MuseoCyrillic-700.woff2') format('woff2'),
-      url('../fonts/Museo/MuseoCyrillic-700.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Museo Cyrillic-900';
-  src: url('../fonts/Museo/MuseoCyrillic-900.woff2') format('woff2'),
-      url('../fonts/Museo/MuseoCyrillic-900.woff') format('woff');
+  font-family: 'Museo Sans Cyrl 700';
+  src: url('../fonts/Museo/MuseoSansCyrl-700.woff2') format('woff2'),
+      url('../fonts/Museo/MuseoSansCyrl-700.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gotham Pro-Black';
-  src: url('../fonts/GothamPro-Black/GothamPro-Black.woff2') format('woff2'),
-      url('../fonts/GothamPro-Black/GothamPro-Black.woff') format('woff');
-  font-weight: 900;
+  font-family: 'Museo Sans Cyrl 900';
+  src: url('../fonts/Museo/MuseoSansCyrl-900.woff2') format('woff2'),
+      url('../fonts/Museo/MuseoSansCyrl-900.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Gotham Pro Black';
+  src: url('../fonts/GothamPro-Black/GothamPro-Black.woff') format('woff2'),
+      url('../fonts/GothamPro-Black/GothamPro-Black.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -38,5 +42,6 @@
       url('../fonts/GothamPro-Medium/GothamPro-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 

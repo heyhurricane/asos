@@ -176,6 +176,24 @@ var mySwiper2 = new Swiper ('.popularswiper-container', {
   },
 });
 
+// $('.sliderwrap .popularswiper-container').each(function(index, value) {
+ 
+//   var mySwiper2 = new Swiper(value, {
+//     loop: true,
+//     spaceBetween: 44,
+//     navigation: {
+//       nextEl: value.nextElementSibling.nextElementSibling,
+//       prevEl: value.nextElementSibling,
+//     },
+//     pagination: {
+//       el: value.nextElementSibling.nextElementSibling.nextElementSibling,
+//       clickable: true,
+//     },
+//     slidesPerView: 4
+//     });
+//   });
+// });
+
 
   var hoverActive = false;
   var hover;
