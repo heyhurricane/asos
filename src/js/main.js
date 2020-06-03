@@ -1,6 +1,7 @@
 $(document).ready(function () {
   var basketActive = false;
   var searchActive = false;
+  var zoomActive = false;
 
   // Кнопка Наверх и Анимация
   $(window).scroll(function () {
@@ -18,6 +19,7 @@ $(document).ready(function () {
     }, 900);
     return false;
 });
+
 
   //выпадающая корзина в секции Hero
 
@@ -37,7 +39,6 @@ $(document).ready(function () {
       closeBtn =  $('.modalsearch__close');
   
   searchBtn.on('click', function () {
-    console.log('yes');
     search.toggleClass('modalsearch--visible');
     searchActive = !(searchActive);
   });
@@ -58,6 +59,12 @@ $(document).ready(function () {
       if (event.key=='Escape' && (basketActive)) { 
         basket.toggleClass('modalbasket--visible');
         basketActive = !(basketActive);
+      }
+      else {
+        if (event.key=='Escape' && (zoomActive)) { 
+          zoom.toggleClass('modalzoom--visible');
+          zoomActive = !(zoomActive);
+        }
       }
 
     }
@@ -179,7 +186,9 @@ $('.popularswiper-slide').on('click', function() {
   if (hoverActive==true) { 
     hover.toggleClass('popular__hover'+indexSlide+'--visible');
     hoverActive=!(hoverActive);
+    if (indexSlide==($(this).data('swiperSlideIndex')+1)) {return true;}
   }
+  if (indexSlide!=($(this).data('swiperSlideIndex')+1) || hoverActive==false) {
   indexSlide = $(this).data('swiperSlideIndex')+1;
  
   if (indexSlide=='1') { hover = $('.popular__hover1'); }
@@ -189,8 +198,32 @@ $('.popularswiper-slide').on('click', function() {
   
   hover.toggleClass('popular__hover'+indexSlide+'--visible');
   hoverActive=!(hoverActive);
+  }
 
 });
+
+  var zoom = $('.modalzoom'),
+    // searchBtn = $('[data-toggle=search]');
+    zoomBtn =  $('.modalzoom__close');
+    // Открытие модального окна Zoom
+    $('.popular__iconzoom').click(function () {
+      if (indexSlide=='1') {
+        $(".modalzoom__image").attr("src", "../img/zoom/zoom1.jpg");}
+      if (indexSlide=='2') {
+        $(".modalzoom__image").attr("src", "../img/zoom/zoom2.jpg");}
+      if (indexSlide=='3') {
+        $(".modalzoom__image").attr("src", "../img/zoom/zoom3.jpg");}
+      if (indexSlide=='4') {
+        $(".modalzoom__image").attr("src", "../img/zoom/zoom4.jpg");}
+      zoom.toggleClass('modalzoom--visible');
+      zoomActive = !(zoomActive);
+    });
+
+    zoomBtn.on('click', function () {
+      zoom.toggleClass('modalzoom--visible');
+      zoomActive = !(zoomActive);
+    });
+    
 
   // кнопка читать далее в секции Новости
 
