@@ -8,4 +8,32 @@
   font-family: 'Gotham Pro-Black'
   border: 0
   cursor: pointer
-  
+  &--primary
+    background-color: transparent
+
+div
+  &.invalid
+    margin-top: 4.8rem
+    margin-left: 1.8rem
+    position: absolute
+    color: $error
+      
+
+input
+  &.invalid
+    border-radius: 27px
+    border: 1px solid $error
+
+
+.scroll-up
+  position: fixed
+  bottom: 0
+  right: 50%
+  left: 50%
+  background: transparent url(../img/arrow-up.png)
+  cursor: pointer
+  width: 30px
+  height: 30px
+  display:none
+  &:hover
+    background-color: rgba($darkblue, 0.2)

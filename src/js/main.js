@@ -2,6 +2,23 @@ $(document).ready(function () {
   var basketActive = false;
   var searchActive = false;
 
+  // Кнопка Наверх и Анимация
+  $(window).scroll(function () {
+    var windowHeight = $(window).height();
+      if ($(this).scrollTop() > 0) {
+          $('.scroll-up').fadeIn();
+      } else {
+          $('.scroll-up').fadeOut();
+      }
+  });
+
+  $('.scroll-up').click(function () {
+    $('body,html').animate({
+        scrollTop: 0
+    }, 900);
+    return false;
+});
+
   //выпадающая корзина в секции Hero
 
   var basket = $('.modalbasket'),
@@ -174,6 +191,55 @@ $('.popularswiper-slide').on('click', function() {
   hoverActive=!(hoverActive);
 
 });
+
+  // кнопка читать далее в секции Новости
+
+  $(function(){
+    $(".news__text").elimore({
+    maxLength: 208,
+    moreText: "Читать целиком",
+    lessText: "Свернуть текст"
+
+    });
+     
+  });
+
+
+  $('.subscription__form').validate({
+    errorClass: "invalid",
+    errorElement : 'div',
+    rules: {
+      // simple rule, converted to {required:true}
+      userEmail: {
+        required: true,
+        email: true
+      },
+    },
+    messages: {
+      userEmail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формте: name@domain.com"
+      }
+    }/*,
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "subscribe.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modalMessage.toggleClass('message--visible');
+          messageActive = !(messageActive);
+        },
+        error: function (response) {
+          console.log('Ошибка запроса ' + response);
+        }
+      });
+    }*/
+  });
+
+  // Маска для телефона
+  $('[type=tel]').mask('+7(000) 000-00-00');
 
 
 

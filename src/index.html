@@ -45,9 +45,55 @@
             <a href="#" class="nav__item">Контакты</a>
           </nav>
           <div class="account menu__account">
-            <a href="#" class="account__link"><img src="img/person-icon.png" alt=""></a>
-            <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/basket-icon.png" alt=""></a>
-            <a href="javascript:void(0);" class="account__link" data-toggle="search"><img src="img/search-icon.png" alt=""></a>
+            <div class="menu__person">
+              <a href="#" class="account__link"><img src="img/person-icon.png" alt=""></a>
+            </div>
+            <!-- /.menu__person -->  
+            <div class="menu__basket">
+              <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/basket-icon.png" alt=""></a>
+              <!-- КОРЗИНА -->
+              <div class="modalbasket">
+                <div class="modalbasket__dialog">
+                  <!-- <div class="modalbasket__square"></div> -->
+                  <div class="modalbasket__product">
+                    <img src="img/basket/basket1.jpg" alt="">
+                    <div class="modalbasket__about">
+                      <span class="modalbasket__name">Женский жилет, А.karina</span>
+                      <span class="modalbasket__price">6 490 ₽</span>
+                      <span class="modalbasket__count">Количество: 1 шт.</span>
+                    </div>
+                    <!-- /.modalbasket__about -->
+                  </div>
+                  <!-- /.modalbasket__product -->
+                  <div class="modalbasket__product">
+                    <img src="img/basket/basket2.jpg" alt="">
+                    <div class="modalbasket__about">
+                      <span class="modalbasket__name">Женский Лонгслив, Oodji</span>
+                      <span class="modalbasket__price">999 ₽</span>
+                      <span class="modalbasket__count">Количество: 1 шт.</span>
+                    </div>
+                    <!-- /.modalbasket__about -->
+                  </div>
+                  <!-- /.modalbasket__product -->
+                  <div class="modalbasket__total">
+                    <span class="modalbasket__amount">Итого: 7 489 ₽</span>
+                  </div>
+                  <div class="modalbasket__buttons">
+                    <button class="button buttonbasket modalbasket__buttonbasket">Корзина</button>
+                    <button class="button buttonbuy modalbasket__buttonbuy">Оформить</button>
+                  </div>
+                  <!-- /.modalbasket__buttons -->
+                  <!-- /.modalbasket__total -->
+                </div>
+                <!-- /.modalbasket__dialog -->
+              </div>
+              <!-- /.modalbasket -->
+            </div>
+            <!-- /.menu__basket -->
+            <div class="menu__search">
+              <a href="javascript:void(0);" class="account__link" data-toggle="search"><img src="img/search-icon.png" alt=""></a>
+            </div>
+            <!-- /.menu__search -->
           </div>
         </div>
         <!-- /.menu -->
@@ -86,7 +132,7 @@
           <span class="madein">Страна производитель: Бангладеш</span>
         </div>
         <div class="buttons sales__buttons">
-          <button class="button sales__buybutton">Купить</button>
+          <button class="button button--primary sales__buybutton">Купить</button>
         </div>
       </div>
       <!-- /.card sales__card -->
@@ -104,7 +150,7 @@
           <span class="madein">Страна производитель: Россия</span>
         </div>
         <div class="buttons sales__buttons">
-          <button class="button sales__buybutton">Купить</button>
+          <button class="button button--primary sales__buybutton">Купить</button>
         </div>
       </div>
       <!-- /.card sales__card -->
@@ -121,7 +167,7 @@
           <span class="madein">Страна производитель: Молдова, Республика</span>
         </div>
         <div class="buttons sales__buttons">
-          <button class="button sales__buybutton">Купить</button>
+          <button class="button button--primary sales__buybutton">Купить</button>
         </div>
       </div>
       <!-- /.card sales__card -->
@@ -138,7 +184,7 @@
           <span class="madein">Страна производитель: Россия</span>
         </div>        
         <div class="buttons sales__buttons">
-          <button class="button sales__buybutton">Купить</button>
+          <button class="button button--primary sales__buybutton">Купить</button>
         </div>
         
       </div>
@@ -152,8 +198,8 @@
   <section class="section popular">
     <div class="container popular__container">
       <div class="popular__heading">
-        <h2 class="popular__title">Популярные товары</h2>
-        <h3 class="popular__subtitle">В этой рубрике мы подобрали самые известные и покупаемые товары. Знакомьтесь, быть может и вам понравится</h3>
+        <h2 class="title popular__title">Популярные товары</h2>
+        <h3 class="subtitle popular__subtitle">В этой рубрике мы подобрали самые известные и покупаемые товары. Знакомьтесь, быть может и вам понравится</h3>
       </div>
       <!-- /.popular__heading -->
       <div class="sliderwrap">
@@ -225,45 +271,158 @@
     <!-- /.container -->
   </section>
   <!-- /.section popular -->
+
+  <!-- НОВОСТИ -->
+  <section class="section news">
+    <div class="container news__container">
+      <div class="news__heading">
+        <h2 class="title news__title">Новости компании</h2>
+        <h3 class="subtitle news__subtitle">Каждую неделю у нас появляются новые коллекции одежды, проводятся постоянные распродажи и акции, а также устраиваются различные мероприятия</h3>
+      </div>
+      <!-- /.news__heading -->
+      <div class="news__block">
+        <div class="news__card">
+          <div class="news__date">
+            <span class="news__month">Март</span>
+            <span class="news__day">15</span>
+          </div>
+          <!-- /.news__date -->
+          <span class="news__name">Новая коллекция от ТВОЕ</span>
+          <div class="news__text">
+            <p>Если вы думаете над тем, что бы такого оригинального добавить в свой гардероб, то наш совет — это удлиненный топ с разрезами по бокам! Прошлым летом они только появились, а этим летом стали супермодными!<br> В новой коллекции ТВОЕ представлены топы, шорты, юбки, хлопковые и льнянные костюмы. Спешите за покупками!</p>
+          </div>  
+        </div>
+        <!-- /.news__card -->
+        <div class="news__card--grey"></div>
+        <div class="news__card news__card--right">
+          <div class="news__date">
+            <span class="news__month">Февраль</span>
+            <span class="news__day">24</span>
+          </div>
+          <!-- /.news__date -->
+          <span class="news__name">10% до конца февраля</span>
+          <div class="news__text">
+            <p>Две яркие представительницы из семьи американского мультимиллионера Мухаммеда Хадид, по совместительству сестры: Джиджи и Белла - не сходят с обложек журналов, разделов уличной моды в таблоидах и интернете.<br> Предоставляем скидку 10% на весь ассортимент по промокоду ASOS15. Промокод не распростроняется на акционные товары.</p>
+          </div>
+        </div>
+        <!-- /.news__card -->
+      </div>
+      <!-- /.news__block -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section news -->
+
+  <section class="section shop">
+    <div class="container shop__container">
+      <div class="shop__heading">
+        <h2 class="title shop__title">Магазин ASOS</h2>
+        <h3 class="subtitle shop__subtitle">Преимущества интернет магазина - доступные цены, широкий, регулярно обновляемый ассортимент. <br>У нас можно купить одежду любой известной марки - представлена продукция ведущих зарубежных, отечественных брендов.</h3>
+      </div>
+      <!-- /.shop__heading -->
+      <div class="social shop__social">
+        <a href="https://vk.com/" class="shop__social-links shop__social-links--vk"></a>
+        <a href="https://www.facebook.com/" class="shop__social-links shop__social-links--fb"></a>
+        <a href="https://twitter.com/" class="shop__social-links shop__social-links--twitter"></a>
+        <a href="https://ok.ru/" class="shop__social-links shop__social-links--ok"></a>
+        <a href="https://www.youtube.com/" class="shop__social-links shop__social-links--youtube"></a>
+      </div>
+      <!-- /.social shop__social -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section shop -->
+  
+  <!-- УЗНАВАЙТЕ ОБ АКЦИЯХ -->
+  <section class="section subscription">
+    <div class="container subscription__container">
+      <div class="subscription__heading">
+        <h2 class="title subscription__title">Узнавайте об акциях</h2>
+        <h3 class="subtitle subscription__subtitle">Каждую неделю мы устраиваем приятные сюрпризы для наших клиентов.<br>Акции, скидки, распродажи - хотите узнавать о них первым? Подпишитесь на рассылку</h3>
+      </div>
+      <!-- /.subscription__heading -->
+      <!-- <form action="subscribe.php" method="POST" class="form subscription__form"> -->
+      <form class="form subscription__form">
+        <input type="email" name="userEmail" class="input subscription__input" id="user-email" placeholder="Введите свой e-mail">
+        <!-- /.input-group -->
+        <button class="button button--primary subscription__button">Подписаться</button>
+      </form>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section subscription -->
 </main>
 
-<!-- КОРЗИНА -->
-<div class="modalbasket">
-  <div class="modalbasket__dialog">
-    <!-- <div class="modalbasket__square"></div> -->
-    <div class="modalbasket__product">
-      <img src="img/basket/basket1.jpg" alt="">
-      <div class="modalbasket__about">
-        <span class="modalbasket__name">Женский жилет, А.karina</span>
-        <span class="modalbasket__price">6 490 ₽</span>
-        <span class="modalbasket__count">Количество: 1 шт.</span>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col footer__col">
+        <div class="logo footer__logo">
+          <a href="index.html" class="logo__link"><img src="img/footer/logo-icon.png" alt="asos"></a>
+        </div>
+        <div class="footer__block footer__place">
+          <img src="img/footer/map.png" alt="" class="footer__icon">
+          <span class="footer__address">г. Москва, ул. Сибирский тракт 59, офис 514</span>
+        </div>
+        <!-- /.footer__place -->
+        <div class="footer__block footer__phone">
+          <img src="img/footer/phone.png" alt="" class="footer__icon">
+          <a href="tel:+74957455599" class="footer__phone-number">8 (495) 745-55-99</a>
+        </div>
+        <!-- /.footer__phone -->
+        <div class="footer__block footer__mail">
+          <img src="img/footer/mail.png" alt="" class="footer__icon">
+          <a href="mailto:example@example.com" class="footer__email">info@asos.shop</a>
+        </div>
+        <!-- /.footer__mail -->
+        <div class="footer__block footer__skype">
+          <img src="img/footer/skype.png" alt="" class="footer__icon">
+          <a href="skype:SkypeUser" class="footer__skype-account">skype: asos.shop</a>
+        </div>
+        <!-- /.footer__mail -->
       </div>
-      <!-- /.modalbasket__about -->
-    </div>
-    <!-- /.modalbasket__product -->
-    <div class="modalbasket__product">
-      <img src="img/basket/basket2.jpg" alt="">
-      <div class="modalbasket__about">
-        <span class="modalbasket__name">Женский Лонгслив, Oodji</span>
-        <span class="modalbasket__price">999 ₽</span>
-        <span class="modalbasket__count">Количество: 1 шт.</span>
+      <!-- /.col -->
+      <div class="col">
+        <span class="footer__name">Полезное</span>
+        <a href="#" class="footer__link">Услуги</a>
+        <a href="#" class="footer__link">Как проехать</a>
+        <a href="#" class="footer__link">Статьи</a>
+        <a href="#" class="footer__link">Условия и положения</a>
+        <a href="#" class="footer__link">Блог</a>
+        <a href="#" class="footer__link">Пресса о нас</a>
       </div>
-      <!-- /.modalbasket__about -->
+      <!-- /.col -->
+      <div class="col">
+        <span class="footer__name">Магазин</span>
+        <a href="#" class="footer__link">О нас</a>
+        <a href="#" class="footer__link">Карьера у нас</a>
+        <a href="#" class="footer__link">Способы доставки</a>
+        <a href="#" class="footer__link">Контакты</a>
+        <a href="#" class="footer__link">Поддержка</a>
+        <a href="#" class="footer__link">Оплата</a>
+      </div>
+      <!-- /.col -->
+      <div class="col">
+        <span class="footer__name">Мой аккаунт</span>
+        <a href="#" class="footer__link">Мой аккаунт</a>
+        <a href="#" class="footer__link">Корзина</a>
+        <a href="#" class="footer__link">Избранное</a>
+        <a href="#" class="footer__link">Оформить заказ</a>
+        <a href="#" class="footer__link">Выход</a>
+       
+      </div>
+      <!-- /.col -->
     </div>
-    <!-- /.modalbasket__product -->
-    <div class="modalbasket__total">
-      <span class="modalbasket__amount">Итого: 7 489 ₽</span>
-    </div>
-    <div class="modalbasket__buttons">
-      <button class="button buttonbasket modalbasket__buttonbasket">Корзина</button>
-      <button class="button buttonbuy modalbasket__buttonbuy">Оформить</button>
-    </div>
-    <!-- /.modalbasket__buttons -->
-    <!-- /.modalbasket__total -->
+    <!-- /.row -->
   </div>
-  <!-- /.modalbasket__dialog -->
+  <!-- /.container -->
+</footer>
+<!-- /.footer -->
+
+<!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
+<div class="scrollup">
+  <button class="button scroll-up"></button>
 </div>
-<!-- /.modalbasket -->
 
 <!-- ПОИСК -->
 <div class="modalsearch">
@@ -285,6 +444,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.elimore.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

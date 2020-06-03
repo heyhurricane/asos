@@ -39,11 +39,44 @@
   font-family: 'Gotham Pro-Black';
   border: 0;
   cursor: pointer; }
+  .button--primary {
+    background-color: transparent; }
+
+div.invalid {
+  margin-top: 4.8rem;
+  margin-left: 1.8rem;
+  position: absolute;
+  color: #ff6666; }
+
+input.invalid {
+  border-radius: 27px;
+  border: 1px solid #ff6666; }
+
+.scroll-up {
+  position: fixed;
+  bottom: 0;
+  right: 50%;
+  left: 50%;
+  background: transparent url(../img/arrow-up.png);
+  cursor: pointer;
+  width: 30px;
+  height: 30px; }
+  .scroll-up:hover {
+    background-color: rgba(26, 35, 48, 0.2); }
 
 .container {
   max-width: 1330px;
   width: 85%;
   margin: auto; }
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10.6rem 0 5.3rem; }
+
+.col {
+  display: flex;
+  flex-direction: column; }
 
 *, *:before, *:after {
   box-sizing: border-box;
@@ -55,11 +88,27 @@ html {
 body {
   font-family: 'Gotham Pro';
   font-size: 1rem;
+  color: #2d3a4b;
   padding: 0;
   margin: 0; }
 
 img {
   max-width: 100%; }
+
+.title {
+  text-align: center;
+  font-size: 1.86rem;
+  font-weight: 700;
+  letter-spacing: 4.68px;
+  text-transform: uppercase;
+  color: #2d3a4b; }
+
+.subtitle {
+  text-align: center;
+  color: #40494e;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.9rem; }
 
 .header {
   padding-top: 3.57rem;
@@ -77,6 +126,8 @@ img {
     .menu__logo:hover {
       -webkit-filter: invert(1);
       filter: invert(1); }
+  .menu__basket {
+    position: relative; }
 
 .nav {
   text-transform: uppercase; }
@@ -104,7 +155,8 @@ img {
 
 .account {
   float: right;
-  margin-right: 4.1rem; }
+  margin-right: 4.1rem;
+  display: flex; }
   .account__link {
     margin-right: 1.3rem; }
 
@@ -159,8 +211,7 @@ img {
     font-weight: 700;
     line-height: 1.57rem;
     padding: 0.64rem 1.57rem;
-    color: #252525;
-    background-color: transparent; }
+    color: #252525; }
     .sales__buybutton:hover {
       background-color: #2d3a4b;
       color: #ffffff; }
@@ -301,10 +352,10 @@ img {
 
 .modalbasket {
   visibility: hidden;
-  position: fixed;
+  position: absolute;
   z-index: 99;
-  right: 16%;
-  top: 7rem;
+  right: -2.3rem;
+  top: 3.7rem;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -377,7 +428,8 @@ img {
     line-height: 2rem;
     text-transform: uppercase;
     text-align: center;
-    display: block; }
+    display: block;
+    color: #252525; }
   .modalbasket__buttonbasket, .modalbasket__buttonbuy {
     padding: 0.69rem 1.76rem;
     font-size: 1rem; }
@@ -456,18 +508,6 @@ img {
     max-width: 37rem;
     margin: auto;
     margin-bottom: 6.28rem; }
-  .popular__title {
-    text-align: center;
-    font-size: 1.86rem;
-    font-weight: 700;
-    letter-spacing: 4.68px;
-    text-transform: uppercase;
-    color: #2d3a4b; }
-  .popular__subtitle {
-    text-align: center;
-    color: #40494e;
-    font-size: 1rem;
-    font-weight: 400; }
   .popular__name {
     font-family: 'Gotham Pro-Black';
     color: #2d3a4b;
@@ -534,14 +574,204 @@ img {
 .popularswiper-button-prev {
   background: url("../img/popular/arrow-prev.png") no-repeat center;
   left: 0; }
+  .popularswiper-button-prev:hover {
+    background-color: rgba(26, 35, 48, 0.2); }
 
 .popularswiper-button-next {
   right: 0;
   background: url("../img/popular/arrow-next.png") no-repeat center; }
+  .popularswiper-button-next:hover {
+    background-color: rgba(26, 35, 48, 0.2); }
 
 .sliderwrap {
   max-width: 84.29rem;
   margin: auto; }
+
+.news {
+  background-color: #f7f7f7;
+  padding: 9.1rem 0; }
+  .news__container {
+    max-width: 1343px;
+    width: 100%; }
+  .news__heading {
+    max-width: 45rem;
+    margin: auto; }
+  .news__subtitle {
+    margin-top: 1.93rem; }
+  .news__block {
+    display: flex;
+    align-items: stretch;
+    margin-top: 6.21rem; }
+  .news__card {
+    padding: 2.5rem 5.71rem 2.29rem 5.11rem;
+    flex-basis: 49%; }
+    .news__card--grey {
+      height: auto;
+      width: 1px;
+      background-color: #c9c9c9; }
+  .news__date {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.41rem; }
+  .news__month {
+    font-family: 'Gotham Pro-Medium';
+    font-size: 1.07rem;
+    font-weight: 500;
+    letter-spacing: -0.3px;
+    margin-bottom: 0.3rem; }
+  .news__day {
+    font-family: 'Gotham Pro-Black';
+    font-size: 5.71rem;
+    text-transform: uppercase;
+    letter-spacing: -3.4px; }
+  .news__name {
+    font-size: 1.57rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.64px; }
+  .news__text {
+    color: #40494e;
+    font-size: 0.93rem;
+    font-weight: 400;
+    line-height: 1.86rem;
+    margin-top: 1.71rem;
+    max-width: 100%; }
+    .news__text a {
+      display: block;
+      font-family: 'Gotham Pro-Medium';
+      text-decoration: none;
+      color: #333333;
+      font-size: 1rem;
+      font-weight: 500;
+      margin-top: 2.02rem; }
+
+.shop {
+  padding: 9.1rem 0; }
+  .shop__subtitle {
+    color: #666666;
+    margin-top: 1.8rem; }
+  .shop__heading {
+    max-width: 66.86rem;
+    margin: auto;
+    margin-bottom: 4.52rem; }
+  .shop__social {
+    max-width: 9.73rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+    .shop__social-links {
+      text-decoration: none;
+      display: inline-block;
+      overflow: hidden; }
+      .shop__social-links--vk {
+        background: url("../img/shop/vk.png") no-repeat;
+        width: 11px;
+        height: 14px; }
+        .shop__social-links--vk:hover {
+          background: url("../img/shop/vk-hover.png") no-repeat; }
+      .shop__social-links--fb {
+        width: 8px;
+        height: 18px;
+        background: url("../img/shop/fb.svg") no-repeat; }
+        .shop__social-links--fb:hover {
+          background: url("../img/shop/fb-hover.svg") no-repeat; }
+      .shop__social-links--twitter {
+        width: 17px;
+        height: 14px;
+        background: url("../img/shop/twitter.svg") no-repeat; }
+        .shop__social-links--twitter:hover {
+          background: url("../img/shop/twitter-hover.svg") no-repeat; }
+      .shop__social-links--ok {
+        width: 11px;
+        height: 18px;
+        background: url("../img/shop/ok.svg") no-repeat; }
+        .shop__social-links--ok:hover {
+          background: url("../img/shop/ok-hover.svg") no-repeat; }
+      .shop__social-links--youtube {
+        width: 17px;
+        height: 12px;
+        background: url("../img/shop/youtube.svg") no-repeat; }
+        .shop__social-links--youtube:hover {
+          background: url("../img/shop/youtube-hover.svg") no-repeat; }
+
+.subscription {
+  background-color: #5b53a6;
+  padding: 7.64rem 0; }
+  .subscription__heading {
+    max-width: 45.92rem;
+    margin: auto;
+    margin-bottom: 3.3rem; }
+  .subscription__title, .subscription__subtitle {
+    color: #ffffff; }
+  .subscription__subtitle {
+    margin-top: 1.8rem; }
+  .subscription__form {
+    max-width: 56.43rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between; }
+  .subscription__input {
+    flex-basis: 68.2%;
+    font-family: 'Gotham Pro-Medium';
+    border-radius: 27px;
+    background-color: #ffffff;
+    padding: 1.43rem 1.93rem;
+    font-size: 1.14rem;
+    color: #8e89be;
+    border: none; }
+    .subscription__input::-moz-placeholder {
+      color: #8e89be;
+      font-size: 1.14rem; }
+    .subscription__input:-ms-input-placeholder {
+      color: #8e89be;
+      font-size: 1.14rem; }
+    .subscription__input::-ms-input-placeholder {
+      color: #8e89be;
+      font-size: 1.14rem; }
+    .subscription__input::placeholder {
+      color: #8e89be;
+      font-size: 1.14rem; }
+  .subscription__button {
+    border-radius: 27px;
+    border: 1px solid #ffffff;
+    padding: 0 3rem; }
+    .subscription__button:hover {
+      background-color: #ffffff;
+      color: #5b53a6; }
+
+.footer {
+  background-color: #171e27;
+  padding: 8.31rem 0;
+  color: #999999; }
+  .footer__address {
+    line-height: 1.8rem; }
+  .footer__logo {
+    margin-bottom: 2.53rem; }
+  .footer__link, .footer__email, .footer__phone-number, .footer__skype-account {
+    font-size: 0.93rem;
+    text-decoration: none;
+    color: #999999; }
+    .footer__link:hover, .footer__email:hover, .footer__phone-number:hover, .footer__skype-account:hover {
+      color: #ffffff; }
+  .footer__link {
+    margin-bottom: 1.48rem; }
+  .footer__block {
+    display: flex;
+    align-items: start;
+    margin-bottom: 2.41rem; }
+  .footer__name {
+    font-size: 1.07rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.1px;
+    margin-bottom: 3.44rem;
+    margin-top: 0.5rem; }
+  .footer__col {
+    max-width: 18.34rem; }
+  .footer__icon {
+    margin-right: 1.14rem; }
 
 @media screen and (max-width: 1353px) {
   html {
