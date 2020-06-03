@@ -208,13 +208,13 @@ $('.popularswiper-slide').on('click', function() {
     // Открытие модального окна Zoom
     $('.popular__iconzoom').click(function () {
       if (indexSlide=='1') {
-        $(".modalzoom__image").attr("src", "../img/zoom/zoom1.jpg");}
+        $(".modalzoom__image").attr("src", "/img/zoom/zoom1.jpg");}
       if (indexSlide=='2') {
-        $(".modalzoom__image").attr("src", "../img/zoom/zoom2.jpg");}
+        $(".modalzoom__image").attr("src", "/img/zoom/zoom2.jpg");}
       if (indexSlide=='3') {
-        $(".modalzoom__image").attr("src", "../img/zoom/zoom3.jpg");}
+        $(".modalzoom__image").attr("src", "/img/zoom/zoom3.jpg");}
       if (indexSlide=='4') {
-        $(".modalzoom__image").attr("src", "../img/zoom/zoom4.jpg");}
+        $(".modalzoom__image").attr("src", "/img/zoom/zoom4.jpg");}
       zoom.toggleClass('modalzoom--visible');
       zoomActive = !(zoomActive);
     });
