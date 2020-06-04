@@ -39,6 +39,7 @@ $(document).ready(function () {
       closeBtn =  $('.modalsearch__close');
   
   searchBtn.on('click', function () {
+    console.log('Зашёл');
     search.toggleClass('modalsearch--visible');
     searchActive = !(searchActive);
   });
@@ -85,14 +86,9 @@ $(document).ready(function () {
     },
   });
 
+
+
   // Смена ховеров у кнопок слайдера
-
-  var block = document.getElementById('block');
-
-  function changeBgImg(){
-    block.style.backgroundImage = "url('https://cs7062.vk.me/c540107/v540107359/2729/fYQlS_23QdA.jpg')";
-  }
-
   // Кнопки вперёд/назад в слайдере в секции Hero
   $('.heroswiper-button-prev').on('click', function() {
     const index = mySwiper.realIndex;

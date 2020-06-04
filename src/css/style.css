@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Gotham Pro';
   src: url("../fonts/GothamPro/GothamPro.woff") format("woff"), url("../fonts/GothamPro/GothamPro.woff2") format("woff2");
@@ -46,6 +47,12 @@
   .button--primary {
     background-color: transparent;
     font-family: 'Gotham Pro-Medium'; }
+  .button--secondary {
+    background-color: #eeeeee;
+    color: #2d3a4b;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.84px; }
 
 div.invalid {
   margin-top: 4.8rem;
@@ -117,8 +124,22 @@ img {
   line-height: 1.9rem; }
 
 .header {
-  padding-top: 3.57rem;
-  margin: auto; }
+  margin: auto;
+  padding: 3.5rem 0; }
+  .header__nav-item {
+    color: #2d3a4b;
+    text-decoration: none;
+    font-size: 1.07rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: 2.1px;
+    margin-right: 2.5rem;
+    cursor: pointer; }
+    .header__nav-item:hover {
+      color: #ef50a2; }
+  .header__menu {
+    display: flex;
+    justify-content: space-between; }
 
 .menu {
   top: 0;
@@ -824,6 +845,125 @@ img {
     max-width: 18.34rem; }
   .footer__icon {
     margin-right: 1.14rem; }
+
+.сataloghero {
+  background-blend-mode: multiply;
+  background: #5a52a5 url("../img/catalog/bg.jpg") no-repeat center/cover;
+  padding: 5.8rem 0 7.7rem; }
+  .сataloghero__title {
+    color: #ffffff;
+    letter-spacing: 0; }
+  .сataloghero__subtitle {
+    max-width: 33.57rem;
+    color: #ffffff;
+    margin: auto;
+    margin-top: 1.9rem; }
+  .сataloghero__link {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.9rem;
+    cursor: pointer; }
+  .сataloghero__nav {
+    border-radius: 21px;
+    background-color: #ef50a2;
+    max-width: 20.86rem;
+    margin: auto;
+    padding: 0.97rem 2.5rem;
+    margin-top: 2.79rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .сataloghero__icon {
+    margin-left: 0.5rem;
+    margin-right: 0.6rem; }
+
+.catalog {
+  padding: 8rem 0; }
+  .catalog__row {
+    flex-wrap: wrap;
+    padding: 0 4.5rem; }
+  .catalog__card {
+    flex-basis: 23.6%;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-bottom: 3.9rem; }
+  .catalog__photo {
+    margin: auto; }
+  .catalog__name {
+    font-family: 'Gotham Pro Black';
+    color: #2d3a4b;
+    font-size: 1.57rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.64px;
+    text-align: center;
+    margin-top: 2.24rem; }
+  .catalog__color {
+    color: #40494e;
+    font-size: 0.93rem;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1.3rem; }
+  .catalog__prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto; }
+  .catalog__price {
+    color: #ef50a2;
+    font-family: 'Gotham Pro Black';
+    font-size: 1.28rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 1.88rem; }
+    .catalog__price--old {
+      color: #2d3a4b;
+      margin-left: 1.5rem; }
+  .catalog__button {
+    padding: 0.61rem 2.21rem;
+    margin: auto;
+    display: block;
+    margin-top: 1.5rem; }
+  .catalog__quantity, .catalog__filter {
+    background: url("../img/catalog/arrow-down.svg") no-repeat right;
+    border: none;
+    color: #2d3a4b;
+    font-family: 'Gotham Pro-Medium';
+    font-size: 1.21rem;
+    font-weight: 700;
+    letter-spacing: -0.34px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-right: 1rem;
+    cursor: pointer; }
+  .catalog__quantity {
+    margin-right: 2.07rem; }
+  .catalog__filter {
+    margin-right: 2.79rem; }
+  .catalog__icon {
+    margin-right: 1.67rem;
+    cursor: pointer; }
+    .catalog__icon--list {
+      margin-right: 0;
+      cursor: pointer; }
+  .catalog__settings {
+    display: flex;
+    justify-content: space-between; }
+  .catalog__count {
+    color: #cccccc;
+    font-family: 'Gotham Pro-Medium';
+    font-size: 1.07rem;
+    font-weight: 500;
+    letter-spacing: -0.3px; }
+  .catalog__settings {
+    margin-bottom: 4.64rem;
+    padding: 0 5.4rem; }
+  .catalog__filters {
+    margin-top: -0.3rem; }
 
 @media screen and (max-width: 1353px) {
   html {
