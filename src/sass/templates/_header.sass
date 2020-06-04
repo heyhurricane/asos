@@ -41,7 +41,7 @@
   display: flex
   justify-content: space-between
   &__logo
-    margin-right: 20.04rem
+    margin-right: 19.74rem
     margin-left: 5.2rem
     &:hover
       filter: invert(1)
@@ -74,7 +74,47 @@
 
 .account
   float: right
-  margin-right: 4.1rem
+  margin-right: 4.5rem
+  margin-top: 0.1rem
   display: flex
   &__link
     margin-right: 1.3rem
+
+
+.menu-button
+  display: none
+  z-index: 10
+.menu-button-activ 
+    height: 0!important
+    background: url('../img/open-menu.svg')
+.menu-button-activ:before 
+    margin-top: 0
+    transform: rotate(45deg) translateY(10px)
+    background-color: $dark
+.menu-button-activ:after 
+  margin-top: 0
+  transform: rotate(-45deg) translateY(-10px)
+  background-color: $dark
+  
+.burger-menu
+  display: none
+  width: 100%
+  position: absolute
+  right: 0
+  top: 0 
+  // box-shadow: inset 0 0 10px 3px rgba(34, 34, 34, 0.3)
+  padding: 1rem 0
+  background-color: $light
+  &__nav
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    a
+      margin: 0 1rem
+      font-size: 2rem
+      &:hover
+        &::after
+          display: none
+.burger-menu-none
+  display: none!important

@@ -73,6 +73,23 @@ $(document).ready(function () {
 
     }
   });
+  
+
+  $(document).on('click', function(event) {
+    console.log(basketActive);
+    if ($(event.target).is(search)) {
+      search.toggleClass('modalsearch--visible');
+      searchActive = !(searchActive);
+      // $('.modal__form')[0].reset();
+    }
+    else {
+      // if (!($(event.target).is(basket))) {
+      //   console.log('yes');
+      //   basket.toggleClass('modalbasket--visible');
+      //   basketActive = !(basketActive);
+      // }
+    }
+  });
 
   // Слайдер в секции Hero
   var mySwiper = new Swiper ('.heroswiper-container', {
@@ -287,6 +304,45 @@ $('.popularswiper-slide').on('click', function() {
       });
     }*/
   });
+
+
+  // бургер-меню
+  
+  $("#menu").on("click", "a", function (event) {
+    event.preventDefault();
+    let id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top - 60
+    }, 1500);
+  });
+
+  $("#burger-menu").on("click", "a", function (event) {
+    event.preventDefault();
+    let id = $(this).attr('href'),
+      top = $(id).offset().top;
+    $('body,html').animate({
+      scrollTop: top - 60
+    }, 1500);
+  });
+
+  var menuButton = $('.menu-button');
+  var burgerMenu = $('.burger-menu');
+  var menuButtonActive = $('.menu-button-activ')
+  var menu = $('.header');
+
+  menuButton.on('click', function() {
+    console.log('123321');
+    menuButton.toggleClass('menu-button-activ');
+    menuButton.css('display', 'block');
+    burgerMenu.toggleClass('burger-menu-none');
+    // menu.classList.toggle('header-active');
+  });
+
+
+
+
+
 
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00');

@@ -40,30 +40,63 @@
     &__logo
       margin-right: 2rem
 
-  @media screen and ( max-width: 991px )    
-    // &__burger
-    //   display: block
-    //   position: relative
-    //   width: 30px
-    //   height: 20px
-    //   &::before, &::after
-    //     content: ''
-    //     background-color: $light
-    //     position: absolute
-    //     width: 100%
-    //     height: 2px
-    //   &::before
-    //     top: 0
-    //   &::after
-    //     bottom: 0
-    //   span
-    //     position: absolute
-    //     background-color: $light 
-    //     width: 100%
-    //     height: 2px
-    //     top: 9px
-    //     left: 0
-        
-  
-  
+  @media screen and ( max-width: 991px )   
+    .menu__nav
+      display: none 
+    .burger-menu
+      display: block
+    .menu-button 
+      position: absolute
+      right: 3.2rem
+      top: 4.4rem
+      display: block
+      width: 30px
+      height: 2px
+      background-color: $dark
+      cursor: pointer
+      &::before 
+        content: ''
+        position: absolute
+        right: 0px
+        top: 0px
+        display: block
+        width: 30px
+        height: 2px
+        background-color: $dark
+        margin-top: -7px
+        transition: transform 0.2s
+      &::after 
+        content: ''
+        position: absolute
+        right: 0px
+        top: 0px
+        display: block
+        width: 30px
+        height: 2px
+        background-color: $dark
+        margin-top: 7px
+        transition: transform 0.2s
+  .footer
+    display: none
+  .catalog
+    &__card
+      flex-basis: 50%
+  .subscription
+    &__form 
+      flex-direction: column
+
+
+
+@media screen and ( max-width: 860px )   
+  .catalog__settings
+    flex-direction: column
+
+@media screen and ( max-width: 760px )   
+  .catalog__card
+    flex-basis: 100%
+
+@media screen and ( max-width: 576px )   
+  .menu
+    &__account
+      display: none
   

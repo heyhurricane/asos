@@ -14,11 +14,7 @@
         <div class="logo menu__logo">
           <a href="index.html" class="logo__link"><img src="img/catalog/logo.png" alt="asos"></a>
         </div>
-        <!-- <div class="menu__burger">
-          <span></span>
-        </div> -->
-        <!-- /.menu__burger -->
-        <nav class="nav menu__nav">
+        <nav class="nav menu__nav" id="menu">
           <a href="index.html" class="header__nav-item">Домой</a>
           <a href="catalog.html" class="header__nav-item header__nav-item--active">Каталог</a>
           <a href="#" class="header__nav-item">О нас</a>
@@ -78,8 +74,20 @@
         </div>
       </div>
       <!-- /.menu -->
+      <div class="menu-button"></div>
+      <div class="burger-menu burger-menu-none">
+
+        <div class="burger-menu__nav" id="burger-menu">
+          <a href="index.html" class="header__nav-item">Домой</a>
+          <a href="catalog.html" class="header__nav-item ">Каталог</a>
+          <a href="#" class="header__nav-item">О нас</a>
+          <a href="#" class="header__nav-item">Партнерам</a>
+          <a href="#" class="header__nav-item">Контакты</a>
+        </div>
+        <!-- /.menu__nav -->
+      </div>  
     </div>
-    <!-- /.container -->
+    <!-- /.container --> 
   </header>
   <!-- /.header -->
 
@@ -136,6 +144,7 @@
         <!-- /.card catalog__card -->
         <div class="card catalog__card">
           <div class="catalog__photo">
+            <img src="img/catalog/sale-icon.png" alt="" class="catalog__sale-icon">
             <img src="img/catalog/skirts/skirt2.jpg" alt="" class="catalog__image">
           </div>
           <span class="catalog__name">Юбка, ТВОЕ</span>
@@ -264,7 +273,7 @@
     <!-- /.container -->
   </section>
   <!-- /.section shop -->
-
+  
   <!-- УЗНАВАЙТЕ ОБ АКЦИЯХ -->
   <section class="section subscription">
     <div class="container subscription__container">
@@ -283,7 +292,7 @@
     <!-- /.container -->
   </section>
   <!-- /.section subscription -->
-  </main>
+</main>
 
 <footer class="footer">
   <div class="container">
@@ -334,7 +343,7 @@
         <a href="#" class="footer__link">Оплата</a>
       </div>
       <!-- /.col -->
-      <div class="col">
+      <div class="col footer__col--account">
         <span class="footer__name">Мой аккаунт</span>
         <a href="#" class="footer__link">Мой аккаунт</a>
         <a href="#" class="footer__link">Корзина</a>
@@ -346,10 +355,19 @@
       <!-- /.col -->
     </div>
     <!-- /.row -->
+    <div class="footer__copyright">
+      <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. Все права защищены.</span>
+    </div>
+    <!-- /.footer__copyright -->
   </div>
   <!-- /.container -->
 </footer>
 <!-- /.footer -->
+
+<!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
+<div class="scrollup">
+  <button class="button scroll-up"></button>
+</div>
 
  <!-- ПОИСК -->
 <div class="modalsearch">
