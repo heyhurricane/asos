@@ -8,9 +8,12 @@ $(document).ready(function () {
     var windowHeight = $(window).height();
       if ($(this).scrollTop() > 0) {
           $('.scroll-up').fadeIn();
+          document.getElementById("headerwrap").style.background = "#5a52a5";
       } else {
           $('.scroll-up').fadeOut();
+          document.getElementById("headerwrap").style.background = "transparent";
       }
+    
   });
 
   $('.scroll-up').click(function () {
