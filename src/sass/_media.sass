@@ -1,3 +1,9 @@
+@media screen and ( max-width: 1505px )
+  .menu
+    &__logo
+      margin-right: 10rem
+  
+  
 @media screen and ( max-width: 1353px )
   html
     font-size: 12px
@@ -19,15 +25,33 @@
             width: 80px
             height: 80px
             transform: translate(-80px, 0)
+  .menu
+    &__account
+      img
+        max-width: 50%
+    &__logo
+      img
+        max-width: 90%
+  .footer
+    &__col
+      margin-right: 0
 
 @media screen and ( max-width: 1200px )
   .menu
     &__logo
       margin-right: 10rem
+      margin-left: 0
+    &__account
+      margin-right: 0
+  .header
+    &__nav-item 
+      margin-right: 2rem
   .hero
     &__heading
       &--largest 
         font-size: 10.16rem
+  
+
 
 @media screen and ( max-width: 1035px )
   .hero
@@ -39,57 +63,100 @@
   .menu
     &__logo
       margin-right: 2rem
+  .footer__col
+    max-width: 17.84rem
+  .row
+    padding: 0 6.7rem 0 5.3rem
 
-  @media screen and ( max-width: 991px )   
-    .menu__nav
+@media screen and ( max-width: 991px )   
+  .menu
+    &__nav
       display: none 
-    .burger-menu
-      display: block
-    .menu-button 
+    &__logo
+      margin: 0
+    &__account
+      margin-right: 2rem
+      img
+        max-width: 100%
+  .burger-menu
+    display: block
+  .menu-button 
+    position: absolute
+    right: 3.6rem
+    top: 4.7rem
+    display: block
+    width: 30px
+    height: 2px
+    background-color: $dark
+    cursor: pointer
+    &::before 
+      content: ''
       position: absolute
-      right: 3.2rem
-      top: 4.4rem
+      right: 0px
+      top: 0px
       display: block
       width: 30px
       height: 2px
       background-color: $dark
-      cursor: pointer
-      &::before 
-        content: ''
-        position: absolute
-        right: 0px
-        top: 0px
-        display: block
-        width: 30px
-        height: 2px
-        background-color: $dark
-        margin-top: -7px
-        transition: transform 0.2s
-      &::after 
-        content: ''
-        position: absolute
-        right: 0px
-        top: 0px
-        display: block
-        width: 30px
-        height: 2px
-        background-color: $dark
-        margin-top: 7px
-        transition: transform 0.2s
-  .footer
-    display: none
+      margin-top: -7px
+      transition: transform 0.2s
+    &::after 
+      content: ''
+      position: absolute
+      right: 0px
+      top: 0px
+      display: block
+      width: 30px
+      height: 2px
+      background-color: $dark
+      margin-top: 7px
+      transition: transform 0.2s
+  // .footer
+  //   display: none
   .catalog
     &__card
       flex-basis: 50%
+    &__filters
+      display: flex
+      justify-content: space-between
+      // margin-top: 0.5rem
+    &__row
+      padding: 0
   .subscription
     &__form 
       flex-direction: column
+    &__input
+      margin-bottom: 1.5rem
+    &__button
+      padding: 1.2rem 3rem
+      max-width: 100%
+      margin: auto
+  .сataloghero
+    &__nav 
+      max-width: 23.06rem
+    &__link
+      font-size: 1.2rem
+  .row
+    flex-wrap: wrap
+    padding: 0
+    padding-left: 5.3rem
+  .col
+    flex-basis: 40%
+  .footer
+    &__col
+      &--account
+        margin-left: 0
+   
 
 
 
 @media screen and ( max-width: 860px )   
-  .catalog__settings
-    flex-direction: column
+  .catalog
+    &__settings
+      flex-direction: column
+      align-items: start
+    &__show
+      margin-bottom: 1.5rem
 
 @media screen and ( max-width: 760px )   
   .catalog__card
@@ -97,6 +164,55 @@
 
 @media screen and ( max-width: 576px )   
   .menu
+    &__logo
+      img
+        max-width: 80%
     &__account
-      display: none
+      margin-right: 3rem
+    &-button 
+      top: 4.4rem
+  .catalog
+    padding: 5rem 0 8.3rem
+    &__settings
+      padding: 0
+    &__filters
+      flex-direction: column
+      // flex-wrap: wrap
+    &__quantity, &__filter
+      // max-width: 50%
+      // flex-basis: 45%
+      margin-bottom: 1.5rem
+  .title
+    font-size: 1.36rem
+  .row
+    padding: 0
+  .col
+    flex-basis: 100%
+    align-items: center
+  .footer
+    &__col
+      max-width: 100%
+    &__logo
+      display: block
+
+
+@media screen and ( max-width: 375px )   
+  .menu-button 
+    right: 2.5rem
+  .footer
+    &__address
+      text-align: center
+    &__place
+      img
+        margin-right: 0
+
+
+@media screen and ( max-height: 768px )  
+  .catalog
+    &__name
+      font-size: 1.17rem
+    &__color
+      font-size: 0.87rem
+  
+
   

@@ -6,6 +6,7 @@
   width: 100%
   position: fixed
   background-color: $light
+  z-index: 199
   &__nav-item
     color: $dark
     text-decoration: none
@@ -77,6 +78,7 @@
   margin-right: 4.5rem
   margin-top: 0.1rem
   display: flex
+  align-items: center
   &__link
     margin-right: 1.3rem
 
@@ -103,18 +105,27 @@
   right: 0
   top: 0 
   // box-shadow: inset 0 0 10px 3px rgba(34, 34, 34, 0.3)
-  padding: 1rem 0
+  // padding: 1rem 0
   background-color: $light
+    
   &__nav
     display: flex
     flex-direction: column
     justify-content: center
     align-items: center
     a
+      padding: 0.5rem 0
       margin: 0 1rem
-      font-size: 2rem
+      font-size: 1.5rem
+      // width: 100%
+      text-align: center
+      text-transform: uppercase
+      font-family: 'Gotham Pro'
+      // box-shadow: inset 0 -1px 0 #202124
       &:hover
         &::after
           display: none
 .burger-menu-none
   display: none!important
+
+  

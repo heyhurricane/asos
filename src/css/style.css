@@ -133,7 +133,8 @@ img {
   top: 0;
   width: 100%;
   position: fixed;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  z-index: 199; }
   .header__nav-item {
     color: #2d3a4b;
     text-decoration: none;
@@ -202,7 +203,8 @@ img {
   float: right;
   margin-right: 4.5rem;
   margin-top: 0.1rem;
-  display: flex; }
+  display: flex;
+  align-items: center; }
   .account__link {
     margin-right: 1.3rem; }
 
@@ -230,7 +232,6 @@ img {
   position: absolute;
   right: 0;
   top: 0;
-  padding: 1rem 0;
   background-color: #ffffff; }
   .burger-menu__nav {
     display: flex;
@@ -238,8 +239,12 @@ img {
     justify-content: center;
     align-items: center; }
     .burger-menu__nav a {
+      padding: 0.5rem 0;
       margin: 0 1rem;
-      font-size: 2rem; }
+      font-size: 1.5rem;
+      text-align: center;
+      text-transform: uppercase;
+      font-family: 'Gotham Pro'; }
       .burger-menu__nav a:hover::after {
         display: none; }
 
@@ -972,7 +977,8 @@ img {
   box-shadow: inset 0 -1px 0 #d1d5db; }
   .catalog__row {
     flex-wrap: wrap;
-    padding: 0 4.5rem; }
+    padding: 0 4.5rem;
+    align-items: flex-start; }
   .catalog__card {
     flex-basis: 23.6%;
     display: flex;
@@ -1031,9 +1037,9 @@ img {
     padding-right: 1rem;
     cursor: pointer; }
   .catalog__quantity {
-    margin-right: 2.07rem; }
+    margin-right: 2.47rem; }
   .catalog__filter {
-    margin-right: 2.79rem; }
+    margin-right: 3.69rem; }
   .catalog__icon {
     margin-right: 1.67rem;
     cursor: pointer; }
@@ -1042,7 +1048,8 @@ img {
       cursor: pointer; }
   .catalog__settings {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    align-items: center; }
   .catalog__count {
     color: #cccccc;
     font-family: 'Gotham Pro-Medium';
@@ -1053,7 +1060,7 @@ img {
     margin-bottom: 4.64rem;
     padding: 0 5.4rem; }
   .catalog__filters {
-    margin-top: -0.3rem; }
+    display: flex; }
   .catalog__photo {
     position: relative; }
   .catalog__sale-icon {
@@ -1061,6 +1068,14 @@ img {
     z-index: 99;
     top: 0;
     right: 0; }
+
+.icon-block {
+  display: flex;
+    display-align-items: center; }
+
+@media screen and (max-width: 1505px) {
+  .menu__logo {
+    margin-right: 10rem; } }
 
 @media screen and (max-width: 1353px) {
   html {
@@ -1075,11 +1090,22 @@ img {
   .heroswiper-button-prev:hover::after {
     width: 80px;
     height: 80px;
-    transform: translate(-80px, 0); } }
+    transform: translate(-80px, 0); }
+  .menu__account img {
+    max-width: 50%; }
+  .menu__logo img {
+    max-width: 90%; }
+  .footer__col {
+    margin-right: 0; } }
 
 @media screen and (max-width: 1200px) {
   .menu__logo {
-    margin-right: 10rem; }
+    margin-right: 10rem;
+    margin-left: 0; }
+  .menu__account {
+    margin-right: 0; }
+  .header__nav-item {
+    margin-right: 2rem; }
   .hero__heading--largest {
     font-size: 10.16rem; } }
 
@@ -1089,17 +1115,27 @@ img {
   .hero__heading--largest {
     font-size: 8rem; }
   .menu__logo {
-    margin-right: 2rem; } }
+    margin-right: 2rem; }
+  .footer__col {
+    max-width: 17.84rem; }
+  .row {
+    padding: 0 6.7rem 0 5.3rem; } }
 
-@media screen and (max-width: 1035px) and (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .menu__nav {
     display: none; }
+  .menu__logo {
+    margin: 0; }
+  .menu__account {
+    margin-right: 2rem; }
+    .menu__account img {
+      max-width: 100%; }
   .burger-menu {
     display: block; }
   .menu-button {
     position: absolute;
-    right: 3.2rem;
-    top: 4.4rem;
+    right: 3.6rem;
+    top: 4.7rem;
     display: block;
     width: 30px;
     height: 2px;
@@ -1126,24 +1162,83 @@ img {
       height: 2px;
       background-color: #2d3a4b;
       margin-top: 7px;
-      transition: transform 0.2s; } }
-
-@media screen and (max-width: 1035px) {
-  .footer {
-    display: none; }
+      transition: transform 0.2s; }
   .catalog__card {
     flex-basis: 50%; }
+  .catalog__filters {
+    display: flex;
+    justify-content: space-between; }
+  .catalog__row {
+    padding: 0; }
   .subscription__form {
-    flex-direction: column; } }
+    flex-direction: column; }
+  .subscription__input {
+    margin-bottom: 1.5rem; }
+  .subscription__button {
+    padding: 1.2rem 3rem;
+    max-width: 100%;
+    margin: auto; }
+  .сataloghero__nav {
+    max-width: 23.06rem; }
+  .сataloghero__link {
+    font-size: 1.2rem; }
+  .row {
+    flex-wrap: wrap;
+    padding: 0;
+    padding-left: 5.3rem; }
+  .col {
+    flex-basis: 40%; }
+  .footer__col--account {
+    margin-left: 0; } }
 
 @media screen and (max-width: 860px) {
   .catalog__settings {
-    flex-direction: column; } }
+    flex-direction: column;
+    align-items: start; }
+  .catalog__show {
+    margin-bottom: 1.5rem; } }
 
 @media screen and (max-width: 760px) {
   .catalog__card {
     flex-basis: 100%; } }
 
 @media screen and (max-width: 576px) {
+  .menu__logo img {
+    max-width: 80%; }
   .menu__account {
-    display: none; } }
+    margin-right: 3rem; }
+  .menu-button {
+    top: 4.4rem; }
+  .catalog {
+    padding: 5rem 0 8.3rem; }
+    .catalog__settings {
+      padding: 0; }
+    .catalog__filters {
+      flex-direction: column; }
+    .catalog__quantity, .catalog__filter {
+      margin-bottom: 1.5rem; }
+  .title {
+    font-size: 1.36rem; }
+  .row {
+    padding: 0; }
+  .col {
+    flex-basis: 100%;
+    align-items: center; }
+  .footer__col {
+    max-width: 100%; }
+  .footer__logo {
+    display: block; } }
+
+@media screen and (max-width: 375px) {
+  .menu-button {
+    right: 2.5rem; }
+  .footer__address {
+    text-align: center; }
+  .footer__place img {
+    margin-right: 0; } }
+
+@media screen and (max-height: 768px) {
+  .catalog__name {
+    font-size: 1.17rem; }
+  .catalog__color {
+    font-size: 0.87rem; } }
