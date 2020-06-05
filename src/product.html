@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог Asos</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header__menu">
+          <div class="logo menu__logo">
+            <a href="index.html" class="logo__link"><img src="img/catalog/logo.png" alt="asos"></a>
+          </div>
+          <nav class="nav menu__nav" id="menu">
+            <a href="index.html" class="header__nav-item">Домой</a>
+            <a href="catalog.html" class="header__nav-item header__nav-item--active">Каталог</a>
+            <a href="#" class="header__nav-item">О нас</a>
+            <a href="#" class="header__nav-item">Партнерам</a>
+            <a href="#" class="header__nav-item">Контакты</a>
+          </nav>
+          <div class="account menu__account">
+            <div class="menu__person">
+              <a href="#" class="account__link"><img src="img/catalog/person-icon.png" alt=""></a>
+            </div>
+            <!-- /.menu__person -->  
+            <div class="menu__basket">
+              <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/catalog/basket-icon.png" alt=""></a>
+              <!-- КОРЗИНА -->
+              <div class="modalbasket">
+                <div class="modalbasket__dialog">
+                  <!-- <div class="modalbasket__square"></div> -->
+                  <div class="modalbasket__product">
+                    <img src="img/basket/basket1.jpg" alt="">
+                    <div class="modalbasket__about">
+                      <span class="modalbasket__name">Женский жилет, А.karina</span>
+                      <span class="modalbasket__price">6 490 ₽</span>
+                      <span class="modalbasket__count">Количество: 1 шт.</span>
+                    </div>
+                    <!-- /.modalbasket__about -->
+                  </div>
+                  <!-- /.modalbasket__product -->
+                  <div class="modalbasket__product">
+                    <img src="img/basket/basket2.jpg" alt="">
+                    <div class="modalbasket__about">
+                      <span class="modalbasket__name">Женский Лонгслив, Oodji</span>
+                      <span class="modalbasket__price">999 ₽</span>
+                      <span class="modalbasket__count">Количество: 1 шт.</span>
+                    </div>
+                    <!-- /.modalbasket__about -->
+                  </div>
+                  <!-- /.modalbasket__product -->
+                  <div class="modalbasket__total">
+                    <span class="modalbasket__amount">Итого: 7 489 ₽</span>
+                  </div>
+                  <div class="modalbasket__buttons">
+                    <button class="button buttonbasket modalbasket__buttonbasket">Корзина</button>
+                    <button class="button buttonbuy modalbasket__buttonbuy">Оформить</button>
+                  </div>
+                  <!-- /.modalbasket__buttons -->
+                  <!-- /.modalbasket__total -->
+                </div>
+                <!-- /.modalbasket__dialog -->
+              </div>
+              <!-- /.modalbasket -->
+            </div>
+            <!-- /.menu__basket -->
+            <div class="menu__search">
+              <a href="javascript:void(0);" class="account__link" data-toggle="search"><img src="img/catalog/search-icon.png" alt=""></a>
+            </div>
+            <!-- /.menu__search -->
+          </div>
+        </div>
+        <!-- /.menu -->
+        <div class="menu-button"></div>
+        <div class="burger-menu burger-menu-none">
+
+          <div class="burger-menu__nav" id="burger-menu">
+            <a href="index.html" class="header__nav-item">Домой</a>
+            <a href="catalog.html" class="header__nav-item ">Каталог</a>
+            <a href="#" class="header__nav-item">О нас</a>
+            <a href="#" class="header__nav-item">Партнерам</a>
+            <a href="#" class="header__nav-item">Контакты</a>
+          </div>
+          <!-- /.menu__nav -->
+        </div>  
+      </div>
+      <!-- /.container --> 
+    </header>
+    <!-- /.header -->
+
+      <main>
+      <section class="section сataloghero">
+        <div class="container">
+          <h1 class="title сataloghero__title">Юбки</h1>
+          <h2 class="subtitle сataloghero__subtitle">Традиционно модные юбки – это отличный вариант одежды для офиса, повседневных дел, торжественных случаев.</h2>
+          <div class="сataloghero__nav">
+            <a href="index.html" class="сataloghero__link">Главная</a>
+            <img src="img/catalog/arrow.png" class="сataloghero__icon" alt="">
+            <a href="" class="сataloghero__link">Каталог</a>
+            <img src="img/catalog/arrow.png" class="сataloghero__icon" alt="">
+            <a href="" class="сataloghero__link">Юбки</a>
+          </div>
+          <!-- /.cataloghero__nav -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section сataloghero -->
+
+      <section class="section product">
+        <div class="container">
+          <div class="product__block">
+            <div class="product__photo">
+              <div class="product__blockphoto">
+                <img src="img/product/photo1.jpg" alt="" class="product__image">
+              </div>
+              <!-- /.product__blockphoto -->
+              
+              <div class="product-sliderwrap">
+                <div class="productswiper-container swiper-container swiper-no-swiping">
+                  <!-- Additional required wrapper -->
+                  <div class="productswiper-wrapper swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="productswiper-slide swiper-slide" data-toggle="hover">
+                      <div class="product__image-small">
+                        <img src="img/product/photo1s.jpg" alt="" class="product__image--small">
+                      </div>
+                    </div>
+                    <div class="productswiper-slide swiper-slide" data-toggle="hover">
+                      <div class="product__image-small">
+                        <img src="img/product/photo2s.jpg" alt="" class="product__image--small">
+                      </div>
+                    </div>
+                    <div class="productswiper-slide swiper-slide" data-toggle="hover">
+                      <div class="product__image-small">
+                        <img src="img/product/photo3s.jpg" alt="" class="product__image--small">
+                      </div>
+                    </div>
+                  </div>     
+                  <!-- If we need navigation buttons -->
+                </div>
+                <div class="productswiper-button-prev swiper-button-prev"></div>
+                <div class="productswiper-button-next swiper-button-next"></div>
+              </div>
+              <!-- /.sliderwrap -->
+            </div>
+            <!-- /.product__photo -->
+            <div class="product__info">
+              <img src="img/catalog/sale-icon.png" alt="" class="product__sale-icon">
+              <span class="product__name">Юбка, Oodji</span>
+              <span class="product__price"><img src="img/pinkrub.png" alt="рубль"> 799</span>
+              <div class="product__about">
+                <div class="product__type">
+                  <span class="product__nameoftype">Вид застежки:</span>
+                  <span class="product__valueoftype">Молния</span>
+                </div>
+                <!-- /.product__type -->
+                <div class="product__type">
+                  <span class="product__nameoftype">Длина изделия:</span>
+                  <span class="product__valueoftype">по спинке: 75 см</span>
+                </div>
+                <!-- /.product__type -->
+                <div class="product__type">
+                  <span class="product__nameoftype">Длина юбки:</span>
+                  <span class="product__valueoftype">Миди</span>
+                </div>
+                <!-- /.product__type -->
+                <div class="product__type">
+                  <span class="product__nameoftype">Сезон:</span>
+                  <span class="product__valueoftype">круглогодичный</span>
+                </div>
+                <!-- /.product__type -->
+                <div class="product__type">
+                  <span class="product__nameoftype">Страна бренда:</span>
+                  <span class="product__valueoftype">Россия</span>
+                </div>
+                <!-- /.product__type -->
+                <div class="product__type">
+                  <span class="product__nameoftype">Страна производитель:</span>
+                  <span class="product__valueoftype">Россия</span>
+                </div>
+                <!-- /.product__type -->
+              </div>
+              <!-- /.product__about -->
+              <div class="product__textblock">
+                <p class="product__text">Ведущие дизайнеры мира рекомендуют дамам отказаться от брюк и выбрать юбки: этот невероятно женственный наряд поможет придать образу загадочность, нежность, сексуальность.</p>
+              </div>
+              <!-- /.product__text -->
+              <div class="product__color">
+                <span class="product__colortext">Выберите цвет:</span>
+                <div class="product__colors product__colors--pink"></div>
+                <!-- /.product__colors -->
+                <div class="product__colors product__colors--yellow"></div>
+                <!-- /.product__colors -->
+                <div class="product__colors product__colors--red"></div>
+                <!-- /.product__colors -->
+                <div class="product__colors product__colors--violet"></div>
+                <!-- /.product__colors -->
+                <div class="product__colors product__colors--blue"></div>
+                <!-- /.product__colors -->
+                <div class="product__colors product__colors--orange"></div>
+                <!-- /.product__colors -->
+              </div>
+              <!-- /.product__color -->
+              <div class="product__quantity">
+                <select class="product__select">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+              </div>
+              <!-- /.product__quantity -->
+              <a href="" class="sizechart__link">Открыть таблицу размеров</a>
+              <div class="product__sizes">
+                <button class="product__size">XXS</button>
+                <button class="product__size">XS</button>
+                <button class="product__size">S</button>
+                <button class="product__size">M</button>
+                <button class="product__size">L</button>
+                <button class="product__size">XL</button>
+                <button class="product__size product__size--disabled">XXL</button>
+              </div>
+              <!-- /.product__sizes -->
+              <div class="product__tobasket">
+                <button class="product__addbasket">Добавить в корзину</button>
+                <img src="img/product/heart.png" alt="" class="product__favourite">
+              </div>
+              <!-- /.product__tobasket -->
+              <div class="product__social">
+                <span class="product__socialtext">Поделиться товаром в соцсетях</span>
+                <div class="social product__sociallinks">
+                  <a href="https://vk.com/" class="social-links social-links--vk"></a>
+                  <a href="https://www.facebook.com/" class="social-links social-links--fb"></a>
+                  <a href="https://twitter.com/" class="social-links social-links--twitter"></a>
+                  <a href="https://ok.ru/" class="social-links social-links--ok"></a>
+                  <a href="https://www.youtube.com/" class="social-links social-links--youtube"></a>
+                </div>
+              </div>
+              <!-- /.product__social -->
+              <div class="product__pay">
+                <span class="product__paytext">Способы оплаты</span>
+                <div class="payment product__payment">
+                  <div class="payment__type payment__type--visa"></div>
+                  <!-- /.payment__type -->
+                  <div class="payment__type payment__type--mastercard"></div>
+                  <!-- /.payment__type -->
+                  <div class="payment__type payment__type--yandex"></div>
+                  <!-- /.payment__type -->
+                  <div class="payment__type payment__type--rbk"></div>
+                  <!-- /.payment__type -->
+                  <div class="payment__type payment__type--qiwi"></div>
+                  <!-- /.payment__type -->
+                </div>
+                <!-- /.payment -->
+              </div>
+              <!-- /.product__pay -->
+            </div>
+            <!-- /.product__info -->
+          </div>
+          <!-- /.product__block -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section product -->
+
+      <section class="section description">
+        <div class="container">
+          <div class="description__menu">
+            <span class="description__name description__name--active">Описание</span>
+            <span class="description__name">Отзывы (03)</span>
+            <span class="description__name">Оплата и доставка</span>
+          </div>
+          <!-- /.description__menu -->
+          <div class="description__block">
+            <div class="description__fullinfo">
+              <span class="description__infotext">Полные Параметры</span>
+              <div class="product__type">
+                <span class="product__nameoftype">Фактура материала:</span>
+                <span class="product__valueoftype">Текстильный</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Покрой:</span>
+                <span class="product__valueoftype">прямой</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Тип посадки:</span>
+                <span class="product__valueoftype">Средняя посадка</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Тип карманов:</span>
+                <span class="product__valueoftype">без карманов</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Уход за вещами:</span>
+                <span class="product__valueoftype">бережная стирка при 30 градусах</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Рисунок:</span>
+                <span class="product__valueoftype">без рисунка</span>
+              </div>
+              <!-- /.product__type -->
+
+              <div class="product__type">
+                <span class="product__nameoftype">Назначение:</span>
+                <span class="product__valueoftype">повседневная</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Конструктивные элементы:</span>
+                <span class="product__valueoftype">Без разреза</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Пол:</span>
+                <span class="product__valueoftype">Женский</span>
+              </div>
+              <!-- /.product__type -->
+              <div class="product__type">
+                <span class="product__nameoftype">Комплектация:</span>
+                <span class="product__valueoftype">юбка</span>
+              </div>
+              <!-- /.product__type -->
+            </div>
+            <!-- /.description__fullinfo -->
+            <div class="feedbacks">
+              <span class="feedbacks__infotext">3 отзыва к товару</span>
+              <div class="feedbacks__feedback">
+                <div class="feedbacks__wrap">
+                  <div class="feedbacks__photo">
+                    <img src="img/feedback/feedback1.png" alt="" class="feedbacks__image">
+                  </div>
+                   <!-- /.feedbacks__photo -->
+                  <div class="feedbacks__info">
+                    <div class="feedbacks__block-text">
+                      <p class="feedbacks__text">Очень хорошая юбка, стильно смотрится.взяла без раздумья!</p>
+                    </div>
+                    <!-- /.feedbacks__block -->
+                    <div class="feedbacks__block">
+                      <span class="feedbacks__name">Олеся Рогозина</span>
+                      <div class="div">
+                        <div class="feedbacks__helpful">
+                          <span class="feedbacks__helptext">Отзыв полезен?</span>
+                          <img src="img/feedback/thumbsup.png" alt="" class="feedbacks__thumbsup">
+                          <span class="feedbacks__helpnumber">3</span>
+                          <img src="img/feedback/thumbsdown.png" alt="" class="feedbacks__thumbsdown">
+                          <span class="feedbacks__helpnumber">0</span>
+                        </div>
+                        <!-- /.feedbacks__helpful -->
+                        <div class="feedbacks__rating">
+                            <span class="feedbacks__rating-text">Оценка:</span>
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-grey.png" alt="" class="feedbacks__rating-stars">
+                        </div>
+                        <!-- /.feedbacks__rating -->
+                        <span class="feedbacks__date">23 июня, 17:02</span>
+                      </div>
+                      
+                    </div>
+                    <!-- /.feedbacks__block -->
+                  </div>
+                  <!-- /.feedbacks__info -->
+                </div>
+              </div>
+              <!-- /.feedbacks__feedback -->
+              <div class="feedbacks__feedback">
+                <div class="feedbacks__wrap">
+                  <div class="feedbacks__photo">
+                    <img src="img/feedback/feedback2.png" alt="" class="feedbacks__image">
+                  </div>
+                   <!-- /.feedbacks__photo -->
+                  <div class="feedbacks__info">
+                    <div class="feedbacks__block-text">
+                      <p class="feedbacks__text">Для милого образа с грамотно подобранными аксессуарами и обувью выглядит супер!</p>
+                    </div>
+                     <!-- /.feedbacks__block -->
+                     <div class="feedbacks__block">
+                      <span class="feedbacks__name">Марина хлебникова</span>
+                      <div class="div">
+                        <div class="feedbacks__helpful">
+                          <span class="feedbacks__helptext">Отзыв полезен?</span>
+                          <img src="img/feedback/thumbsup.png" alt="" class="feedbacks__thumbsup">
+                          <span class="feedbacks__helpnumber">0</span>
+                          <img src="img/feedback/thumbsdown.png" alt="" class="feedbacks__thumbsdown">
+                          <span class="feedbacks__helpnumber">0</span>
+                        </div>
+                        <!-- /.feedbacks__helpful -->
+                        <div class="feedbacks__rating">
+                            <span class="feedbacks__rating-text">Оценка:</span>
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                        </div>
+                        <!-- /.feedbacks__rating -->
+                        <span class="feedbacks__date">19 июня, 18:12</span>
+                      </div>
+                     </div>
+                  </div>
+                  <!-- /.feedbacks__info -->
+                </div>
+                <!-- /.feedbacks__wrap -->
+                
+                <div class="feedbacks__answer">
+                  <div class="feedbacks__logo">
+                    <img src="img/feedback/logo.png" alt="asos">
+                  </div>
+                  <!-- /.feedbacks__logo -->
+                  <div class="feedbacks__admin">
+                    <span class="feedbacks__admin-name">Ответ администрации</span>
+                    <p class="feedbacks__admin-answer">Марина, полностью с вами согласны, спасибо за ваш заказ!</p>
+                  </div>
+                  <!-- /.feedbacks__admin -->
+                </div>
+                <!-- /.feedbacks__answer -->
+              </div>
+              <!-- /.feedbacks__feedback -->
+              <div class="feedbacks__feedback">
+                <div class="feedbacks__wrap">
+                  <div class="feedbacks__photo">
+                    <img src="img/feedback/feedback3.png" alt="" class="feedbacks__image">
+                  </div>
+                  <!-- /.feedbacks__photo -->
+                  <div class="feedbacks__info">
+                    <div class="feedbacks__block-text">
+                      <p class="feedbacks__text">Потрясающая юбка! Ткань приятная, форму держит. Размер соответствует .Девочки , смотрите внимательнее прежде чем заказывать.</p>
+                    </div>
+                    <div class="feedbacks__block">
+                      <span class="feedbacks__name">Полина венская</span>
+                      <div class="div">
+                        <div class="feedbacks__helpful">
+                          <span class="feedbacks__helptext">Отзыв полезен?</span>
+                          <img src="img/feedback/thumbsup.png" alt="" class="feedbacks__thumbsup">
+                          <span class="feedbacks__helpnumber">0</span>
+                          <img src="img/feedback/thumbsdown.png" alt="" class="feedbacks__thumbsdown">
+                          <span class="feedbacks__helpnumber">0</span>
+                        </div>
+                        <!-- /.feedbacks__helpful -->
+                        <div class="feedbacks__rating">
+                            <span class="feedbacks__rating-text">Оценка:</span>
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                            <img src="img/feedback/star-pink.png" alt="" class="feedbacks__rating-stars">
+                        </div>
+                        <!-- /.feedbacks__rating -->
+                        <span class="feedbacks__date">15 июня, 10:58</span>
+                      </div>
+                    </div> 
+                  </div>
+                  <!-- /.feedbacks__info -->
+                </div>
+              </div>
+              <!-- /.feedbacks__feedback -->
+            </div>
+            <!-- /.feedbacks -->
+          </div>
+          <!-- /.description__block -->
+        </div>
+        <!-- /.container -->
+      </section>
+      <!-- /.section description -->
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col footer__col">
+            <div class="logo footer__logo">
+              <a href="index.html" class="logo__link"><img src="img/footer/logo-icon.png" alt="asos"></a>
+            </div>
+            <div class="footer__block footer__place">
+              <img src="img/footer/map.png" alt="" class="footer__icon">
+              <span class="footer__address">г. Москва, ул. Сибирский тракт 59, офис 514</span>
+            </div>
+            <!-- /.footer__place -->
+            <div class="footer__block footer__phone">
+              <img src="img/footer/phone.png" alt="" class="footer__icon">
+              <a href="tel:+74957455599" class="footer__phone-number">8 (495) 745-55-99</a>
+            </div>
+            <!-- /.footer__phone -->
+            <div class="footer__block footer__mail">
+              <img src="img/footer/mail.png" alt="" class="footer__icon">
+              <a href="mailto:example@example.com" class="footer__email">info@asos.shop</a>
+            </div>
+            <!-- /.footer__mail -->
+            <div class="footer__block footer__skype">
+              <img src="img/footer/skype.png" alt="" class="footer__icon">
+              <a href="skype:SkypeUser" class="footer__skype-account">skype: asos.shop</a>
+            </div>
+            <!-- /.footer__mail -->
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <span class="footer__name">Полезное</span>
+            <a href="#" class="footer__link">Услуги</a>
+            <a href="#" class="footer__link">Как проехать</a>
+            <a href="#" class="footer__link">Статьи</a>
+            <a href="#" class="footer__link">Условия и положения</a>
+            <a href="#" class="footer__link">Блог</a>
+            <a href="#" class="footer__link">Пресса о нас</a>
+          </div>
+          <!-- /.col -->
+          <div class="col">
+            <span class="footer__name">Магазин</span>
+            <a href="#" class="footer__link">О нас</a>
+            <a href="#" class="footer__link">Карьера у нас</a>
+            <a href="#" class="footer__link">Способы доставки</a>
+            <a href="#" class="footer__link">Контакты</a>
+            <a href="#" class="footer__link">Поддержка</a>
+            <a href="#" class="footer__link">Оплата</a>
+          </div>
+          <!-- /.col -->
+          <div class="col footer__col--account">
+            <span class="footer__name">Мой аккаунт</span>
+            <a href="#" class="footer__link">Мой аккаунт</a>
+            <a href="#" class="footer__link">Корзина</a>
+            <a href="#" class="footer__link">Избранное</a>
+            <a href="#" class="footer__link">Оформить заказ</a>
+            <a href="#" class="footer__link">Выход</a>
+          
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+        <div class="footer__copyright">
+          <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. Все права защищены.</span>
+        </div>
+        <!-- /.footer__copyright -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.footer -->
+
+    <!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
+    <div class="scrollup">
+      <button class="button scroll-up"></button>
+    </div>
+
+    <!-- ПОИСК -->
+    <div class="modalsearch">
+      <div class="modalsearch__dialog">
+        <div class="modalsearch__close"></div>
+        <form class="modalsearch__form">
+          <input type="search" class="modalsearch__input" placeholder="Поисковой запрос">
+          <button type="submit" class="modalsearch__button"></button>
+        </form>
+        <!-- /.modalsearch__form -->
+      </div>
+      <!-- /.modalsearch__dialog -->
+    </div>
+    <!-- /.modalsearch -->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script>
+    <script src="js/jquery.elimore.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

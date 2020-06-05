@@ -1,0 +1,108 @@
+.feedbacks
+  &__wrap
+    display: flex
+    margin-top: 2rem
+    align-items: center
+    margin-bottom: 3.7rem
+  &__feedback
+    display: flex
+    margin-top: 2rem
+    align-items: center
+    margin-bottom: 3.7rem
+    flex-direction: column
+    align-items: stretch
+    // position: relative
+    // &::after
+    //   content: ''
+    //   width: 100%
+    //   height: 1px
+    //   background-color: #c9c9c9
+    //   display: block
+    //   margin-top: 5rem
+    //   position: absolute
+  &__infotext
+    color: #141414
+    font-family: 'Gotham Pro-Medium'  
+    font-size: 1.14rem
+    text-transform: uppercase
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    flex-basis: 90%
+  &__block
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &-text
+      flex-basis: 100%
+  &__text, &__admin-answer
+    display: block
+    width: 100%
+    margin-top: 0
+    letter-spacing: -0.47px
+  &__photo
+    margin-right: 1.43rem
+  &__name, &__helptext, &__rating-text, &__helpnumber, &__date
+    color: $midblue
+    font-family: 'Gotham Pro-Medium'
+    font-size: 0.86rem
+    text-transform: uppercase
+  &__name
+    // flex-basis: 56%
+  &__helpful
+    // flex-basis: 31%
+    margin-right: 4.3rem
+  &__rating
+    // flex-basis: 24.4%
+    display: flex
+    align-items: center
+    margin-right: 1.7rem
+    &-stars
+      margin-right: 0.4rem
+  &__date
+    // flex-basis: 20%
+    margin-left: 2.9rem
+    margin-right: -3.8rem
+    color: #808080
+  &__thumbsdown
+    transform: translateY(0.2rem)
+  &__helptext, &__rating-text
+    margin-right: 0.7rem
+  &__helpnumber
+    margin-right: 0.9rem
+  &__answer
+    background-color: #ffeff7
+    width: 100%
+    // height: 5rem
+    top: -1.9rem
+    position: relative
+    display: flex
+    align-items: center
+    padding: 2.43rem 0 2.43rem 2.43rem
+    &::before
+      content: ' '
+      position: absolute
+      width: 0
+      height: 0
+      left: 3.7rem
+      top: -19px
+      border: 10px solid
+      border-color: transparent transparent #ffeff7 #ffeff7
+  &__admin-answer
+    margin: 0
+    margin-top: 1.1rem
+    letter-spacing: -0.4px
+  &__admin-name
+    color: #141414
+    font-family: 'Gotham Pro-Medium'
+    font-size: 1rem
+    text-transform: uppercase
+    letter-spacing: 2px
+  &__logo
+    margin-right: 2.57rem
+
+.div
+  display: flex
+  justify-content: space-between
+  align-items: center

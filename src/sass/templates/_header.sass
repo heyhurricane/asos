@@ -18,6 +18,7 @@
     font-family: 'Gotham Pro-Medium' 
     cursor: pointer
     &:hover
+      transition: color 0.3s
       color: $pink
     &--active
       position: relative
@@ -31,6 +32,19 @@
         margin-top: 0.5rem
         left: 0
         right: 0
+      &:hover
+        transition: background 0.3s
+        position: relative
+        &::after
+          content: ''
+          display: block
+          position: absolute
+          width: 100%
+          height: 2px
+          background-color: $pink
+          margin-top: 0.5rem
+          left: 0
+          right: 0
   &__menu
     display: flex
     justify-content: space-between
@@ -45,6 +59,7 @@
     margin-right: 19.74rem
     margin-left: 5.2rem
     &:hover
+      transition: color 0.3s
       filter: invert(1)
   &__basket
     position: relative
@@ -61,6 +76,7 @@
     margin-right: 2.5rem
     cursor: pointer
     &:hover
+      transition: color 0.3s
       color: $pink
     &--active
       position: relative

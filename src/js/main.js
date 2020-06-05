@@ -42,7 +42,6 @@ $(document).ready(function () {
       closeBtn =  $('.modalsearch__close');
   
   searchBtn.on('click', function () {
-    console.log('Зашёл');
     search.toggleClass('modalsearch--visible');
     searchActive = !(searchActive);
   });
@@ -76,7 +75,6 @@ $(document).ready(function () {
   
 
   $(document).on('click', function(event) {
-    console.log(basketActive);
     if ($(event.target).is(search)) {
       search.toggleClass('modalsearch--visible');
       searchActive = !(searchActive);
@@ -332,7 +330,6 @@ $('.popularswiper-slide').on('click', function() {
   var menu = $('.header');
 
   menuButton.on('click', function() {
-    console.log('123321');
     menuButton.toggleClass('menu-button-activ');
     menuButton.css('display', 'block');
     burgerMenu.toggleClass('burger-menu-none');
@@ -340,9 +337,60 @@ $('.popularswiper-slide').on('click', function() {
   });
 
 
+  // Слайдер на странице Товар
+  var mySwiper3 = new Swiper ('.productswiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 30,
+    pagination: {
+      el: '.productswiper-pagination',
+      type: 'bullets', 
+    },
+    navigation: {
+      nextEl: '.productswiper-button-next',
+      prevEl: '.productswiper-button-prev',
+    },
+  });
 
 
+  // выбор цвета в секции Товар
 
+  var colorActive = false;
+  
+  $('.product__colors').click(function () {
+    if (colorActive==true) {
+        $('.product__colors').not(this).removeClass('product__colors--selected');
+        colorActive = !(colorActive);
+    }
+    $(this).addClass('product__colors--selected');
+    colorActive = !(colorActive);
+  });
+
+  // выбор размера в секции Товар
+
+  var sizeActive = false;
+  
+  $('.product__size').click(function () {
+    if (sizeActive==true) {
+        $('.product__size').not(this).removeClass('product__size--selected');
+        sizeActive = !(sizeActive);
+    }
+    $(this).addClass('product__size--selected');
+    sizeActive = !(sizeActive);
+  });
+
+
+  // ПОЯВЛЕНИЕ ИКОНОК ПРИ КЛИКЕ НА СЛАЙД В СЕКЦИИ ПОПУЛЯРНЫЕ ТОВАРЫ
+$('.productswiper-slide').on('click', function() {
+    var ID = $(this).data('swiperSlideIndex')+1;
+    console.log(ID);
+    if (ID=='1') {
+      $(".product__image").attr("src", "../img/product/photo1.jpg");}
+    if (ID=='2') {
+      $(".product__image").attr("src", "../img/product/photo2.jpg");}
+    if (ID=='3') {
+      $(".product__image").attr("src", "../img/product/photo3.jpg");}
+});
 
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00');
