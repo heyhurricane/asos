@@ -95,7 +95,7 @@
       <section class="section сataloghero">
         <div class="container">
           <h1 class="title сataloghero__title">Юбки</h1>
-          <h2 class="subtitle сataloghero__subtitle">Традиционно модные юбки – это отличный вариант одежды для офиса, повседневных дел, торжественных случаев.</h2>
+          <h2 class="subtitle producthero__subtitle"> Дизайнеры настоятельно рекомендуют соблюдать тенденции текущего сезона, но не забывать о главном: специфика фигуры определяет конечный выбор.</h2>
           <div class="сataloghero__nav">
             <a href="index.html" class="сataloghero__link">Главная</a>
             <img src="img/catalog/arrow.png" class="сataloghero__icon" alt="">
@@ -212,7 +212,7 @@
                 </select>
               </div>
               <!-- /.product__quantity -->
-              <a href="" class="sizechart__link">Открыть таблицу размеров</a>
+              <a href="javascript:void(0);" class="sizechart__link" data-toggle="sizechart">Открыть таблицу размеров</a>
               <div class="product__sizes">
                 <button class="product__size">XXS</button>
                 <button class="product__size">XS</button>
@@ -231,26 +231,26 @@
               <div class="product__social">
                 <span class="product__socialtext">Поделиться товаром в соцсетях</span>
                 <div class="social product__sociallinks">
-                  <a href="https://vk.com/" class="social-links social-links--vk"></a>
-                  <a href="https://www.facebook.com/" class="social-links social-links--fb"></a>
-                  <a href="https://twitter.com/" class="social-links social-links--twitter"></a>
-                  <a href="https://ok.ru/" class="social-links social-links--ok"></a>
-                  <a href="https://www.youtube.com/" class="social-links social-links--youtube"></a>
+                  <a href="https://vk.com/" target="_blank" class="social-links social-links--vk"></a>
+                  <a href="https://www.facebook.com/" target="_blank" class="social-links social-links--fb"></a>
+                  <a href="https://twitter.com/" target="_blank" class="social-links social-links--twitter"></a>
+                  <a href="https://ok.ru/" target="_blank" class="social-links social-links--ok"></a>
+                  <a href="https://www.youtube.com/" target="_blank" class="social-links social-links--youtube"></a>
                 </div>
               </div>
               <!-- /.product__social -->
               <div class="product__pay">
                 <span class="product__paytext">Способы оплаты</span>
                 <div class="payment product__payment">
-                  <div class="payment__type payment__type--visa"></div>
+                  <a href="#" class="payment__type payment__type--visa"></a>
                   <!-- /.payment__type -->
-                  <div class="payment__type payment__type--mastercard"></div>
+                  <a href="#" class="payment__type payment__type--mastercard"></a>
                   <!-- /.payment__type -->
-                  <div class="payment__type payment__type--yandex"></div>
+                  <a href="#" class="payment__type payment__type--yandex"></a>
                   <!-- /.payment__type -->
-                  <div class="payment__type payment__type--rbk"></div>
+                  <a href="#" class="payment__type payment__type--rbk"></a>
                   <!-- /.payment__type -->
-                  <div class="payment__type payment__type--qiwi"></div>
+                  <a href="#" class="payment__type payment__type--qiwi"></a>
                   <!-- /.payment__type -->
                 </div>
                 <!-- /.payment -->
@@ -573,6 +573,124 @@
         <!-- /.container -->
       </section>
       <!-- /.section description -->
+
+       <!-- ПОПУЛЯРНЫЕ ТОВАРЫ -->
+  <section class="section popular product-popular">
+    <div class="container popular__container">
+      <div class="popular__heading">
+        <h2 class="title popular__title">Вам может понравиться</h2>
+        <h3 class="subtitle popular__subtitle">В этой рубрике мы подобрали самые известные и покупаемые товары. Знакомьтесь, быть может и вам понравится</h3>
+      </div>
+      <!-- /.popular__heading -->
+      <div class="sliderwrap">
+        <div class="popularswiper-container swiper-container swiper-no-swiping">
+          <!-- Additional required wrapper -->
+          <div class="popularswiper-wrapper swiper-wrapper">
+              <!-- Slides -->
+              <div class="popularswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product1.jpg" alt="" class="popular__image">
+                  <div class="popular__hover1">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                  <!-- /.popular__hover -->
+                </div>
+                <span class="popular__name">Жилет, A.Karina</span>
+                <span class="popular__color">Цвет: серый</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 6 490</span>
+              </div>
+              <div class="popularswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product2.jpg" alt="" class="popular__image">
+                  <div class="popular__hover2">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                </div>
+                <span class="popular__name">Юбка, Oodji</span>
+                <span class="popular__color">Цвет: синий</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 799</span>
+              </div>
+              <div class="popularswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product3.jpg" alt="" class="popular__image">
+                  <div class="popular__hover3">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                </div>
+                <span class="popular__name">Брюки, ТВОЕ</span>
+                <span class="popular__color">Цвет: темно-синий</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 599</span>
+              </div>
+              <div class="popularswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product4.jpg" alt="" class="popular__image">
+                  <div class="popular__hover4">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                </div>
+                <span class="popular__name">Пижама FORLIFE</span>
+                <span class="popular__color">Цвет: коралловый, белый</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 1 290</span>
+              </div>
+          </div>     
+          <!-- If we need navigation buttons -->
+        </div>
+         <div class="popularswiper-button-prev swiper-button-prev"></div>
+          <div class="popularswiper-button-next swiper-button-next"></div>
+      </div>
+      <!-- /.sliderwrap -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section popular -->
+
+  <section class="section shop">
+    <div class="container shop__container">
+      <div class="shop__heading">
+        <h2 class="title shop__title">Магазин ASOS</h2>
+        <h3 class="subtitle shop__subtitle">Преимущества интернет магазина - доступные цены, широкий, регулярно обновляемый ассортимент. <br>У нас можно купить одежду любой известной марки - представлена продукция ведущих зарубежных, отечественных брендов.</h3>
+      </div>
+      <!-- /.shop__heading -->
+      <div class="social shop__social">
+        <a href="https://vk.com/" target="_blank" class="social-links social-links--vk"></a>
+        <a href="https://www.facebook.com/" target="_blank" class="social-links social-links--fb"></a>
+        <a href="https://twitter.com/" target="_blank" class="social-links social-links--twitter"></a>
+        <a href="https://ok.ru/" target="_blank" class="social-links social-links--ok"></a>
+        <a href="https://www.youtube.com/" target="_blank" class="social-links social-links--youtube"></a>
+      </div>
+      <!-- /.social shop__social -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section shop -->
+
+   <!-- УЗНАВАЙТЕ ОБ АКЦИЯХ -->
+   <section class="section subscription">
+    <div class="container subscription__container">
+      <div class="subscription__heading">
+        <h2 class="title subscription__title">Узнавайте об акциях</h2>
+        <h3 class="subtitle subscription__subtitle">Каждую неделю мы устраиваем приятные сюрпризы для наших клиентов.<br>Акции, скидки, распродажи - хотите узнавать о них первым? Подпишитесь на рассылку</h3>
+      </div>
+      <!-- /.subscription__heading -->
+      <!-- <form action="subscribe.php" method="POST" class="form subscription__form"> -->
+      <form class="form subscription__form">
+        <input type="email" name="userEmail" class="input subscription__input" id="user-email" placeholder="Введите свой e-mail">
+        <!-- /.input-group -->
+        <button class="button button--primary subscription__button">Подписаться</button>
+      </form>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section subscription -->
+
     </main>
 
     <footer class="footer">
@@ -669,7 +787,107 @@
      <div class="sizechart">
       <div class="sizechart__dialog">
         <div class="sizechart__close"></div>
+        <div class="sizechart__heading">Таблица размеров</div>
+        <div class="sizechart__row--names">
+          <div class="sizechart__col1">
+            <span class="sizechart__colname">Российский размер</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colname">Обхват талии</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colname">Обхват бедер</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colname">Размер производителя</span>
+          </div>
+        </div>
+        <div class="sizechart__row">
+          <div class="sizechart__col1">
+            <span class="sizechart__colvalue">40</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colvalue">58-62</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colvalue">86-90</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colvalue">XXS</span>
+          </div>
+        </div>
+        <div class="sizechart__row">
+          <div class="sizechart__col1">
+            <span class="sizechart__colvalue">42</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colvalue">62-66</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colvalue">90-94</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colvalue">XS</span>
+          </div>
+        </div>
+        <div class="sizechart__row">
+          <div class="sizechart__col1">
+            <span class="sizechart__colvalue">44</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colvalue">66-70</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colvalue">94-98</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colvalue">S</span>
+          </div>
+        </div>
+        <div class="sizechart__row">
+          <div class="sizechart__col1">
+            <span class="sizechart__colvalue">46</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colvalue">70-74</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colvalue">98-102</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colvalue">M</span>
+          </div>
+        </div>
+        <div class="sizechart__row">
+          <div class="sizechart__col1">
+            <span class="sizechart__colvalue">48</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colvalue">74-78</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colvalue">102-104</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colvalue">L</span>
+          </div>
+        </div>
+        <div class="sizechart__row">
+          <div class="sizechart__col1">
+            <span class="sizechart__colvalue">50</span>
+          </div>
+          <div class="sizechart__col2">
+            <span class="sizechart__colvalue">78-82</span>
+          </div>
+          <div class="sizechart__col3">
+            <span class="sizechart__colvalue">104-108</span>
+          </div>
+          <div class="sizechart__col4">
+            <span class="sizechart__colvalue">XL</span>
+          </div>
+        </div>
         
+      
       </div>
       <!-- /.sizechart__dialog -->
     </div>

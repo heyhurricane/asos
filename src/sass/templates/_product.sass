@@ -1,5 +1,14 @@
 .product
   padding: 7.43rem 0
+  &-popular
+    box-shadow: inset 0 -1px 0 #d1d5db
+    background-color: $greynews
+  &hero
+    &__subtitle
+      max-width: 41.64rem
+      color: $light
+      margin: auto
+      margin-top: 1.9rem
   &__sale-icon
     position: absolute
     z-index: 99
@@ -91,9 +100,12 @@
     height: 13px
     border-radius: 50%
     margin-right: 0.9rem
-    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
     cursor: pointer
     &--selected
+      position: relative
       &::before
         position: absolute
         content: ''
@@ -102,8 +114,6 @@
         border-radius: 50%
         background: transparent
         border: 2px solid $pink
-        top: -45%
-        left: -45%
     &--orange
       background-color: #e2a040
     &--yellow

@@ -2,7 +2,7 @@ $(document).ready(function () {
   var basketActive = false;
   var searchActive = false;
   var zoomActive = false;
-
+  var sizeActive = false;
   // Кнопка Наверх и Анимация
   $(window).scroll(function () {
     var windowHeight = $(window).height();
@@ -68,11 +68,34 @@ $(document).ready(function () {
           zoom.toggleClass('modalzoom--visible');
           zoomActive = !(zoomActive);
         }
+        else {
+          if (event.key=='Escape' && (sizeActive)) { 
+            sizechart.toggleClass('sizechart--visible');
+            sizeActive = !(sizeActive);
+          }
+        }
       }
 
     }
   });
   
+  // таблица размеров
+
+  var sizechart = $('.sizechart'),
+      sizeBtn = $('[data-toggle=sizechart]');
+      closesizeBtn =  $('.sizechart__close');
+  
+  sizeBtn.on('click', function () {
+    sizechart.toggleClass('sizechart--visible');
+    sizeActive = !(sizeActive);
+  });
+
+  closesizeBtn.on('click', function () {
+    sizechart.toggleClass('sizechart--visible');
+    sizeActive = !(sizeActive);
+  });
+
+
 
   $(document).on('click', function(event) {
     if ($(event.target).is(search)) {
@@ -476,15 +499,25 @@ $('.feedbacks__rating-stars--new').on('click', function() {
   });
     console.log('yea');
     $('.feedbacks__rating-stars--new').each(function (index, value) {
-      //your iterator
       console.log($(value).attr('id'));
       if ($(value).attr('id')<=rating) {
         $(value).attr("src", "../img/feedback/star-pink.png");
       }
     });
-  // }
 });
 
+var heartFull = false;
+$('.product__favourite').on('click', function() {
+  console.log(heartFull);
+  if (heartFull==true) {
+   
+    $(this).attr("src", "../img/product/heart.png");
+  }
+  else {
+    $(this).attr("src", "../img/product/heartfull.png");
+  }
+  heartFull = !(heartFull);
+});
 
 
   // Маска для телефона

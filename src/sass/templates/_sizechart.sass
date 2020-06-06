@@ -18,13 +18,13 @@
   &__dialog
     position: relative
     // background: $dark url('../img/bg-lines.svg') no-repeat center
-    max-width: 87.88rem
+    width: 68rem
     // padding: 14.22rem 21.64rem 21.12rem 19.74rem
     color: $light
   &__close
     position: absolute
-    right: 0
-    top: 0
+    right: -0.4rem
+    top: -1.1rem
     width: 35px
     height: 35px
     background: transparent url('../img/close.png') no-repeat center
@@ -32,3 +32,58 @@
     margin: 12px
     cursor: pointer
     outline: none
+  &__row
+    display: flex
+    width: 100%
+    justify-content: space-between
+    align-items: center
+    &:hover
+      transition: background 0.3s
+      background-color: $pink
+    &--names
+      display: flex
+      width: 100%
+      justify-content: space-between
+      align-items: center
+      position: relative
+      margin-bottom: 2.7rem
+      &::after
+        position: absolute
+        content: ''
+        width: 100%
+        height: 1px
+        background-color: $light
+        display: block
+        bottom: -1rem
+  &__col
+    &1
+      flex-basis: 21.1%
+    &2
+      flex-basis: 14.8%
+    &3
+      flex-basis: 14.4%
+    &4
+      flex-basis: 25%
+  &__colname
+    color: $light
+    font-family: 'Gotham Pro'
+    font-size: 1rem
+    text-transform: uppercase
+    letter-spacing: 1.82px
+  &__colvalue
+    color: $light
+    font-size: 1rem
+    line-height: 50px
+    display: flex
+    justify-content: center
+    align-items: center
+  &__heading
+    font-family: 'Gotham Pro-Medium'
+    font-size: 1.57rem
+    font-weight: 700
+    text-transform: uppercase
+    margin: auto
+    max-width: 21.07rem
+    margin-bottom: 5.93rem
+    letter-spacing: 2.44px
+
