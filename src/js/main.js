@@ -372,6 +372,62 @@ $('.popularswiper-slide').on('click', function() {
     }*/
   });
 
+
+  $('.contacts__form').validate({
+    errorClass: "errinvalid",
+    errorElement : 'div',
+    rules: {
+      // simple rule, converted to {required:true}
+      nameofuser: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      emailofuser: {
+        required: true,
+        email: true
+      },
+      phoneofuser: {
+        // required: true,
+        minlength: 17,
+        maxlength: 17
+      },
+      message: "required"
+    },
+    messages: {
+      nameofuser: {
+        required: "Имя обязательно",
+        minlength: 'Имя не короче 2 символов',
+        maxlength: 'Имя не длиннее 15 символов'
+      },
+      emailofuser: {
+        required: "Обязательно укажите email",
+        email: "Введите в формте: name@domain.com"
+      },
+      phoneofuser: {
+        minlength: 'Телефон должен содержать 10 символов',
+        maxlength: 'Телефон должен содержать 10 символов'
+      },
+      message: "Введите текст сообщения",
+    }/*,
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "subscribe.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modalMessage.toggleClass('message--visible');
+          messageActive = !(messageActive);
+        },
+        error: function (response) {
+          console.log('Ошибка запроса ' + response);
+        }
+      });
+    }*/
+  });
+
+
   // бургер-меню
   
   $("#menu").on("click", "a", function (event) {
