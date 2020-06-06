@@ -269,6 +269,7 @@ $('.popularswiper-slide').on('click', function() {
      
   });
 
+  // валидация форм
 
   $('.subscription__form').validate({
     errorClass: "invalid",
@@ -303,6 +304,50 @@ $('.popularswiper-slide').on('click', function() {
     }*/
   });
 
+  $('.feedbacks__form').validate({
+    errorClass: "errinvalid",
+    errorElement : 'div',
+    rules: {
+      // simple rule, converted to {required:true}
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      useremail: {
+        required: true,
+        email: true
+      },
+      userfeedback: "required",
+    },
+    messages: {
+      username: {
+        required: "Имя обязательно",
+        minlength: 'Имя не короче 2 символов',
+        maxlength: 'Имя не длиннее 15 символов'
+      },
+      useremail: {
+        required: "Обязательно укажите email",
+        email: "Введите в формте: name@domain.com"
+      },
+      userfeedback: "Если Вы хотите оставить отзыв, обязательно его введите",
+    }/*,
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "subscribe.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          $(form)[0].reset();
+          modalMessage.toggleClass('message--visible');
+          messageActive = !(messageActive);
+        },
+        error: function (response) {
+          console.log('Ошибка запроса ' + response);
+        }
+      });
+    }*/
+  });
 
   // бургер-меню
   
@@ -380,10 +425,9 @@ $('.popularswiper-slide').on('click', function() {
   });
 
 
-  // ПОЯВЛЕНИЕ ИКОНОК ПРИ КЛИКЕ НА СЛАЙД В СЕКЦИИ ПОПУЛЯРНЫЕ ТОВАРЫ
+  // смена фото в секции товара
 $('.productswiper-slide').on('click', function() {
     var ID = $(this).data('swiperSlideIndex')+1;
-    console.log(ID);
     if (ID=='1') {
       $(".product__image").attr("src", "../img/product/photo1.jpg");}
     if (ID=='2') {
@@ -391,6 +435,57 @@ $('.productswiper-slide').on('click', function() {
     if (ID=='3') {
       $(".product__image").attr("src", "../img/product/photo3.jpg");}
 });
+
+
+  // Переключение Описание/Отзывы/Оплата
+
+  var descriptionActive = true;
+  var feedbackActive = false;
+  var paymentActive = false;
+
+  $('.description__name').click(function () {
+    var page = $(this).attr('id');
+    $('.description__name').not(this).removeClass('description__name--active');
+    $(this).addClass('description__name--active');
+    if (page=='description') {
+      $('.description__fullinfo').toggleClass('description__fullinfo--visible');
+      if (feedbackActive==true) {$('.feedbacks').toggleClass('feedbacks--visible'); feedbackActive = !(feedbackActive);}
+      if (descriptionActive==true) {  $('.payandship').toggleClass('payandship--visible');  paymentActive = !(paymentActive);}
+      descriptionActive = !(descriptionActive);
+    }
+    if (page=='feedbacks') {
+      $('.feedbacks').toggleClass('feedbacks--visible');
+      if (descriptionActive==true) { $('.description__fullinfo').toggleClass('description__fullinfo--visible'); descriptionActive = !(descriptionActive);}
+      if (paymentActive==true) {  $('.payandship').toggleClass('payandship--visible');  paymentActive = !(paymentActive);}
+      feedbackActive = !(feedbackActive);
+    }
+    if (page=='payment') {
+      $('.payandship').toggleClass('payandship--visible');
+      if (feedbackActive==true) {$('.feedbacks').toggleClass('feedbacks--visible'); feedbackActive = !(feedbackActive);}
+      if (descriptionActive==true) { $('.description__fullinfo').toggleClass('description__fullinfo--visible'); descriptionActive = !(descriptionActive);}
+      paymentActive = !(paymentActive);
+    }
+  });
+   
+
+  // оценка
+$('.feedbacks__rating-stars--new').on('click', function() {
+  var rating = $(this).attr('id');
+  $('.feedbacks__rating-stars--new').each(function (index, value) {
+    $(value).attr("src", "../img/feedback/star-grey.png");
+  });
+    console.log('yea');
+    $('.feedbacks__rating-stars--new').each(function (index, value) {
+      //your iterator
+      console.log($(value).attr('id'));
+      if ($(value).attr('id')<=rating) {
+        $(value).attr("src", "../img/feedback/star-pink.png");
+      }
+    });
+  // }
+});
+
+
 
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00');

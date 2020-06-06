@@ -1,0 +1,84 @@
+.payandship
+  display: none
+  &--visible
+    display: initial
+  &__infotext
+    color: #141414
+    font-family: 'Gotham Pro-Medium'  
+    font-size: 1.14rem
+    text-transform: uppercase
+  &__blockname
+    margin-bottom: 2.21rem
+    &--delivery
+      margin-bottom: 3.3rem
+      position: relative
+      &::after
+        content: ''
+        width: 38.8%
+        height: 1px
+        background-color: #c9c9c9
+        display: block
+        position: absolute
+        margin-top: 2.7rem
+  &__payment
+    margin-bottom: 2.8rem
+    &-way
+      display: flex
+      margin-bottom: 2rem
+      align-items: center
+    &num
+      width: 3.57rem
+      height: 3.57rem
+      background: $pink
+      font-family: 'Gotham Pro-Medium' 
+      font-size: 1.29rem
+      color: $light
+      display: flex
+      align-items: center
+      justify-content: center
+      margin-right: 2.5rem
+    &-text
+      color: $midblue
+      font-size: 1rem
+      font-weight: 400
+      max-width: 55rem
+      line-height: 1.7rem
+      letter-spacing: 0.1px
+  &__paysecurity
+    display: flex
+    align-items: center
+    margin-top: -0.6rem
+  &__security
+    &-img
+      margin-right: 2rem
+    &-text
+      max-width: 60.2rem
+      font-size: 0.93rem
+      line-height: 1.9
+      letter-spacing: 0.05px
+  &__nameoftype, &__valueoftype
+    color: $midblue
+    font-size: 0.93rem
+    letter-spacing: 0.2px
+  &__type
+    &::after
+      content: ''
+      width: 38.8%
+      height: 1px
+      background-color: #c9c9c9
+      display: block
+      margin-top: 0.71rem
+      margin-bottom: 0.71rem
+  &__nameoftype
+    font-family: 'Gotham Pro-Medium'
+    font-weight: 500
+  &__valueoftype
+    font-family: 'Gotham Pro'
+    &--pink
+      color: $pink
+      font-family: 'Gotham Pro Black'
+
+
+
+  
+      

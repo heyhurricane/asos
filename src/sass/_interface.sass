@@ -24,13 +24,23 @@ div
     margin-left: 1.8rem
     position: absolute
     color: $error
+  &.errinvalid
+    bottom: -1.3rem
+    position: absolute
+    color: $error
       
 
 input
   &.invalid
     border-radius: 27px
     border: 1px solid $error
-    // box-shadow: 0 0px 20px  $error 
+    // box-shadow: 0 0px 20px  $error
+  &.errinvalid
+    border: 1px solid $error
+
+textarea
+  &.errinvalid
+    border: 1px solid $error
 
 
 .scroll-up
@@ -46,3 +56,13 @@ input
   &:hover
     transition: color 0.3s
     background-color: rgba($darkblue, 0.2)
+
+
+.form
+  &__label
+    color: $black
+    font-family: 'Gotham Pro-Medium'
+    font-size: 0.86rem
+    text-transform: uppercase
+    margin-right: 0.9rem
+ 

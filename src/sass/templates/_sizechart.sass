@@ -1,0 +1,34 @@
+.sizechart
+  visibility: hidden
+  position: fixed
+  z-index: 199
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($purple, 0.9)
+  display: flex
+  justify-content: center
+  align-items: center
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    // background: $dark url('../img/bg-lines.svg') no-repeat center
+    max-width: 87.88rem
+    // padding: 14.22rem 21.64rem 21.12rem 19.74rem
+    color: $light
+  &__close
+    position: absolute
+    right: 0
+    top: 0
+    width: 35px
+    height: 35px
+    background: transparent url('../img/close.png') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+    outline: none

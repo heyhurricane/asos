@@ -268,69 +268,75 @@
       <section class="section description">
         <div class="container">
           <div class="description__menu">
-            <span class="description__name description__name--active">Описание</span>
-            <span class="description__name">Отзывы (03)</span>
-            <span class="description__name">Оплата и доставка</span>
+            <span class="description__name description__name--active" id="description">Описание</span>
+            <span class="description__name" id="feedbacks">Отзывы (03)</span>
+            <span class="description__name" id="payment">Оплата и доставка</span>
           </div>
           <!-- /.description__menu -->
           <div class="description__block">
-            <div class="description__fullinfo">
-              <span class="description__infotext">Полные Параметры</span>
-              <div class="product__type">
+            <div class="description__fullinfo description__fullinfo--visible">
+              <div class="description__blockname">
+                <span class="description__infotext">Полные Параметры</span>
+              </div>
+              <!-- /.description__blockname -->
+              <div class="description__type">
                 <span class="product__nameoftype">Фактура материала:</span>
                 <span class="product__valueoftype">Текстильный</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Покрой:</span>
                 <span class="product__valueoftype">прямой</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Тип посадки:</span>
                 <span class="product__valueoftype">Средняя посадка</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Тип карманов:</span>
                 <span class="product__valueoftype">без карманов</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Уход за вещами:</span>
                 <span class="product__valueoftype">бережная стирка при 30 градусах</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Рисунок:</span>
                 <span class="product__valueoftype">без рисунка</span>
               </div>
-              <!-- /.product__type -->
+              <!-- /.description__type -->
 
-              <div class="product__type">
+              <div class="description__type">
                 <span class="product__nameoftype">Назначение:</span>
                 <span class="product__valueoftype">повседневная</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Конструктивные элементы:</span>
                 <span class="product__valueoftype">Без разреза</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Пол:</span>
                 <span class="product__valueoftype">Женский</span>
               </div>
-              <!-- /.product__type -->
-              <div class="product__type">
+              <!-- /.description__type -->
+              <div class="description__type">
                 <span class="product__nameoftype">Комплектация:</span>
                 <span class="product__valueoftype">юбка</span>
               </div>
-              <!-- /.product__type -->
+              <!-- /.description__type -->
             </div>
             <!-- /.description__fullinfo -->
             <div class="feedbacks">
-              <span class="feedbacks__infotext">3 отзыва к товару</span>
+              <div class="feedbacks__blockname">
+                <span class="feedbacks__infotext">3 отзыва к товару</span>
+              </div>
+              <!-- /.feedbacks__blockname -->
               <div class="feedbacks__feedback">
                 <div class="feedbacks__wrap">
                   <div class="feedbacks__photo">
@@ -463,8 +469,104 @@
                 </div>
               </div>
               <!-- /.feedbacks__feedback -->
+              <div class="feedbacks__blockname feedbacks__blockname--newfeedback">
+                <span class="feedbacks__infotext">Добавить свой отзыв</span>
+              </div>
+              <form action="#" class="feedbacks__form">
+                <div class="input-group feedbacks__input-group">
+                  <label for="nameuser" class="label form__label feedbacks__label">Ваше имя *</label>
+                  <input type="text" name="username" class="input form__input feedbacks__input" id="nameuser">
+                </div>
+                <!-- /.feedbacks__input-group -->
+                <div class="input-group feedbacks__input-group">
+                  <label for="emailuser" class="label form__label feedbacks__label">e-mail *</label>
+                  <input type="text" name="useremail" class="input form__input feedbacks__input" id="emailuser">
+                </div>
+                <!-- /.feedbacks__input-group -->
+                <div class="input-group feedbacks__input-group feedbacks__input-group--full-width">
+                  <label for="feedbackuser" class="label form__label feedbacks__label">Ваш отзыв *</label>
+                  <textarea type="text" name="userfeedback" class="textarea form__textarea feedbacks__textareafeedback" id="feedbackuser"></textarea>
+                </div>
+                <!-- /.newfeedback-group -->
+                <div class="feedbacks__newfeeback-block">
+                  <div class="input-group feedbacks__input-group feedbacks__input-group--rating">
+                    <label for="ratinguser" class="label form__label">Оценка:</label>
+                    <div class="feedbacks__newrating" id="ratinguser">
+                      <img src="img/feedback/star-grey.png" id="1" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
+                      <img src="img/feedback/star-grey.png" id="2" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
+                      <img src="img/feedback/star-grey.png" id="3" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
+                      <img src="img/feedback/star-grey.png" id="4" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
+                      <img src="img/feedback/star-grey.png" id="5" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
+                    </div>
+                    <!-- /.feedbacks__newrating -->
+                  </div>
+                  <!-- /.feedbacks__input-group -->
+                  <button class="button feedbacks__addfeedback">Разместить отзыв</button>
+                </div>
+                <!-- /.feedbacks__newfeeback-block -->           
+              </form>
+              <!-- /.feedbacks__form -->
             </div>
             <!-- /.feedbacks -->
+            <div class="payandship">
+              <div class="payandship__blockname">
+                <span class="payandship__infotext">Как оплатить заказ</span>
+              </div>
+              <div class="payandship__payment">
+                <div class="payandship__payment-way">
+                  <div class="payandship__paymentnum">1</div>
+                  <span class="payandship__payment-text">Оплатить заказ можно наличными или банковской картой при получении. Вы также можете оплатить покупки банковской картой при оформлении заказа.</span>
+                  <!-- /.payandship__payment-first -->
+                </div>
+                <!-- /.payandship__payment-way -->
+                <div class="payandship__payment-way">
+                  <div class="payandship__paymentnum">2</div>
+                  <span class="payandship__payment-text">Доступные способы оплаты заказов: наличные, банковские карты, PayPal.</span>
+                </div>
+                <!-- /.payandship__payment-way -->
+                <div class="payandship__payment-way">
+                  <div class="payandship__paymentnum">3</div>
+                  <span class="payandship__payment-text">Вы сможете проверить соответствие комплектации заказа и подлинность вещей в присутствии курьера.</span>
+                </div>
+                <!-- /.payandship__payment-way -->
+                <div class="payandship__paysecurity">
+                  <div class="payandship__security-img">
+                    <img src="img/product/byvisa.png" alt="visa">
+                  </div>
+                  <p class="payandship__security-text">Все операции с банковскими картами проводятся в соответствии с требованиями VISA International, MasterCard Worldwide. Безопасность платежей гарантируется использованием SSL протокола для передачи конфиденциальной информации.</p>
+                  <!-- /.payandship__security-img -->
+                </div>
+                <!-- /.payandship__paysecurity -->
+              </div>
+              <!-- /.payandship__payment -->
+              <div class="payandship__blockname payandship__blockname--delivery">
+                <span class="payandship__infotext">Доставка</span>
+              </div>
+              <div class="payandship__delivery">
+                <div class="payandship__type">
+                  <span class="payandship__nameoftype">Ваш населенный пункт:</span>
+                  <span class="payandship__valueoftype">Екатеринбург</span>
+                </div>
+                <!-- /.payandship__type -->
+                <div class="payandship__type">
+                  <span class="payandship__nameoftype">Способ доставки:</span>
+                  <span class="payandship__valueoftype">самовывоз, курьер</span>
+                </div>
+                <!-- /.payandship__type -->
+                <div class="payandship__type">
+                  <span class="payandship__nameoftype">Ближайшая дата доставки:</span>
+                  <span class="payandship__valueoftype">11.08.2016</span>
+                </div>
+                <!-- /.payandship__type -->
+                <div class="payandship__type">
+                  <span class="payandship__nameoftype">Стоимость доставки:</span>
+                  <span class="payandship__valueoftype payandship__valueoftype--pink">Бесплатно</span>
+                </div>
+                <!-- /.payandship__type -->
+              </div>
+              <!-- /.payandship__delivery -->
+            </div>
+            <!-- /.payandship -->
           </div>
           <!-- /.description__block -->
         </div>
@@ -561,6 +663,19 @@
       <!-- /.modalsearch__dialog -->
     </div>
     <!-- /.modalsearch -->
+
+
+     <!-- ТАБЛИЦА РАЗМЕРОВ -->
+     <div class="sizechart">
+      <div class="sizechart__dialog">
+        <div class="sizechart__close"></div>
+        
+      </div>
+      <!-- /.sizechart__dialog -->
+    </div>
+    <!-- /.sizechart -->
+
+
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>

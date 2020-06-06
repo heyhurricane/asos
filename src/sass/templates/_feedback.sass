@@ -1,25 +1,29 @@
 .feedbacks
+  display: none
+  &--visible
+    display: initial
   &__wrap
     display: flex
-    margin-top: 2rem
+    margin-top: 2.2rem
     align-items: center
-    margin-bottom: 3.7rem
+    // margin-bottom: 3.7rem
   &__feedback
     display: flex
-    margin-top: 2rem
+    // margin-top: 2rem
     align-items: center
-    margin-bottom: 3.7rem
+    margin-bottom: 1.6rem
     flex-direction: column
     align-items: stretch
-    // position: relative
-    // &::after
-    //   content: ''
-    //   width: 100%
-    //   height: 1px
-    //   background-color: #c9c9c9
-    //   display: block
-    //   margin-top: 5rem
-    //   position: absolute
+    position: relative
+    &::after
+      content: ''
+      width: 100%
+      height: 1px
+      background-color: #c9c9c9
+      display: block
+      // margin-top: 5rem
+      position: absolute
+      bottom: -1.9rem
   &__infotext
     color: #141414
     font-family: 'Gotham Pro-Medium'  
@@ -29,11 +33,11 @@
     display: flex
     flex-direction: column
     align-items: stretch
-    flex-basis: 90%
+    flex-basis: 95%
   &__block
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: flex-start
     &-text
       flex-basis: 100%
   &__text, &__admin-answer
@@ -49,37 +53,47 @@
     font-size: 0.86rem
     text-transform: uppercase
   &__name
-    // flex-basis: 56%
+    flex-basis: 45.8%
   &__helpful
-    // flex-basis: 31%
-    margin-right: 4.3rem
+    margin-right: 4rem
+    flex-basis: 37.2%
   &__rating
-    // flex-basis: 24.4%
     display: flex
     align-items: center
-    margin-right: 1.7rem
+    margin-right: 1.4rem
+    flex-basis: 27.2%
     &-stars
       margin-right: 0.4rem
+      &--new
+        cursor: pointer
+        margin-right: 0.05rem
   &__date
     // flex-basis: 20%
     margin-left: 2.9rem
     margin-right: -3.8rem
     color: #808080
+    flex-basis: 16.4%
   &__thumbsdown
     transform: translateY(0.2rem)
-  &__helptext, &__rating-text
+    margin-right: -0.2rem
+    cursor: pointer
+  &__thumbsup
+    cursor: pointer
+  &__helptext
     margin-right: 0.7rem
+  &__rating-text
+    margin-right: 0.8rem
   &__helpnumber
     margin-right: 0.9rem
   &__answer
     background-color: #ffeff7
     width: 100%
-    // height: 5rem
-    top: -1.9rem
+    top: 1.9rem
     position: relative
     display: flex
     align-items: center
     padding: 2.43rem 0 2.43rem 2.43rem
+    margin-bottom: 2.3rem
     &::before
       content: ' '
       position: absolute
@@ -101,8 +115,62 @@
     letter-spacing: 2px
   &__logo
     margin-right: 2.57rem
+  &__blockname
+    margin-bottom: 0rem
+    &--newfeedback
+      margin-top: 11.15rem
+      margin-bottom: 3.73rem
+  &__form
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    margin: auto
+    max-width: 100%
+    padding-right: 3.1rem
+  &__input-group
+    display: flex
+    flex-direction: column
+    flex-basis: 48.6%
+    margin-bottom: 1.28rem
+    position: relative
+    &--rating
+      flex-direction: row
+      align-items: center
+      margin-bottom: 0
+    &--full-width
+      flex-basis: 100%
+      margin-bottom: 1.58rem
+  &__input, &__textareafeedback
+    border: 1px solid #d1d5db
+    background-color: $light
+    margin-top: 1.06rem
+    font-family: 'Gotham Pro-Medium'
+    font-size: 1.2rem
+    padding: 0.9rem 0.9rem 1rem
+    
+  &__textareafeedback
+    resize: none
+    height: 12rem
+  &__newfeeback-block
+    display: flex
+    justify-content: space-between
+    flex-basis: 100%
+    align-items: center
+  &__addfeedback
+    background-color: $dark
+    font-family: 'Gotham Pro-Medium'
+    font-size: 1rem
+    padding: 0.54rem 2rem
+    letter-spacing: 0.2px
+    &:hover
+      transition: background 0.3s
+      background-color: $pink
+  &__label
+    letter-spacing: 0.3px
 
 .div
   display: flex
-  justify-content: space-between
+  justify-content: flex-start
   align-items: center
+  flex-basis: 54.2%

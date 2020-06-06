@@ -1,22 +1,24 @@
 .description
+  padding-bottom: 5rem
   &__menu
-    // display: flex
     position: relative
     padding: 0 5.5rem
     &::after
       content: ''
-      width: 100%
+      width: 88.8%
       height: 1px
       background-color: #c9c9c9
       display: block
       margin-top: 1rem
       position: absolute
   &__name
-    margin-right: 3.29rem
+    margin-right: 2.89rem
     color: #141414
     font-family: 'Gotham Pro-Medium'    
     font-size: 1rem
     text-transform: uppercase
+    letter-spacing: 1.6px
+    cursor: pointer
     &--active 
       color: #808080
       position: relative
@@ -28,9 +30,10 @@
         display: block
         margin-top: 1rem
         position: absolute
+        left: 0
   &__block
     margin-top: 3.52rem
-    padding: 0 5.5rem
+    padding: 0 5rem 0 5.5rem
   &__infotext
     color: #141414
     font-family: 'Gotham Pro-Medium'  
@@ -38,7 +41,7 @@
     text-transform: uppercase
     &::after
       content: ''
-      width: 50%
+      width: 38.9%
       height: 1px
       background-color: #c9c9c9
       display: block
@@ -46,3 +49,14 @@
       margin-bottom: 0.71rem
   &__fullinfo
     display: none
+    &--visible
+      display: initial
+  &__type
+    &::after
+      content: ''
+      width: 38.9%
+      height: 1px
+      background-color: #c9c9c9
+      display: block
+      margin-top: 0.71rem
+      margin-bottom: 0.71rem
