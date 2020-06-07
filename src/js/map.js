@@ -35,7 +35,7 @@ var check_if_load = false;
             // Необходимо указать данный тип макета.
             iconLayout: 'default#image',
             // Своё изображение иконки метки.
-            iconImageHref: '../img/mappin.png',
+            iconImageHref: 'img/mappin.png',
             // Размеры метки.
             iconImageSize: [102, 87],
             // Смещение левого верхнего угла иконки относительно
