@@ -1,12 +1,26 @@
-@media screen and ( max-width: 1550px )
+@media screen and ( max-width: 1562px )
   .menu
     &__logo
       margin-right: 10rem
   .header
     &__nav-item
       margin-right: 2rem
+  .promocode
+    &__button
+      padding: 0.57rem 0.83rem
+  .feedbacks
+    &__name
+      flex-basis: 30%
+  .div
+    flex-basis: 70%
   
-  
+@media screen and ( max-width: 1500px )
+  .product-sliderwrap 
+    top: -7rem
+  .product
+    &__sizes
+      max-width: 100%
+
 @media screen and ( max-width: 1353px )
   html
     font-size: 12px
@@ -38,6 +52,15 @@
   .footer
     &__col
       margin-right: 0
+  .cart
+    &__row
+      align-items: center
+    &__col1 
+      flex-basis: 22.65%
+    &__info, &__price, &__quantity, &__amount, &__delete
+      margin: 0
+ 
+
 
 @media screen and ( max-width: 1200px )
   .menu
@@ -58,11 +81,37 @@
       font-size: 1.07rem
     &__color
       font-size: 0.8rem
+  .cart
+    &__name
+      font-size: 1.17rem
+  .promocode
+    &__button
+      font-size: 0.8rem
+    &__input
+      &::placeholder
+        font-size: 1rem
+  .product
+    &__block 
+      padding: 0  
+  .payment
+    &__type
+      &--yandex 
+        width: 6.91rem
+  .feedbacks
+    &__name, &__helptext, &__rating-text, &__helpnumber, &__date 
+      font-size: 0.68rem
+      
 
 @media screen and ( max-width: 1100px ) 
  .header
     &__nav-item 
       margin-right: 1.5rem
+ .promocode
+    &__continue, &__update
+      padding: 0.61rem 0.91rem
+    &__input-group
+      padding: 1rem
+
 
 @media screen and ( max-width: 1035px )
   .hero
@@ -78,6 +127,11 @@
     max-width: 17.84rem
   .row
     padding: 0 6.7rem 0 5.3rem
+  .cart
+    &__image
+      img
+        max-width: 80%
+
 
 @media screen and ( max-width: 991px )   
   .menu
@@ -134,7 +188,7 @@
     &__row
       padding: 0
     &__settings
-      padding: 0 6.5% 0 14.8%
+      padding: 0 10%
     &__name 
       font-size: 1.57rem
     &__color
@@ -163,7 +217,42 @@
     &__col
       &--account
         margin-left: 0
-   
+  .contactshero
+    &__nav 
+      max-width: 19.16rem
+  .contacts
+    &__heading 
+      font-size: 1.27rem
+  .cart
+    &__row
+      padding: 0
+  .carthero
+    &__nav
+      max-width: 25rem
+  .promocode
+    &__row
+      flex-direction: column
+      padding: 0
+    &__col40
+      margin-top: 2rem
+      flex-basis: 100%
+      padding: 0
+    &__col60 
+      flex-basis: 100%
+      padding: 0
+  .product
+    &__block
+      flex-direction: column
+    &__sale-icon
+      right: 5%
+    &__sizes
+      max-width: 32rem
+    &__payment
+      max-width: 35rem
+  .description
+    &__block, &__menu
+      padding: 0
+    
 
 
 
@@ -172,12 +261,84 @@
     &__settings
       flex-direction: column
       align-items: start
+      padding: 0
+      max-width: 85.4%
+      margin: auto
+      margin-bottom: 2.1rem
     &__show
       margin-bottom: 1.5rem
-
+  .contacts
+    &__row
+      flex-direction: column
+      padding: 0
+  .feedbacks
+    &__block
+      align-items: stretch
+      flex-direction: column
+  .div
+    margin-top: 1rem
+    
 @media screen and ( max-width: 760px )   
-  .catalog__card
-    flex-basis: 100%
+  .catalog
+    padding: 5rem 0 8.3rem
+    &__card
+      flex-basis: 100%
+    &__settings
+      padding: 0
+      max-width: 262px
+    &__filters
+      flex-direction: column
+    &__quantity, &__filter
+      margin-bottom: 1.5rem
+  .cart
+    padding: 4.8rem 0 0
+    &__row
+      flex-direction: column
+      align-items: stretch
+      max-width: 40%
+      margin: auto
+      margin-bottom: 5rem
+      &--name
+        display: none
+    &__hidden
+      &--name, &--btn
+        display: initial
+    &__close
+      display: none
+    &__price, &__amount 
+      display: inline-block
+    &__col
+      &2, &3, &4, &5, &6
+        flex-basis: 100%
+        display: flex
+        justify-content: space-between
+        margin-top: 1rem
+        width: 250px
+      &3, &6
+        margin-top: 2rem
+      &6
+        margin: auto
+    &__photo
+      display: none
+    
+    &__image
+      width: 250px
+      height: 250px
+      &1
+        background: url('../img/cart/cart1big.jpg') no-repeat center
+      &2
+        background: url('../img/cart/cart2big.jpg') no-repeat center
+      &3
+        background: url('../img/cart/cart3big.jpg') no-repeat center
+
+@media screen and ( max-width: 611px ) 
+  .feedbacks
+    &__helpful 
+      margin-right: 0
+      flex-basis: 40%
+    &__rating
+      flex-basis: 25%
+      margin-right: 0
 
 @media screen and ( max-width: 576px )   
   .menu
@@ -188,14 +349,6 @@
       margin-right: 3rem
     &-button 
       top: 4.4rem
-  .catalog
-    padding: 5rem 0 8.3rem
-    &__settings
-      padding: 0
-    &__filters
-      flex-direction: column
-    &__quantity, &__filter
-      margin-bottom: 1.5rem
   .title
     font-size: 1.36rem
   .row
@@ -208,6 +361,101 @@
       max-width: 100%
     &__logo
       display: block
+  .contacts
+    &__input-group
+      flex-basis: 100%
+    &__address, &__email, &__phone-number, &__skype-account 
+      font-size: 1.2rem
+    &__text, &__label
+      font-size: 1rem
+  .cart
+    &__row 
+      align-items: center
+    &__col6
+      margin: 0
+  .product
+    &__image
+      &--small
+          max-width: 80%
+    &swiper
+      &-slide
+        margin-right: 0
+    &-sliderwrap
+      max-width: 100%
+      margin-left: 1rem
+    &__nameoftype, &__valueoftype
+      font-size: 1.2rem
+    &__text, &__colortext
+      font-size: 1.2rem
+    &__socialtext, &__paytext
+      font-size: 1.3rem
+  .feedbacks
+    &__text, &__admin-answer
+      font-size: 1.5rem
+    &__helpful, &__rating
+      margin-bottom: 1rem
+    &__date
+      margin: 0
+    &__helptext, &__rating-text, &__helpnumber, &__date 
+      font-size: 0.9rem
+    &__name
+      font-size: 0.7rem
+    &__input-group 
+      flex-basis: 100%
+      &--rating
+        flex-basis: 50%
+        margin-bottom: 2rem
+    &__newfeeback-block
+      flex-direction: column
+      align-items: flex-start
+    &__form
+      padding: 0
+    &__blockname
+      &--newfeedback
+        margin-top: 5rem
+    &__label
+      font-size: 1rem
+  .form
+    &__label
+      font-size: 1rem
+  .div
+    flex-direction: column
+    align-items: flex-start
+    justify-content: center
+  .description
+    &__menu
+      flex-direction: column
+      display: flex
+      &::after
+        margin-right: 0
+        bottom: -1rem
+    &__name
+      margin-bottom: 1rem
+      &::after
+        display: none
+      &--active
+        color: $pink
+  .payandship
+    &__payment
+      &-text 
+        font-size: 1.2rem
+    &__security
+      &-text 
+        font-size: 1rem
+    &__nameoftype, &__valueoftype 
+      font-size: 1.1rem
+    
+
+@media screen and ( max-width: 476px )  
+  .promocode
+    &__buttons
+      flex-direction: column
+      align-items: center
+    &__input-group
+      padding: 0.5rem
+    &__continue, &__update 
+      width: 100%;
+      margin-bottom: 1rem
 
 
 @media screen and ( max-width: 375px )   
@@ -219,6 +467,15 @@
     &__place
       img
         margin-right: 0
+  .product
+    &__addbasket
+      font-size: 0.98rem
+      margin-right: 1.83rem
+  .payment
+    align-items: flex-start
+    flex-direction: column
+    &__type
+      margin-bottom: 1rem
 
 
 @media screen and ( max-height: 768px )  
