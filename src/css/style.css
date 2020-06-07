@@ -1334,7 +1334,11 @@ img {
     justify-content: space-between;
     max-width: 83%; }
   .product__favourite {
-    cursor: pointer; }
+    cursor: pointer;
+    background: transparent url("../img/product/heart.png") no-repeat center;
+    border: none;
+    width: 28px;
+    height: 24px; }
 
 .sizechart__link {
   margin-top: 5.5px;

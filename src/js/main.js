@@ -494,11 +494,11 @@ $('.popularswiper-slide').on('click', function() {
 $('.productswiper-slide').on('click', function() {
     var ID = $(this).data('swiperSlideIndex')+1;
     if (ID=='1') {
-      $(".product__image").attr("src", "../img/product/photo1.jpg");}
+      $(".product__image").attr("src", "img/product/photo1.jpg");}
     if (ID=='2') {
-      $(".product__image").attr("src", "../img/product/photo2.jpg");}
+      $(".product__image").attr("src", "img/product/photo2.jpg");}
     if (ID=='3') {
-      $(".product__image").attr("src", "../img/product/photo3.jpg");}
+      $(".product__image").attr("src", "img/product/photo3.jpg");}
 });
 
 
@@ -537,11 +537,11 @@ $('.productswiper-slide').on('click', function() {
 $('.feedbacks__rating-stars--new').on('click', function() {
   var rating = $(this).attr('id');
   $('.feedbacks__rating-stars--new').each(function (index, value) {
-    $(value).attr("src", "../img/feedback/star-grey.png");
+    $(value).attr("src", "img/feedback/star-grey.png");
   });
     $('.feedbacks__rating-stars--new').each(function (index, value) {
       if ($(value).attr('id')<=rating) {
-        $(value).attr("src", "../img/feedback/star-pink.png");
+        $(value).attr("src", "img/feedback/star-pink.png");
       }
     });
 });
@@ -549,11 +549,10 @@ $('.feedbacks__rating-stars--new').on('click', function() {
 var heartFull = false;
 $('.product__favourite').on('click', function() {
   if (heartFull==true) {
-   
-    $(this).attr("src", "../img/product/heart.png");
+    document.getElementById('favourite').style.backgroundImage = "url('img/product/heart.png')";
   }
   else {
-    $(this).attr("src", "../img/product/heartfull.png");
+    document.getElementById('favourite').style.backgroundImage = "url('img/product/heartfull.png')";
   }
   heartFull = !(heartFull);
 });
