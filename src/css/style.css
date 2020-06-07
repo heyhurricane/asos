@@ -219,6 +219,19 @@ img {
       filter: invert(1); }
   .menu__basket {
     position: relative; }
+  .menu-button {
+    display: none;
+    z-index: 10; }
+    .menu-button-activ {
+      height: 0 !important; }
+      .menu-button-activ::before {
+        margin-top: 0;
+        transform: rotate(45deg) translateY(10px);
+        background-color: #2d3a4b; }
+      .menu-button-activ::after {
+        margin-top: 0;
+        transform: rotate(-45deg) translateY(-10px);
+        background-color: #2d3a4b; }
 
 .nav {
   text-transform: uppercase; }
@@ -253,24 +266,6 @@ img {
   align-items: center; }
   .account__link {
     margin-right: 1.3rem; }
-
-.menu-button {
-  display: none;
-  z-index: 10; }
-
-.menu-button-activ {
-  height: 0 !important;
-  background: url("../img/open-menu.svg"); }
-
-.menu-button-activ:before {
-  margin-top: 0;
-  transform: rotate(45deg) translateY(10px);
-  background-color: #2d3a4b; }
-
-.menu-button-activ:after {
-  margin-top: 0;
-  transform: rotate(-45deg) translateY(-10px);
-  background-color: #2d3a4b; }
 
 .burger-menu {
   display: none;
@@ -605,7 +600,8 @@ img {
     color: #252525; }
   .modalbasket__buttonbasket, .modalbasket__buttonbuy {
     padding: 0.69rem 1.76rem;
-    font-size: 1rem; }
+    font-size: 1rem;
+    text-decoration: none; }
     .modalbasket__buttonbasket:hover, .modalbasket__buttonbuy:hover {
       transition: color 0.3s;
       background-color: #5a52a5; }
@@ -1815,6 +1811,16 @@ img {
 
 .contacts {
   padding: 5.87rem 0 7.86rem; }
+  .contactshero__nav {
+    border-radius: 21px;
+    background-color: #ef50a2;
+    max-width: 15.76rem;
+    margin: auto;
+    padding: 0.97rem 2.5rem;
+    margin-top: 2.79rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
   .contacts__heading {
     color: #2d3a4b;
     font-family: 'Gotham Pro-Medium';
@@ -1907,6 +1913,267 @@ img {
   max-width: 100%;
   height: 37.93rem;
   z-index: 199; }
+
+.cart {
+  padding: 7.1rem 0 0; }
+  .carthero__subtitle {
+    color: #ffffff; }
+  .carthero__nav {
+    border-radius: 21px;
+    background-color: #ef50a2;
+    max-width: 22.21rem;
+    margin: auto;
+    padding: 0.97rem 2.5rem;
+    margin-top: 2.79rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .cart__row {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    margin-bottom: 3.89rem;
+    padding-left: 5.4rem; }
+    .cart__row--name {
+      position: relative; }
+      .cart__row--name::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #c9c9c9;
+        display: block;
+        bottom: -1.4rem;
+        position: absolute; }
+    .cart__row--product {
+      position: relative;
+      margin-bottom: 4.9rem; }
+      .cart__row--product::after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        background-color: #c9c9c9;
+        display: block;
+        bottom: -2.4rem;
+        position: absolute; }
+  .cart__col1 {
+    flex-basis: 16.65%; }
+  .cart__col2 {
+    flex-basis: 24%; }
+  .cart__col3 {
+    flex-basis: 19.5%;
+    text-align: center; }
+  .cart__col4 {
+    flex-basis: 8.6%; }
+  .cart__col5 {
+    flex-basis: 16.4%;
+    text-align: center; }
+  .cart__col6 {
+    flex-basis: 7.5%; }
+  .cart__info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4.4rem; }
+  .cart__colname {
+    color: #252525;
+    font-family: 'Gotham Pro-Medium';
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px; }
+  .cart__name {
+    color: #2d3a4b;
+    font-family: 'Gotham Pro-Medium';
+    font-size: 1.57rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.64px;
+    display: block;
+    margin-bottom: 0.8rem; }
+  .cart__color {
+    color: #40494e;
+    font-size: 0.93rem;
+    font-weight: 400; }
+  .cart__price, .cart__amount {
+    color: #ef50a2;
+    font-family: 'Gotham Pro Black';
+    font-size: 1.28rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 4.45rem; }
+  .cart__quantity {
+    background: url("../img/catalog/arrow-down.svg") no-repeat right;
+    background-position-x: 81.9%;
+    color: #2d3a4b;
+    border: 1px solid #2d3a4b;
+    font-family: 'Gotham Pro-Medium';
+    font-size: 0.93rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 4.84rem;
+    padding: 8px 0 8px 12.1px;
+    cursor: pointer;
+    margin-top: 4.13rem;
+    margin-left: 0.7rem; }
+  .cart__delete {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 4.6rem; }
+  .cart__close {
+    cursor: pointer;
+    background: transparent url("../img/cart/close.png") no-repeat center;
+    border: none;
+    width: 19px;
+    height: 19px; }
+
+.promocode {
+  box-shadow: inset 0 -1px 0 #d1d5db;
+  background-color: #f7f7f7;
+  padding: 7.1rem 0 7rem; }
+  .promocode__row {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5.4rem; }
+  .promocode__col60 {
+    flex-basis: 53.4%; }
+  .promocode__col40 {
+    flex-basis: 42.6%;
+    padding-right: 5.2rem; }
+  .promocode__heading {
+    color: #2d3a4b;
+    font-family: "Gotham Pro-Medium";
+    font-size: 1.57rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2.64px;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 4.2rem; }
+    .promocode__heading::after {
+      content: '';
+      position: absolute;
+      width: 22%;
+      height: 2px;
+      background-color: #2d3a4b;
+      display: block;
+      bottom: -0.5rem; }
+    .promocode__heading--amount {
+      color: #2d3a4b;
+      font-family: "Gotham Pro-Medium";
+      font-size: 1.57rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2.64px;
+      position: relative;
+      display: inline-block;
+      margin-bottom: 4.2rem; }
+      .promocode__heading--amount::after {
+        content: '';
+        position: absolute;
+        width: 29%;
+        height: 2px;
+        background-color: #2d3a4b;
+        display: block;
+        bottom: -0.5rem; }
+  .promocode__input-group {
+    padding: 3.57rem;
+    background-color: #eeeeee;
+    max-width: 100%;
+    display: flex;
+    align-items: stretch; }
+  .promocode__input {
+    padding: 0.92rem 0.92rem 1.02rem 1.4rem;
+    border: 1px solid #2d3a4b;
+    flex-basis: 67.95%;
+    letter-spacing: 0.1px; }
+    .promocode__input::-moz-placeholder {
+      color: #909090;
+      font-family: "Gotham Pro";
+      font-size: 1.07rem;
+      font-weight: 400; }
+    .promocode__input:-ms-input-placeholder {
+      color: #909090;
+      font-family: "Gotham Pro";
+      font-size: 1.07rem;
+      font-weight: 400; }
+    .promocode__input::-ms-input-placeholder {
+      color: #909090;
+      font-family: "Gotham Pro";
+      font-size: 1.07rem;
+      font-weight: 400; }
+    .promocode__input::placeholder {
+      color: #909090;
+      font-family: "Gotham Pro";
+      font-size: 1.07rem;
+      font-weight: 400; }
+  .promocode__button {
+    font-family: "Gotham Pro";
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.57rem 1.93rem;
+    border: none;
+    flex-basis: 32.15%; }
+    .promocode__button:hover {
+      transition: background 0.3s;
+      background-color: #ef50a2; }
+  .promocode__addcode {
+    margin-top: 2.9rem; }
+  .promocode__buttons {
+    margin-top: 2.5rem;
+    max-width: 37.14rem;
+    display: flex;
+    justify-content: space-between; }
+  .promocode__continue, .promocode__update {
+    background-color: #eeeeee;
+    color: #2d3a4b;
+    font-family: "Gotham Pro-Medium";
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.61rem 2.21rem;
+    letter-spacing: 0.8px; }
+    .promocode__continue:hover, .promocode__update:hover {
+      transition: background 0.3s;
+      background-color: #2d3a4b;
+      color: #ffffff; }
+  .promocode__allproducts {
+    border: 3px solid #ef50a2;
+    padding: 2.27rem 2.36rem; }
+  .promocode__product, .promocode__amount {
+    display: flex;
+    justify-content: space-between; }
+  .promocode__name, .promocode__price {
+    color: #2d3a4b;
+    font-family: "Gotham Pro-Medium";
+    font-size: 0.86rem;
+    text-transform: uppercase;
+    letter-spacing: 0.72px; }
+  .promocode__amount-text {
+    color: #2d3a4b;
+    font-family: "Gotham Pro-Medium";
+    font-size: 1.29rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.36px; }
+  .promocode__fullamount {
+    color: #2d3a4b;
+    font-family: "Gotham Pro-Medium";
+    font-size: 1.29rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.36px; }
+  .promocode__product {
+    position: relative;
+    margin-bottom: 2.37rem; }
+    .promocode__product::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background-color: #c9c9c9;
+      display: block;
+      bottom: -1.3rem;
+      position: absolute; }
 
 @media screen and (max-width: 1550px) {
   .menu__logo {

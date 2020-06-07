@@ -40,7 +40,7 @@ var check_if_load = false;
             iconImageSize: [102, 87],
             // Смещение левого верхнего угла иконки относительно
             // её "ножки" (точки привязки).
-            iconImageOffset: [-5, -38]
+            iconImageOffset: [-30, -110]
         });
 
     myMap.geoObjects.add(myPlacemark);    

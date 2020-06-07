@@ -15,8 +15,8 @@
           <a href="index.html" class="logo__link"><img src="img/catalog/logo.png" alt="asos"></a>
         </div>
         <nav class="nav menu__nav" id="menu">
-          <a href="index.html" class="header__nav-item">Домой</a>
-          <a href="catalog.html" class="header__nav-item header__nav-item--active">Каталог</a>
+          <a href="index.html" class="header__nav-item header__nav-item--active">Домой</a>
+          <a href="catalog.html" class="header__nav-item">Каталог</a>
           <a href="#" class="header__nav-item">О нас</a>
           <a href="#" class="header__nav-item">Партнерам</a>
           <a href="contacts.html" class="header__nav-item">Контакты</a>
@@ -56,8 +56,8 @@
                   <span class="modalbasket__amount">Итого: 7 489 ₽</span>
                 </div>
                 <div class="modalbasket__buttons">
-                  <a href="cart.html" class="button buttonbasket modalbasket__buttonbasket">Корзина</a>
-                  <a href="cart.html" class="button buttonbuy modalbasket__buttonbuy">Оформить</a>
+                  <button class="button buttonbasket modalbasket__buttonbasket">Корзина</button>
+                  <button class="button buttonbuy modalbasket__buttonbuy">Оформить</button>
                 </div>
                 <!-- /.modalbasket__buttons -->
                 <!-- /.modalbasket__total -->
@@ -94,169 +94,226 @@
   <main>
   <section class="section сataloghero">
     <div class="container">
-      <h1 class="title сataloghero__title">Юбки</h1>
-      <h2 class="subtitle сataloghero__subtitle">Традиционно модные юбки – это отличный вариант одежды для офиса, повседневных дел, торжественных случаев.</h2>
-      <div class="сataloghero__nav">
+      <h1 class="title сataloghero__title">Корзина</h1>
+      <h2 class="subtitle carthero__subtitle">Здесь собраны все товары, которые вы добавили в корзину покупок.<br>При необходимости вы можете отредактировать ваш заказ</h2>
+      <div class="carthero__nav">
         <a href="index.html" class="сataloghero__link">Главная</a>
         <img src="img/catalog/arrow.png" class="сataloghero__icon" alt="">
         <a href="catalog.html" class="сataloghero__link">Каталог</a>
         <img src="img/catalog/arrow.png" class="сataloghero__icon" alt="">
-        <a href="catalog.html" class="сataloghero__link">Юбки</a>
+        <a href="" class="сataloghero__link">Корзина</a>
       </div>
       <!-- /.cataloghero__nav -->
     </div>
     <!-- /.container -->
   </section>
   <!-- /.section сataloghero -->
-  <div class="section catalog">
+
+  <section class="section cart">
     <div class="container">
-      <div class="catalog__settings">
-        <div class="catalog__show">
-          <span class="catalog__count">Показано 1 - 12 из 30 товаров</span>
+      <div class="cart__row cart__row--name">
+        <div class="cart__col1">
+          <span class="cart__colname">Фото товара</span>
         </div>
-        <!-- /.catalog__show -->
-        <div class="catalog__filters">
-          <select class="catalog__quantity">
-            <option class="catalog__number">Показывать по 12</option>
-            <option class="catalog__number">Показывать по 50</option>
-            <option class="catalog__number">Показать все</option>
-          </select>
-          <select class="catalog__filter">
-            <option>Фильтр по</option>
-            <option>цене (🠕)</option>
-            <option>цене (🠗)</option>
-          </select>
-          <div class="icon-block">
-            <img src="img/catalog/filter.png" class="catalog__icon" alt="">
-            <img src="img/catalog/list.png" class="catalog__icon--list" alt="">
-          </div>
+        <!-- /.cart__col -->
+        <div class="cart__col2">
+          <span class="cart__colname">Название товара</span>
         </div>
-        <!-- /.catalog__filters -->
+        <!-- /.cart__col -->
+        <div class="cart__col3">
+          <span class="cart__colname">Цена</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col4">
+          <span class="cart__colname">Количество</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col5">
+          <span class="cart__colname">Итого</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col6"></div>
+        <!-- /.cart__col -->
       </div>
-      <!-- /.catalog__settings -->
-      <div class="row catalog__row">
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt1.jpg" alt="" class="catalog__image"></a>
+      <!-- /.cart__row -->
+      <div class="cart__row cart__row--product">
+        <div class="cart__col1">
+          <div class="cart__image">
+            <img src="img/cart/cart1.jpg" alt="" class="cart__photo">
           </div>
-          <span class="catalog__name">Юбка, ТВОЕ</span>
-          <span class="catalog__color">Цвет: темно-синий</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
         </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html">
-              <img src="img/catalog/sale-icon.png" alt="" class="catalog__sale-icon">
-              <img src="img/catalog/skirts/skirt2.jpg" alt="" class="catalog__image">
-            </a>
+        <!-- /.cart__col -->
+        <div class="cart__col2">
+          <div class="cart__info">
+            <span class="cart__name">Жилет, A.Karina</span>
+            <span class="cart__color">Цвет: серый</span>
           </div>
-          <span class="catalog__name">Юбка, ТВОЕ</span>
-          <span class="catalog__color">Цвет: серый</span>
-          <div class="catalog__prices">
-            <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
-            <span class="catalog__price catalog__price--old"><img src="img/rubblack.png" alt="рубль"> 659</span>
-          </div>
-          <!-- /.catalog__prices -->
+          <!-- /.cart__info -->
         </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt3.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, Oodji</span>
-          <span class="catalog__color">Цвет: бледно-розовый</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 499</span>
+        <!-- /.cart__col -->
+        <div class="cart__col3">
+          <span class="cart__price"><img src="img/pinkrub.png" alt="рубль"> 6 490</span>
         </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt4.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, КАЛIНКА</span>
-          <span class="catalog__color">Цвет: синий</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 2 810</span>
+        <!-- /.cart__col -->
+        <div class="cart__col4">
+          <select name="quantity" id="quantity" class="cart__quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
         </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt5.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, ТВОЕ</span>
-          <span class="catalog__color">Цвет: синий</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
+        <!-- /.cart__col -->
+        <div class="cart__col5">
+          <span class="cart__amount"><img src="img/pinkrub.png" alt="рубль"> 6 490</span>
         </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt6.jpg" alt="" class="catalog__image"></a>
+        <!-- /.cart__col -->
+        <div class="cart__col6">
+          <div class="cart__delete">
+            <button class="cart__close"></button>
           </div>
-          <span class="catalog__name">Юбка, Oodji</span>
-          <span class="catalog__color">Цвет: морская волна</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 399</span>
+          <!-- /.cart__delete -->
         </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt7.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">ARBOR VITAE</span>
-          <span class="catalog__color">Цвет: розовый</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 2 290</span>
-        </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt8.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, Oodji</span>
-          <span class="catalog__color">Цвет: бирюзовый</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 799</span>
-        </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt9.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">EMKA FASHION</span>
-          <span class="catalog__color">Цвет: синий</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 1 495</span>
-        </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt10.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, HELMIDGE</span>
-          <span class="catalog__color">Цвет: синий, оранжевый, желтый</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 6 990</span>
-        </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt11.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, Baon</span>
-          <span class="catalog__color">Цвет: салатовый</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 991</span>
-        </div>
-        <!-- /.card catalog__card -->
-        <div class="card catalog__card">
-          <div class="catalog__photo">
-            <a href="product.html"><img src="img/catalog/skirts/skirt12.jpg" alt="" class="catalog__image"></a>
-          </div>
-          <span class="catalog__name">Юбка, Oodji</span>
-          <span class="catalog__color">Цвет: персиковый</span>
-          <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
-        </div>
-        <!-- /.card catalog__card -->
+        <!-- /.cart__col -->
       </div>
-      <!-- /.row -->
-      <button class="button button--secondary catalog__button">Показать еще 12 товаров</button>
+      <!-- /.cart__row -->
+      <div class="cart__row cart__row--product">
+        <div class="cart__col1">
+          <div class="cart__image">
+            <img src="img/cart/cart2.jpg" alt="" class="cart__photo">
+          </div>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col2">
+          <div class="cart__info">
+            <span class="cart__name">Юбка, Oodji</span>
+            <span class="cart__color">Цвет: синий</span>
+          </div>
+          <!-- /.cart__info -->
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col3">
+          <span class="cart__price"><img src="img/pinkrub.png" alt="рубль"> 799</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col4">
+          <select name="quantity" id="quantity" class="cart__quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col5">
+          <span class="cart__amount"><img src="img/pinkrub.png" alt="рубль"> 1 598</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col6">
+          <div class="cart__delete">
+            <button class="cart__close"></button>
+          </div>
+          <!-- /.cart__delete -->
+        </div>
+        <!-- /.cart__col -->
+      </div>
+      <!-- /.cart__row -->
+      <div class="cart__row cart__row--product">
+        <div class="cart__col1">
+          <div class="cart__image">
+            <img src="img/cart/cart3.jpg" alt="" class="cart__photo">
+          </div>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col2">
+          <div class="cart__info">
+            <span class="cart__name">Брюки, ТВОЕ</span>
+            <span class="cart__color">Цвет: темно-синий</span>
+          </div>
+          <!-- /.cart__info -->
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col3">
+          <span class="cart__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col4">
+          <select name="quantity" id="quantity" class="cart__quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col5">
+          <span class="cart__amount"><img src="img/pinkrub.png" alt="рубль"> 599</span>
+        </div>
+        <!-- /.cart__col -->
+        <div class="cart__col6">
+          <div class="cart__delete">
+            <button class="cart__close"></button>
+          </div>
+          <!-- /.cart__delete -->
+        </div>
+        <!-- /.cart__col -->
+      </div>
+      <!-- /.cart__row -->
     </div>
     <!-- /.container -->
-  </div>
-  <!-- /.catalog -->
+  </section>
+  <!-- /.section cart -->
+
+  <section class="section promocode">
+    <div class="container">
+      <div class="promocode__row">
+        <div class="promocode__col60">
+          <h2 class="promocode__heading">Купон на скидку</h2>
+          <form class="promocode__addcode">
+            <div class="promocode__input-group">
+              <input type="text" name="code" class="input form__input promocode__input" id="promo" placeholder="Введите номер купона на скидку">
+              <button type="submit" class="button promocode__button">Применить код</button>
+            </div>
+            <div class="promocode__buttons">
+              <button class="button promocode__continue">Продолжить покупки</button>
+              <button class="button promocode__update">Обновить корзину</button>
+            </div>
+            <!-- /.promocode__buttons -->
+            <!-- /.promocode__input-group -->  
+          </form>
+          <!-- /.promocode__addcode -->
+        </div>
+        <!-- /.promocode__col -->
+        <div class="promocode__col40">
+          <h2 class="promocode__heading--amount">Сумма итого</h2>
+          <div class="promocode__allproducts">
+            <div class="promocode__product">
+              <span class="promocode__name">Жилет, A.Karina</span>
+              <span class="promocode__price"><img src="img/cart/rubsmall.png" alt="рубль"> 6490</span>
+            </div>
+            <!-- /.promocode__product -->
+            <div class="promocode__product">
+              <span class="promocode__name">Юбка, Oodji</span>
+              <span class="promocode__price"><img src="img/cart/rubsmall.png" alt="рубль"> 1598</span>
+            </div>
+            <!-- /.promocode__product -->
+            <div class="promocode__product">
+              <span class="promocode__name">Брюки, ТВОЕ</span>
+              <span class="promocode__price"><img src="img/cart/rubsmall.png" alt="рубль"> 599</span>
+            </div>
+            <!-- /.promocode__product -->
+            <div class="promocode__amount">
+              <span class="promocode__amount-text">Итого</span>
+              <span class="promocode__fullamount"><img src="img/cart/ruble.png" alt="рубль"> 7687</span>
+            </div>
+          </div>
+          <!-- /.promocode__allproducts -->
+        </div>
+        <!-- /.promocode__col -->
+      </div>
+      <!-- /.promocode__row -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.section promocode -->
+
 
   <section class="section shop">
     <div class="container shop__container">

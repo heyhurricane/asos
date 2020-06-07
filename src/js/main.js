@@ -434,24 +434,6 @@ $('.popularswiper-slide').on('click', function() {
 
   // бургер-меню
   
-  $("#menu").on("click", "a", function (event) {
-    event.preventDefault();
-    let id = $(this).attr('href'),
-      top = $(id).offset().top;
-    $('body,html').animate({
-      scrollTop: top - 60
-    }, 1500);
-  });
-
-  $("#burger-menu").on("click", "a", function (event) {
-    event.preventDefault();
-    let id = $(this).attr('href'),
-      top = $(id).offset().top;
-    $('body,html').animate({
-      scrollTop: top - 60
-    }, 1500);
-  });
-
   var menuButton = $('.menu-button');
   var burgerMenu = $('.burger-menu');
   var menuButtonActive = $('.menu-button-activ')

@@ -51,8 +51,6 @@
 
 
 .menu
-  // z-index: 99
-  // padding-top: 3.6rem
   display: flex
   justify-content: space-between
   &__logo
@@ -63,6 +61,21 @@
       filter: invert(1)
   &__basket
     position: relative
+  &-button
+    display: none
+    z-index: 10
+    &-activ 
+      height: 0!important
+      // background: url('../img/open-menu.svg')
+      &::before 
+        margin-top: 0
+        transform: rotate(45deg) translateY(10px)
+        background-color: $dark
+      &::after 
+        margin-top: 0
+        transform: rotate(-45deg) translateY(-10px)
+        background-color: $dark
+
 
 .nav
   text-transform: uppercase
@@ -98,21 +111,6 @@
   &__link
     margin-right: 1.3rem
 
-
-.menu-button
-  display: none
-  z-index: 10
-.menu-button-activ 
-    height: 0!important
-    background: url('../img/open-menu.svg')
-.menu-button-activ:before 
-    margin-top: 0
-    transform: rotate(45deg) translateY(10px)
-    background-color: $dark
-.menu-button-activ:after 
-  margin-top: 0
-  transform: rotate(-45deg) translateY(-10px)
-  background-color: $dark
   
 .burger-menu
   display: none
