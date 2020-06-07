@@ -8,10 +8,14 @@ $(document).ready(function () {
     var windowHeight = $(window).height();
       if ($(this).scrollTop() > 0) {
           $('.scroll-up').fadeIn();
-          document.getElementById("headerwrap").style.background = "#5a52a5";
+          if (document.getElementById("headerwrap")!==null) {
+            document.getElementById("headerwrap").style.background = "#5a52a5";
+          }
       } else {
           $('.scroll-up').fadeOut();
-          document.getElementById("headerwrap").style.background = "transparent";
+          if (document.getElementById("headerwrap")!==null) {
+            document.getElementById("headerwrap").style.background = "transparent";
+          }
       }
     
   });
@@ -553,9 +557,7 @@ $('.feedbacks__rating-stars--new').on('click', function() {
   $('.feedbacks__rating-stars--new').each(function (index, value) {
     $(value).attr("src", "../img/feedback/star-grey.png");
   });
-    console.log('yea');
     $('.feedbacks__rating-stars--new').each(function (index, value) {
-      console.log($(value).attr('id'));
       if ($(value).attr('id')<=rating) {
         $(value).attr("src", "../img/feedback/star-pink.png");
       }
@@ -564,7 +566,6 @@ $('.feedbacks__rating-stars--new').on('click', function() {
 
 var heartFull = false;
 $('.product__favourite').on('click', function() {
-  console.log(heartFull);
   if (heartFull==true) {
    
     $(this).attr("src", "../img/product/heart.png");
@@ -575,12 +576,8 @@ $('.product__favourite').on('click', function() {
   heartFull = !(heartFull);
 });
 
-
   // Маска для телефона
   $('[type=tel]').mask('+7(000) 000-00-00');
-
-
-
 
   new WOW().init();
 
