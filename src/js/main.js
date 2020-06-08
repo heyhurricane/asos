@@ -217,6 +217,22 @@ var mySwiper2 = new Swiper ('.popularswiper-container', {
   },
 });
 
+var mySwiper2small = new Swiper ('.popularsmallswiper-container', {
+  slidesPerView: 1,
+  loop: true,
+  spaceBetween: 20,
+  pagination: {
+    el: '.popularsmallswiper-pagination',
+    type: 'bullets', 
+  },
+  navigation: {
+    nextEl: '.popularsmallswiper-button-next',
+    prevEl: '.popularsmallswiper-button-prev',
+  },
+});
+
+
+
 // $('.sliderwrap .popularswiper-container').each(function(index, value) {
  
 //   var mySwiper2 = new Swiper(value, {

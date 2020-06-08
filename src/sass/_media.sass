@@ -59,6 +59,9 @@
       flex-basis: 22.65%
     &__info, &__price, &__quantity, &__amount, &__delete
       margin: 0
+  .popular
+    &__name
+      font-size: 1.37rem
  
 
 
@@ -100,6 +103,9 @@
   .feedbacks
     &__name, &__helptext, &__rating-text, &__helpnumber, &__date 
       font-size: 0.68rem
+  .popular
+    &__name
+      font-size: 1.07rem
       
 
 @media screen and ( max-width: 1100px ) 
@@ -252,6 +258,11 @@
   .description
     &__block, &__menu
       padding: 0
+  .sliderwrap
+    display: none
+  .sliderwrapsmall
+    display: block
+    max-width: 39.9rem
     
 
 
@@ -380,6 +391,9 @@
     &swiper
       &-slide
         margin-right: 0
+      &-button
+        &-prev, &-next
+          top: 150%
     &-sliderwrap
       max-width: 100%
       margin-left: 1rem
@@ -471,11 +485,28 @@
     &__addbasket
       font-size: 0.98rem
       margin-right: 1.83rem
+    &__size
+      padding: 0.59rem 0.82rem
+    &__sizes
+      max-width: 100%
   .payment
     align-items: flex-start
     flex-direction: column
     &__type
       margin-bottom: 1rem
+  .popular
+    &smallswiper
+      &-button
+        &-prev, &-next
+          top: 110%
+        &-prev
+          left: 5rem
+        &-next
+          right: 5rem
+
+
+
+
 
 
 @media screen and ( max-height: 768px )  
