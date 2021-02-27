@@ -20,12 +20,16 @@
 
 div
   &.invalid
-    margin-top: 4.8rem
+    margin-top: 4.4rem
     margin-left: 1.8rem
     position: absolute
     color: $error
   &.errinvalid
     bottom: -1.3rem
+    position: absolute
+    color: $error
+  &.invaliderror
+    margin-top: 6rem
     position: absolute
     color: $error
       
@@ -37,25 +41,27 @@ input
     // box-shadow: 0 0px 20px  $error
   &.errinvalid
     border: 1px solid $error
+  &.invaliderror
+    border: 1px solid $error
+
 
 textarea
   &.errinvalid
     border: 1px solid $error
 
-
-.scroll-up
-  position: fixed
+.scrollup
+  width: 30px
+  height: 30px
+  margin: auto
   bottom: 0
-  left: 49.3%
+  margin-top: 5.3rem
+.scroll-up
+  // position: fixed
   background: transparent url(../img/arrow-up.png)
   cursor: pointer
   width: 30px
   height: 30px
-  display: none
   z-index: 999
-  &:hover
-    transition: color 0.3s
-    background-color: rgba($darkblue, 0.2)
 
 
 .form
@@ -71,3 +77,138 @@ textarea
 [class*="ymaps-2"][class*="-ground-pane"]
   filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#brightness")
   -webkit-filter: brightness(60%)
+
+
+.loader
+  position: absolute
+  z-index: 15
+  top: -100%
+  left: 0
+  box-sizing: border-box
+  width: 100%
+  height: 100%
+  overflow: hidden
+  color: #000000
+  transition: opacity .7s ease
+  opacity: 0
+  background-color: rgba(0,0,0,.55)
+
+ 
+.loader:after,
+.loader:before
+  box-sizing: border-box
+
+ 
+.loader.is-active 
+  top: 0
+  opacity: 1
+
+ 
+.loader-default:after
+  position: absolute
+  top: calc(50% - 24px)
+  left: calc(50% - 24px)
+  width: 48px
+  height: 48px
+  content: ''
+  animation: rotation 1s linear infinite
+  border: solid 8px #ffffff
+  border-left-color: transparent
+  border-radius: 50%
+
+ 
+@keyframes rotation
+  from 
+    transform: rotate(0)
+  to
+    transform: rotate(359deg)
+ 
+@keyframes blink
+  from
+    opacity: .5
+  to
+    opacity: 1
+
+.ymap-container
+  position: relative
+  margin: 3em 0 2em 0
+  overflow: hidden
+  cursor: pointer
+  background: url('../img/before-load.jpg') #ffffff no-repeat
+  background-position: center center
+  background-size: cover
+  box-shadow: 0 0 2em  0 rgba(0,0,0,.2)
+
+
+.select
+  position: relative
+  display: block
+  width: 100%
+  max-width: 14.29rem
+  &__head
+    width: 100%
+    max-width: 100%
+    padding-right: 1rem
+    font-size: 1.21rem
+    line-height: 18px
+    color: $dark
+    cursor: pointer
+    letter-spacing: -0.04px
+    font-family: 'Gotham Pro-Medium' 
+    &::after
+      width: 8px
+      height: 4px
+      background: #FFF url('../img/catalog/arrow-down.svg') no-repeat center / cover
+      position: absolute
+      right: 24px
+      bottom: 50%
+      transform: translateY(50%)
+      content: ''
+      display: block
+      transition: .2s ease-in
+  &__head.open::after
+    transform: translateY(50%) rotate(180deg)
+  &__list
+    display: none
+    position: absolute
+    top: 100%
+    left: 0
+    right: 0
+    background: #fff
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15)
+    border: 1px solid #d7d7d7
+    margin-top: 5px
+    max-height: 205px
+    overflow-x: hidden
+    overflow-y: auto
+    z-index: 100
+    margin: 0
+    padding: 0
+    font-size: 14px
+    color: #424348
+    scrollbar-color: dark
+    scrollbar-width: thin
+    overscroll-behavior: contain
+
+
+.select__list::-webkit-scrollbar 
+  width: 7px
+  background-color: #F8F9FA
+  padding: 5px
+
+
+.select__list::-webkit-scrollbar-thumb
+  border-radius: 10px
+  background-color: #D9D9D9
+
+
+.select__list .select__item
+  position: relative
+  border-top: 1px solid rgba(224, 229, 231, 0.5)
+  padding: 10px 15px
+  cursor: pointer
+  list-style-type: none
+
+
+.select__list .select__item:hover
+  background-color: #f5f5f5

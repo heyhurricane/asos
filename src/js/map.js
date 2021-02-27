@@ -2,7 +2,7 @@ $(document).ready(function () {
 // карта
 
 //Переменная для включения/отключения индикатора загрузки
-// var spinner = $('.ymap-container').children('.loader');
+var spinner = $('.ymap-container').children('.loader');
 //Переменная для определения была ли хоть раз загружена Яндекс.Карта (чтобы избежать повторной загрузки при наведении)
 var check_if_load = false;
  
@@ -49,7 +49,7 @@ var check_if_load = false;
     // Решение по callback-у для определения полной загрузки карты
     waitForTilesLoad(layer).then(function() {
       // Скрываем индикатор загрузки после полной загрузки карты
-      // spinner.removeClass('is-active');
+      spinner.removeClass('is-active');
     });
   };
 

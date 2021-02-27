@@ -9,10 +9,10 @@
     flex-basis: 23.6%
     display: flex
     flex-direction: column
-    cursor: pointer
     margin-bottom: 3.9rem
   &__photo
     margin: auto
+    cursor: pointer
   &__name
     font-family: 'Gotham Pro Black'
     color: $dark
@@ -22,6 +22,8 @@
     letter-spacing: 2.64px
     text-align: center
     margin-top: 2.24rem
+    text-decoration: none
+    cursor: pointer
   &__color
     color: $midblue
     font-size: 0.93rem
@@ -49,12 +51,9 @@
     margin: auto
     display: block
     margin-top: 1.5rem
-  &__quantity, &__filter
-    background: url('../img/catalog/arrow-down.svg') no-repeat right
+  &__quantity
+    // background: url('../img/catalog/arrow-down.svg') no-repeat right
     border: none
-    color: $dark
-    font-family: 'Gotham Pro-Medium' 
-    font-size: 1.21rem
     font-weight: 700
     letter-spacing: -0.34px
     appearance: none
@@ -64,10 +63,10 @@
     // margin-right: 2.07rem
     margin-right: 2.47rem
   &__filter
-    // margin-right: 2.79rem
-    margin-right: 3.69rem
+    max-width: 10.71rem
+    margin-right: 0.2rem
   &__icon
-    margin-right: 1.67rem
+    margin-right: 2.27rem
     cursor: pointer
     &--list
       margin-right: 0
@@ -76,19 +75,22 @@
     display: flex
     justify-content: space-between
     align-items: center
+    max-width: 100%
+    flex-basis: 100%
+    margin: auto
+    margin-bottom: 4.64rem
+    // padding: 0 5.4rem
   &__count
     color: #cccccc
     font-family: 'Gotham Pro-Medium'    
     font-size: 1.07rem
     font-weight: 500
     letter-spacing: -0.3px
-  &__settings
-    margin-bottom: 4.64rem
-    padding: 0 5.4rem
   &__filters
     display: flex
-  //   margin-top: -0.3rem
     align-items: center
+    flex-basis: 40%
+    padding-left: 2.8rem
   &__photo
     position: relative
   &__sale-icon

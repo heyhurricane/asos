@@ -75,9 +75,6 @@
     border: none
     flex-basis: 32.15%
     //  width: 32.1%
-    &:hover
-      transition: background 0.3s
-      background-color: $pink
   &__addcode
     // margin-top: 2.9rem
   &__buttons
@@ -94,10 +91,6 @@
     text-transform: uppercase
     padding: 0.61rem 2.21rem
     letter-spacing: 0.8px
-    &:hover
-      transition: background 0.3s
-      background-color: $dark
-      color: $light
   &__allproducts
     border: 3px solid #ef50a2
     padding: 2.27rem 2.36rem
@@ -139,4 +132,9 @@
 
 
 
+
+@-moz-document url-prefix()
+  .promocode
+    &__button
+      font-size: 0.9rem
 

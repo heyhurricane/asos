@@ -4,14 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Интернет-магазин Asos</title>
-  <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/></head>
 </head>
 
 <body> 
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64720939, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64720939" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <!--  MAIN -->
 <main>
-  <section class="hero">
+  <div class="hero">
     <div class="heroswiper-container swiper-container swiper-no-swiping">
       <!-- Additional required wrapper -->
       <div class="heroswiper-wrapper swiper-wrapper">
@@ -46,11 +48,11 @@
           </nav>
           <div class="account menu__account">
             <div class="menu__person">
-              <a href="#" class="account__link"><img src="img/person-icon.png" alt=""></a>
+              <a href="javascript:void(0);" class="account__link" data-toggle="auth"><img src="img/person-icon.png" alt=""></a>
             </div>
             <!-- /.menu__person -->  
             <div class="menu__basket">
-              <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/basket-icon.png" alt=""></a>
+              <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/basket-icon.png" class="account__link--basket" alt=""></a>
               <!-- КОРЗИНА -->
               <div class="modalbasket">
                 <div class="modalbasket__dialog">
@@ -97,6 +99,18 @@
           </div>
         </div>
         <!-- /.menu -->
+        <div class="menu-button--light"></div>
+        <div class="burger-menu burger-menu-none">
+
+          <div class="burger-menu__nav" id="burger-menu">
+            <a href="index.html" class="header__nav-item">Домой</a>
+            <a href="catalog.html" class="header__nav-item ">Каталог</a>
+            <a href="#" class="header__nav-item">О нас</a>
+            <a href="#" class="header__nav-item">Партнерам</a>
+            <a href="contacts.html" class="header__nav-item">Контакты</a>
+          </div>
+          <!-- /.menu__nav -->
+        </div>  
       </div>
       <!-- /.container -->
     </div>
@@ -114,18 +128,18 @@
       <!-- /.hero__content -->
     </div>      
     <!-- /.container -->
-  </section>
+  </div>
   <!-- /.hero -->
 
   <!-- ТОВАРЫ ПО АКЦИИ -->
-  <section class="section sales">
+  <div class="section sales">
     <div class="sales__product">
       <div class="card sales__card sales__card--right">
         <div class="sales__photo">
-          <img src="img/sales/sale1.jpg" alt="" class="sales__image">
+          <a href="product.html"><img src="img/sales/sale1.jpg" alt="" class="sales__image"></a>
         </div>
         <span class="sales__price"><img src="img/pinkrub.png" alt="рубль"> 1 199</span>
-        <span class="sales__name">шорты, ТВОЕ</span>
+        <a href="product.html" class="sales__name">шорты, ТВОЕ</a>
         <div class="sales__productinfo">
           <span class="sales__season">Сезон: лето</span>
           <span class="sales__sex">Пол: Женский</span>
@@ -139,11 +153,10 @@
       <!-- /.card sales__card -->
       <div class="card sales__card sales__card--grey sales__card--left">
         <div class="sales__photo">
-          <img src="img/sales/sale2.jpg" alt="" class="sales__image">
-        </div>
-        
+          <a href="product.html"><img src="img/sales/sale2.jpg" alt="" class="sales__image"></a>
+        </div>  
         <span class="sales__price"><img src="img/ruble.png" alt="рубль"> 299</span>
-        <span class="sales__name">Футболка, ТВОЕ</span>
+        <a href="product.html" class="sales__name">Футболка, ТВОЕ</a>
         <div class="sales__productinfo">
           <span class="sales__season">Сезон: демисезон</span>
           <span class="sales__sex">Пол: Женский</span>
@@ -157,10 +170,10 @@
       <!-- /.card sales__card -->
       <div class="card sales__card sales__card--grey sales__card--right">
         <div class="sales__photo">
-          <img src="img/sales/sale3.jpg" alt="" class="sales__image">
+          <a href="product.html"><img src="img/sales/sale3.jpg" alt="" class="sales__image"></a>
         </div>
         <span class="sales__price"><img src="img/ruble.png" alt="рубль"> 399</span>
-        <span class="sales__name">Футболка, ТВОЕ</span>
+        <a href="product.html" class="sales__name">Футболка, ТВОЕ</a>
         <div class="sales__productinfo">
           <span class="sales__season">Сезон: лето</span>
           <span class="sales__sex">Пол: Женский</span>
@@ -174,10 +187,10 @@
       <!-- /.card sales__card -->
       <div class="card sales__card sales__card--left">
         <div class="sales__photo">
-          <img src="img/sales/sale4.jpg" alt="" class="sales__image">
+          <a href="product.html"><img src="img/sales/sale4.jpg" alt="" class="sales__image"></a>
         </div>        
         <span class="sales__price"><img src="img/pinkrub.png" alt="рубль"> 299</span>
-        <span class="sales__name">Футболка, ТВОЕ</span>
+        <a href="product.html" class="sales__name">Футболка, ТВОЕ</a>
         <div class="sales__productinfo">
           <span class="sales__season">Сезон: демисезон</span>
           <span class="sales__sex">Пол: Женский</span>
@@ -192,7 +205,7 @@
       <!-- /.card sales__card -->
     </div>
     <!-- /.sales__product -->
-  </section>
+  </div>
   <!-- /.section sales -->
 
   <!-- ПОПУЛЯРНЫЕ ТОВАРЫ -->
@@ -218,7 +231,7 @@
                   </div>
                   <!-- /.popular__hover -->
                 </div>
-                <span class="popular__name">Жилет, A.Karina</span>
+                <a href="product.html" class="popular__name">Жилет, A.Karina</a>
                 <span class="popular__color">Цвет: серый</span>
                 <span class="popular__price"><img src="img/pinkrub.png" alt="рубль"> 6 490</span>
               </div>
@@ -231,7 +244,7 @@
                     <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
                   </div>
                 </div>
-                <span class="popular__name">Юбка, Oodji</span>
+                <a href="product.html" class="popular__name">Юбка, Oodji</a>
                 <span class="popular__color">Цвет: синий</span>
                 <span class="popular__price"><img src="img/pinkrub.png" alt="рубль"> 799</span>
               </div>
@@ -244,7 +257,7 @@
                     <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
                   </div>
                 </div>
-                <span class="popular__name">Брюки, ТВОЕ</span>
+                <a href="product.html" class="popular__name">Брюки, ТВОЕ</a>
                 <span class="popular__color">Цвет: темно-синий</span>
                 <span class="popular__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
               </div>
@@ -257,7 +270,7 @@
                     <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
                   </div>
                 </div>
-                <span class="popular__name">Пижама FORLIFE</span>
+                <a href="product.html" class="popular__name">Пижама FORLIFE</a>
                 <span class="popular__color">Цвет: коралловый, белый</span>
                 <span class="popular__price"><img src="img/pinkrub.png" alt="рубль"> 1 290</span>
               </div>
@@ -266,6 +279,71 @@
         </div>
          <div class="popularswiper-button-prev swiper-button-prev"></div>
           <div class="popularswiper-button-next swiper-button-next"></div>
+      </div>
+      <!-- /.sliderwrap -->
+      <div class="sliderwrapsmall">
+        <div class="popularsmallswiper-container swiper-container swiper-no-swiping">
+          <!-- Additional required wrapper -->
+          <div class="popularsmallswiper-wrapper swiper-wrapper">
+              <!-- Slides -->
+              <div class="popularsmallswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product1.jpg" alt="" class="popular__image">
+                  <div class="popular__hover1">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                  <!-- /.popular__hover -->
+                </div>
+                <span class="popular__name">Жилет, A.Karina</span>
+                <span class="popular__color">Цвет: серый</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 6 490</span>
+              </div>
+              <div class="popularsmallswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product2.jpg" alt="" class="popular__image">
+                  <div class="popular__hover2">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                </div>
+                <span class="popular__name">Юбка, Oodji</span>
+                <span class="popular__color">Цвет: синий</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 799</span>
+              </div>
+              <div class="popularsmallswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product3.jpg" alt="" class="popular__image">
+                  <div class="popular__hover3">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                </div>
+                <span class="popular__name">Брюки, ТВОЕ</span>
+                <span class="popular__color">Цвет: темно-синий</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 599</span>
+              </div>
+              <div class="popularsmallswiper-slide swiper-slide" data-toggle="hover">
+                <div class="popular__photo">
+                  <img src="img/popular/product4.jpg" alt="" class="popular__image">
+                  <div class="popular__hover4">
+                    <img src="img/popular/zoom-icon.png" alt="" class="popular__iconzoom">
+                    <img src="img/popular/basket-icon.png" alt="" class="popular__iconbasket">
+                    <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
+                  </div>
+                </div>
+                <span class="popular__name">Пижама FORLIFE</span>
+                <span class="popular__color">Цвет: коралловый, белый</span>
+                <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 1 290</span>
+              </div>
+          </div>     
+          <!-- If we need navigation buttons -->
+        </div>
+         <div class="popularsmallswiper-button-prev swiper-button-prev"></div>
+          <div class="popularsmallswiper-button-next swiper-button-next"></div>
       </div>
       <!-- /.sliderwrap -->
     </div>
@@ -289,7 +367,7 @@
           </div>
           <!-- /.news__date -->
           <span class="news__name">Новая коллекция от ТВОЕ</span>
-          <div class="news__text">
+          <div class="news__text news__text-left">
             <p>Если вы думаете над тем, что бы такого оригинального добавить в свой гардероб, то наш совет — это удлиненный топ с разрезами по бокам! Прошлым летом они только появились, а этим летом стали супермодными!<br> В новой коллекции ТВОЕ представлены топы, шорты, юбки, хлопковые и льнянные костюмы. Спешите за покупками!</p>
           </div>  
         </div>
@@ -302,7 +380,7 @@
           </div>
           <!-- /.news__date -->
           <span class="news__name">10% до конца февраля</span>
-          <div class="news__text">
+          <div class="news__text news__text-right">
             <p>Две яркие представительницы из семьи американского мультимиллионера&nbsp;Мухаммеда Хадид, по совместительству сестры: Джиджи и Белла - не сходят с обложек журналов, разделов уличной моды в таблоидах и интернете.<br> Предоставляем скидку 10% на весь ассортимент по промокоду ASOS15. Промокод не распростроняется на акционные товары.</p>
           </div>
         </div>
@@ -386,7 +464,7 @@
       <div class="col">
         <span class="footer__name">Полезное</span>
         <a href="#" class="footer__link">Услуги</a>
-        <a href="#" class="footer__link">Как проехать</a>
+        <a href="contacts.html" class="footer__link">Как проехать</a>
         <a href="#" class="footer__link">Статьи</a>
         <a href="#" class="footer__link">Условия и положения</a>
         <a href="#" class="footer__link">Блог</a>
@@ -398,7 +476,7 @@
         <a href="#" class="footer__link">О нас</a>
         <a href="#" class="footer__link">Карьера у нас</a>
         <a href="#" class="footer__link">Способы доставки</a>
-        <a href="#" class="footer__link">Контакты</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
         <a href="#" class="footer__link">Поддержка</a>
         <a href="#" class="footer__link">Оплата</a>
       </div>
@@ -406,9 +484,9 @@
       <div class="col footer__col--account">
         <span class="footer__name">Мой аккаунт</span>
         <a href="#" class="footer__link">Мой аккаунт</a>
-        <a href="#" class="footer__link">Корзина</a>
+        <a href="cart.html" class="footer__link">Корзина</a>
         <a href="#" class="footer__link">Избранное</a>
-        <a href="#" class="footer__link">Оформить заказ</a>
+        <a href="cart.html" class="footer__link">Оформить заказ</a>
         <a href="#" class="footer__link">Выход</a>
        
       </div>
@@ -416,18 +494,18 @@
     </div>
     <!-- /.row -->
     <div class="footer__copyright">
-      <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. Все права защищены.</span>
+      <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. <a href="https://glo.academy/" class="footer__academy" target="_blank" >Glo Academy</a>. Все права защищены.</span>
     </div>
     <!-- /.footer__copyright -->
   </div>
   <!-- /.container -->
+  <!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
+  <div class="scrollup">
+    <button class="button scroll-up"></button>
+  </div>
 </footer>
 <!-- /.footer -->
 
-<!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
-<div class="scrollup">
-  <button class="button scroll-up"></button>
-</div>
 
 <!-- ПОИСК -->
 <div class="modalsearch">
@@ -453,9 +531,46 @@
 </div>
 <!-- /.modalzoom -->
 
+<!-- СООБЩЕНИЕ ОБ ОТПРАВКЕ ФОРМЫ -->
+<div class="submessage">
+  <div class="submessage__dialog">
+    <h3 class="submessage__title">Форма отправлена!<br> Спасибо!</h3>
+    <button class="button button--primary submessage__button">Ок!</button>
+  </div>
+  <!-- /.submessage__dialog -->
+</div>
+<!-- /.message -->
+
+<!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+
+<div class="authorization">
+  <div class="authorization__dialog">
+    <button class="authorization__close"></button>
+    <h3 class="authorization__title">Войдите в свой аккаунт</h3>
+    <form class="form authorization__form">
+      <div class="input-group authorization__input-group">
+        <label for="emailofuser" class="label authorization__label">Email</label>
+        <input type="email" name="userofemail" class="input form__input authorization__input" id="emailofuser" placeholder="Email:">
+      </div>
+      <!-- /.input-group authorization__input-group -->
+      <div class="input-group authorization__input-group authorization__input-group--last">
+        <label for="passwordofuser" class="label authorization__label">Пароль</label>
+        <input type="password" name="passwordUser" class="input form__input authorization__input" id="passwordofuser" placeholder="Пароль:">
+      </div>
+      <!-- /.input-group authorization__input-group -->         
+      <button class="button button--primary authorization__button">войти</button>
+      <span class="authorization__text">У Вас нет учётной записи? <a href="#">Зарегистрироваться</a></span>
+    </form>
+    <!-- /.form authorization__form -->
+  </div>
+  <!-- /.authorization__dialog -->
+</div>
+<!-- /.authorization -->
+
+
 
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>

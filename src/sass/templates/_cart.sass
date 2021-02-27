@@ -3,6 +3,9 @@
   &hero
     &__subtitle
       color: $light
+      max-width: 36.89rem
+      margin: auto
+      margin-top: 1.9rem
     &__nav
       border-radius: 21px
       background-color: $pink
@@ -73,6 +76,7 @@
     letter-spacing: 2.64px
     display: block
     margin-bottom: 0.8rem
+    text-decoration: none
   &__color
     color: $midblue
     font-size: 0.93rem
@@ -86,7 +90,7 @@
     display: block
     margin-top: 4.45rem
   &__quantity
-    background: url('../img/catalog/arrow-down.svg') no-repeat right
+    // background: url('../img/catalog/arrow-down.svg') no-repeat right
     background-position-x: 81.9%
     color: $dark
     border: 1px solid $dark
@@ -98,6 +102,10 @@
     cursor: pointer
     margin-top: 4.13rem
     margin-left: 0.7rem
+    &-head
+      font-size: 0.93rem
+      &::after 
+        right: 12.5px
   &__delete
     display: flex
     justify-content: flex-end

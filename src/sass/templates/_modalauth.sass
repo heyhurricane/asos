@@ -1,0 +1,83 @@
+.authorization
+  visibility: hidden
+  position: fixed
+  z-index: 299
+  left: 0
+  right: 0
+  top: 0
+  bottom: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($purple, 0.2)
+  display: flex
+  justify-content: center
+  align-items: center
+  &--visible
+    opacity: 1
+    visibility: visible
+  &__dialog
+    position: relative
+    max-width: 36.36rem
+    background: $light no-repeat center
+    border: 1px solid $purple
+    padding: 1.657rem 3.5rem 1.928rem
+    color: $light
+  &__close
+    position: absolute
+    right: -4rem
+    top: -4rem
+    width: 35px
+    height: 35px
+    background: transparent url('../img/close.png') no-repeat center
+    border: none
+    margin: 12px
+    cursor: pointer
+    outline: none
+  &__title
+    font-family: 'Gotham Pro Black'
+    font-size: 1.357rem
+    text-align: center
+    color: $dark
+    margin: 0
+    margin: 0.436rem 2.428rem 1.828rem
+    line-height: 1.5
+    text-transform: uppercase
+  &__form
+    display: flex
+    flex-direction: column
+  &__input
+    &-group
+      display: flex
+      flex-direction: column
+      margin-bottom: 3rem
+      &--last
+        margin-bottom: 0.1rem
+  &__policy
+    margin-bottom: 2.72rem
+  &__button
+    align-self: center
+    padding: 1.3rem 3.3rem
+    background-color: $pink
+    margin: 3rem 0
+  &__label
+    font-family: 'Gotham Pro-Medium'
+    color: $dark
+    text-transform: uppercase
+  &__input
+    border: 1px solid #d1d5db
+    background-color: $light
+    margin-top: 1.06rem
+    font-family: "Gotham Pro"
+    font-size: 1.07rem
+    padding: 0.9rem 0.9rem 1rem
+    color: $black
+    font-weight: 400
+  &__text
+    color: $black
+    font-size: 1rem
+    a
+      font-family: 'Gotham Pro-Medium'
+      text-decoration: none
+      color: $midblue
+
+  

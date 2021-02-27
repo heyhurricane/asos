@@ -1,5 +1,5 @@
 .product
-  padding: 7.43rem 0
+  padding: 7.43rem 0 5rem
   &-popular
     box-shadow: inset 0 -1px 0 #d1d5db
     background-color: $greynews
@@ -142,7 +142,7 @@
       color: $disabled
       cursor: auto 
   &__select
-    background: url('../img/catalog/arrow-down.svg') no-repeat right
+    // background: url('../img/catalog/arrow-down.svg') no-repeat right
     background-position-x: 81.9%
     color: $dark
     border: 1px solid $dark
@@ -168,9 +168,6 @@
     letter-spacing: 0.7px
     border: none    
     cursor: pointer
-    &:hover
-      transition: background 0.3s
-      background-color: $pink
   &__social
     margin-bottom: 3rem
   &__socialtext, &__paytext
@@ -194,6 +191,18 @@
     border: none
     width: 28px
     height: 24px
+  &__image
+    &-small
+      // img
+      //   outline: 2px solid $pink
+          // &::after
+          //   content: ''
+          //   border: 2px solid $pink
+          //   width: 100%
+          //   height: 100%
+       
+
+
 
 
 .sizechart
@@ -209,9 +218,21 @@
 
 
 .productswiper  
+  &-container
+    padding-top: 2px
+    padding-left: 6px
+    padding-right: 6px
+    // padding: 2px
+    max-width: 39.29rem
   &-slide
     cursor: pointer
-    
+    &--active
+      img
+        outline: 2px solid $pink
+        box-sizing: content-box
+        border: 2px solid #fff
+
+      
   &-button
     &-prev, &-next
       background-size: 31px
@@ -243,34 +264,19 @@
       background: url('../img/product/visa.png') no-repeat center / cover
       width: 4.64rem
       height: 1.43rem
-      &:hover
-        transition: background 0.3s
-        background: url('../img/product/visa-hover.png') no-repeat center / cover
     &--mastercard
       width: 3.71rem
       height: 2.21rem
       background: url('../img/product/master.png') no-repeat center / cover
-      &:hover
-        transition: background 0.3s
-        background: url('../img/product/master-hover.png') no-repeat center / cover
     &--yandex
       width: 6.71rem
       height: 1.14rem
       background: url('../img/product/yandex.png') no-repeat center / cover
-      &:hover
-        transition: background 0.3s
-        background: url('../img/product/yandex-hover.png') no-repeat center / cover
     &--rbk
       width: 4.35rem
       height: 1.86rem
       background: url('../img/product/rbk.png') no-repeat center / cover
-      &:hover
-        transition: background 0.3s
-        background: url('../img/product/rbk-hover.png') no-repeat center / cover
     &--qiwi
       width: 4.78rem
       height: 2.28rem
       background: url('../img/product/qiwi.png') no-repeat center / cover
-      &:hover
-        transition: background 0.3s
-        background: url('../img/product/qiwi-hover.png') no-repeat center / cover

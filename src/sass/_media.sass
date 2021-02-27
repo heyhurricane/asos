@@ -5,6 +5,9 @@
   .header
     &__nav-item
       margin-right: 2rem
+  .nav
+    &__item
+      margin-right: 2rem
   .promocode
     &__button
       padding: 0.57rem 0.83rem
@@ -13,6 +16,11 @@
       flex-basis: 30%
   .div
     flex-basis: 70%
+  .catalog
+    &__filters
+      justify-content: space-between
+      flex-basis: 41.9%
+
   
 @media screen and ( max-width: 1500px )
   .product-sliderwrap 
@@ -20,6 +28,21 @@
   .product
     &__sizes
       max-width: 100%
+
+
+@media screen and ( max-width: 1475px)
+  .catalog
+    &__filters
+        flex-basis: 50%
+  .hero
+    &__heading
+      &--big
+        font-size: 5.47rem
+      &--largest
+        font-size: 9.96rem
+   
+
+  
 
 @media screen and ( max-width: 1353px )
   html
@@ -62,6 +85,9 @@
   .popular
     &__name
       font-size: 1.37rem
+  .producthero
+    &__subtitle
+      max-width: 26.24rem
  
 
 
@@ -72,13 +98,16 @@
       margin-left: 0
     &__account
       margin-right: 0
+  .nav
+    &__item 
+      margin-right: 2rem
   .header
     &__nav-item 
-      margin-right: 2rem
+    margin-right: 2rem
   .hero
     &__heading
       &--largest 
-        font-size: 10.16rem
+        font-size: 8.76rem
   .catalog
     &__name 
       font-size: 1.07rem
@@ -106,7 +135,17 @@
   .popular
     &__name
       font-size: 1.07rem
+    &__hover
+      &1, &2, &3, &4
+        padding: 8.53rem 3.98rem
       
+@media screen and ( max-width: 1101px )
+  .nav
+    &__item 
+      margin-right: 1.5rem  
+  .catalog
+    &__filters
+      flex-basis: 60%
 
 @media screen and ( max-width: 1100px ) 
  .header
@@ -140,6 +179,9 @@
 
 
 @media screen and ( max-width: 991px )   
+  .popular
+    &__iconzoom
+      display: none
   .menu
     &__nav
       display: none 
@@ -159,7 +201,7 @@
     width: 30px
     height: 2px
     background-color: $dark
-    cursor: pointer
+    cursor: pointer      
     &::before 
       content: ''
       position: absolute
@@ -182,14 +224,55 @@
       background-color: $dark
       margin-top: 7px
       transition: transform 0.2s
-  // .footer
-  //   display: none
+    &--light
+      position: absolute
+      right: 3.6rem
+      top: 4.7rem
+      display: block
+      width: 30px
+      height: 2px
+      background-color: $light
+      cursor: pointer
+      &::before 
+        content: ''
+        position: absolute
+        right: 0px
+        top: 0px
+        display: block
+        width: 30px
+        height: 2px
+        background-color: $light
+        margin-top: -7px
+        transition: transform 0.2s
+      &::after 
+        content: ''
+        position: absolute
+        right: 0px
+        top: 0px
+        display: block
+        width: 30px
+        height: 2px
+        background-color: $light
+        margin-top: 7px
+        transition: transform 0.2s
+  .heroswiper-container
+    height: 100%
+    display: none
+  .hero
+    background-blend-mode: multiply 
+    background: $purple url('../img/bg.jpg') no-repeat center / cover
+    height: 60vh
+    &__heading--largest
+      font-size: 7.2rem
+    &__content
+      margin-top: 8rem
   .catalog
     &__card
       flex-basis: 50%
     &__filters
       display: flex
       justify-content: space-between
+      padding: 0
       // margin-top: 0.5rem
     &__row
       padding: 0
@@ -229,9 +312,6 @@
   .contacts
     &__heading 
       font-size: 1.27rem
-  .cart
-    &__row
-      padding: 0
   .carthero
     &__nav
       max-width: 25rem
@@ -263,11 +343,85 @@
   .sliderwrapsmall
     display: block
     max-width: 39.9rem
+  .news
+    &__block
+      flex-direction: column
+    &__card
+      padding: 0
+      margin-bottom: 5rem
+      &--grey
+        display: none
+      &--right
+        padding: 0
+        position: relative
+        &::before
+          content: ''
+          width: 100%
+          height: 1px
+          background-color: $lightsecondary
+          display: block
+          position: absolute
+          top: -2.6rem
+    &__container
+      max-width: 80%
+  .sizechart
+    &__dialog
+      // width: 50rem
+      width: 90%
+    &__col
+      &1, &2, &3, &4
+        text-align: center
+    &__colname
+      font-size: 0.8rem
+    &__heading
+      font-size: 1.37rem
+  .modalsearch
+    &__dialog
+      padding: 5rem 7rem
+      max-width: 100%
+    &__button
+      left: 79.3%
+  .select
+    margin-right: 2.5rem
+    &__head 
+      &::after
+        width: 8px
+        height: 4px
+        background: #FFF url('../img/catalog/arrow-down.svg') no-repeat center / cover
+        position: absolute
+        right: -5%
+        bottom: 50%
+        transform: translateY(50%)
+        content: ''
+        display: block
+        transition: .2s ease-in
+    &__list .select__item
+      padding: 10px 2px
+  .catalog
+    &__settings
+      flex-direction: column
+      align-items: start
+      max-width: 85.4%
+      margin: auto
+      padding: 0 2.7%
+      margin-bottom: 2.1rem
+    &__show
+      margin-bottom: 1.5rem
+  .cart
+    &__row
+      padding: 0
+    &__quantity
+      &-head
+        font-size: 0.93rem
+        &::after 
+          right: 12.5px
+
+
     
 
 
 
-@media screen and ( max-width: 860px )   
+@media screen and ( max-width: 870px )   
   .catalog
     &__settings
       flex-direction: column
@@ -288,6 +442,12 @@
       flex-direction: column
   .div
     margin-top: 1rem
+  .sales
+    &__product
+      flex-direction: column
+    &__card
+      text-align: center
+ 
     
 @media screen and ( max-width: 760px )   
   .catalog
@@ -299,8 +459,19 @@
       max-width: 262px
     &__filters
       flex-direction: column
+      align-items: flex-start
+      padding: 0
     &__quantity, &__filter
       margin-bottom: 1.5rem
+  .select
+    margin-bottom: 1.5rem
+    &__head
+      &::after
+        // width: 8px
+        // height: 4px
+        // background: #FFF url(../img/catalog/arrow-down.svg) no-repeat center/cover
+        // position: absolute
+        right: -5%
   .cart
     padding: 4.8rem 0 0
     &__row
@@ -323,12 +494,15 @@
         flex-basis: 100%
         display: flex
         justify-content: space-between
-        margin-top: 1rem
+        margin-top: 2rem
         width: 250px
       &3, &6
         margin-top: 2rem
+      &3, &4, &5
+        align-items: flex-end
       &6
-        margin: auto
+        margin: 0
+        margin-top: 2rem
     &__photo
       display: none
     
@@ -341,6 +515,51 @@
         background: url('../img/cart/cart2big.jpg') no-repeat center
       &3
         background: url('../img/cart/cart3big.jpg') no-repeat center
+  .hero
+    &__heading
+      &--big
+        font-size: 3rem
+      &--largest
+        font-size: 5rem
+  .sales
+    &__card
+      flex-basis: 100%
+      padding-left: 0
+      padding-right: 0
+      &--grey
+        background-color: $light
+    &__productinfo
+      font-size: 1.13rem
+    &__buybutton 
+      font-size: 1.2rem
+  .popular 
+    padding: 3.3rem 0 6.5rem
+  .modalsearch
+    &__dialog
+      padding: 5rem 2.3rem
+    &__button
+      left: 85%
+  .feedbacks
+    &__helpnumber 
+      margin-right: 0.7rem
+  .modalzoom
+    &__image
+      max-width: 70%
+    &__close
+      right: 3rem
+    &__photo
+      display: flex
+      justify-content: center
+  .cart
+    &__quantity
+      margin: 0
+      &-head
+        font-size: 0.93rem
+        &::after 
+          right: 12.5px
+  
+
+  
 
 @media screen and ( max-width: 611px ) 
   .feedbacks
@@ -351,7 +570,20 @@
       flex-basis: 25%
       margin-right: 0
 
-@media screen and ( max-width: 576px )   
+@media screen and ( max-width: 576px )  
+  .hero
+    &__price
+      font-size: 2rem
+      img
+        max-width: 10%
+    &__heading
+      &--big 
+        font-size: 2rem
+      &--largest
+        font-size: 3rem
+    &__button
+      font-size: 0.89rem
+      padding: 1rem 1.14rem
   .menu
     &__logo
       img
@@ -360,6 +592,8 @@
       margin-right: 3rem
     &-button 
       top: 4.4rem
+      &--light 
+        right: 2.6rem
   .title
     font-size: 1.36rem
   .row
@@ -458,8 +692,36 @@
         font-size: 1rem
     &__nameoftype, &__valueoftype 
       font-size: 1.1rem
+  .news
+    &__day
+      font-size: 4rem
+  .modalsearch
+    &__button
+      left: 73%
+    &__input
+      width: 22rem
+  .authorization
+    &__close 
+      right: -1rem
+      top: -4.8rem
+    &__dialog 
+      max-width: 30rem
+      padding: 1.657rem 2.5rem 1.928rem
     
-
+@media screen and ( max-height: 768px )  
+  .catalog
+    &__name
+      font-size: 1.17rem
+    &__color
+      font-size: 0.87rem
+  .hero 
+    height: 120vh
+   
+@media screen and ( max-width: 508px )
+  .carthero
+    &__subtitle
+      max-width: 22.59rem
+  
 @media screen and ( max-width: 476px )  
   .promocode
     &__buttons
@@ -467,11 +729,32 @@
       align-items: center
     &__input-group
       padding: 0.5rem
+      flex-direction: column
     &__continue, &__update 
-      width: 100%;
+      width: 100%
       margin-bottom: 1rem
+    &__input 
+      padding: 0.92rem 0 1.02rem 0.6rem
+      flex-basis: 50%
+    &__button
+      font-size: 0.9rem
+      padding: 0.37rem 0.6rem
+      flex-basis: 50%
+  .modalzoom
+    &__close 
+      right: 1.8rem
+      top: -16.4%
+    &__image 
+      max-width: 100%
+  .hero
+    height: 60vh
 
-
+@media screen and ( max-width: 444px )
+  .сataloghero
+    &__subtitle
+      max-width: 28.67rem
+  
+  
 @media screen and ( max-width: 375px )   
   .menu-button 
     right: 2.5rem
@@ -503,23 +786,437 @@
           left: 5rem
         &-next
           right: 5rem
+  .sizechart
+    &__dialog
+      width: 100%
+    &__colname
+      font-size: 0.7rem
+  .modalbasket
+    right: -6.5rem
+    &__dialog
+      &::after
+        left: 65.7%
+ 
 
-
-
-
-
-
-@media screen and ( max-height: 768px )  
-  .catalog
-    &__name
-      font-size: 1.17rem
-    &__color
-      font-size: 0.87rem
+@media screen and ( max-width: 350px )
+  .carthero
+    &__nav
+      padding: 0.97rem 1.1rem
   
+
+@media (min-height: 641px) and ( max-width: 320px )
+  .hero 
+    height: 55vh
+
+
+@media (max-height: 640px) and (max-width: 320px)
+  .hero 
+    height: 70vh
+
+
+// Ховеры
+@media screen and ( min-width: 992px )  
+  .сataloghero
+    &__link
+      &:hover
+        transition: color 0.3s
+        color: $purple
+  .contacts
+    &__send
+      &:hover
+        transition: background 0.3s
+        background-color: $pink
+    &__email, &__phone-number, &__skype-account
+      &:hover
+        transition: color 0.3s
+        color: $pink
+  .feedbacks
+    &__addfeedback
+      &:hover
+        transition: background 0.3s
+        background-color: $pink
+  .footer
+    &__link, &__email, &__phone-number, &__skype-account
+      &:hover
+        transition: color 0.3s
+        color: $light
+  .header
+    &__nav-item
+      &:hover
+        transition: color 0.3s
+        color: $pink
+      &--active
+        &::after
+          position: absolute
+        &:hover
+          transition: background 0.3s
+          position: relative  
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: $pink
+            margin-top: 0.5rem
+            left: 0
+            right: 0
+  .menu
+    &__logo
+      &:hover
+        transition: color 0.3s
+        filter: drop-shadow(0 0 3px rgba($pink,1))
+  .nav
+    &__item
+      &:hover
+        transition: color 0.3s
+        color: $pink
+      &--active
+        &::after
+          position: absolute
+        &:hover
+          transition: background 0.3s
+          position: relative  
+          &::after
+            content: ''
+            display: block
+            position: absolute
+            width: 100%
+            height: 2px
+            background-color: $pink
+            margin-top: 0.5rem
+            left: 0
+            right: 0
+  .hero
+    &__button
+      &:hover
+        transition: background 0.3s
+        background-color: $pink
+  .heroswiper
+    &-button
+      &-prev
+        &:hover
+          transition: background 0.3s
+          background: $light url('../img/hover-arrow-next.svg') no-repeat center
+          transform: rotate(180deg)
+      &-next
+        &:hover
+          transition: background 0.3s
+          background: $light url('../img/hover-arrow-next.svg') no-repeat center  
+  .slide1
+    &-next
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 80px
+          height: 80px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-next.jpg') no-repeat center
+          transform: translate(-80px, 0)
+    &-prev
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 80px
+          height: 80px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-prev.jpg') no-repeat center
+          transform: translate(-80px, 0) rotate(180deg)
+  .slide2
+    &-next
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 80px
+          height: 80px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-prev.jpg') no-repeat center
+          transform: translate(-80px, 0)
+    &-prev
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 80px
+          height: 80px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-first.jpg') no-repeat center
+          transform: translate(-80px, 0) rotate(180deg)
+  .slide3
+    &-next
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 80px
+          height: 80px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-first.jpg') no-repeat center
+          transform: translate(-80px, 0)
+    &-prev
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 80px
+          height: 80px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-next.jpg') no-repeat center
+          transform: translate(-80px, 0) rotate(180deg)
+  .modalbasket
+    &__buttonbasket, &__buttonbuy
+      &:hover
+        transition: color 0.3s
+        background-color: $purple
+  .popular
+    &__iconzoom
+      &:hover
+        transition: background 0.3s
+        background: url(../img/popular/hover-zoom.png)
+    &__iconbasket
+      &:hover
+        transition: background 0.3s
+        background: url(../img/popular/hover-basket.png)
+    &__iconheart
+      &:hover
+        transition: background 0.3s
+        background: url(../img/popular/hover-heart.png) 
+  .popularswiper  
+    &-button
+      &-prev
+        &:hover
+          transition: background 0.3s
+          background-color: rgba($darkblue, 0.2)
+      &-next
+        &:hover
+          transition: background 0.3s
+          background-color: rgba($darkblue, 0.2)
+  .product
+    &__addbasket
+      &:hover
+        transition: background 0.3s
+        background-color: $pink
+  .payment
+    &__type
+      &--visa
+        &:hover
+          transition: background 0.3s
+          background: url('../img/product/visa-hover.png') no-repeat center / cover
+      &--mastercard
+        &:hover
+          transition: background 0.3s
+          background: url('../img/product/master-hover.png') no-repeat center / cover
+      &--yandex
+        &:hover
+          transition: background 0.3s
+          background: url('../img/product/yandex-hover.png') no-repeat center / cover
+      &--rbk
+        &:hover
+          transition: background 0.3s
+          background: url('../img/product/rbk-hover.png') no-repeat center / cover
+      &--qiwi
+        &:hover
+          transition: background 0.3s
+          background: url('../img/product/qiwi-hover.png') no-repeat center / cover    
+  .promocode
+    &__button
+      &:hover
+        transition: background 0.3s
+        background-color: $pink  
+    &__continue, &__update
+      &:hover
+        transition: background 0.3s
+        background-color: $dark
+        color: $light
+  .sales
+    &__buybutton
+      &:hover
+        transition: color 0.3s
+        background-color: $dark
+        color: $light
+  .social
+    &-links
+      &--vk
+        &:hover
+          transition: background 0.3s
+          background: url('../img/shop/vk-hover.png') no-repeat
+      &--fb
+        &:hover
+          transition: background 0.3s
+          background: url('../img/shop/fb-hover.svg') no-repeat
+      &--twitter
+        &:hover
+          transition: background 0.3s
+          background: url('../img/shop/twitter-hover.svg') no-repeat
+      &--ok
+        &:hover
+          transition: background 0.3s
+          background: url('../img/shop/ok-hover.svg') no-repeat
+      &--youtube
+        &:hover
+          transition: background 0.3s
+          background: url('../img/shop/youtube-hover.svg') no-repeat
+  .sizechart
+    &__row
+      &:hover
+        transition: background 0.3s
+        background-color: $pink
+  .subscription
+    &__button
+      &:hover
+        transition: color 0.3s
+        background-color: $light
+        color: $lightpurple
+  .catalog
+    &__button
+      &:hover
+        transition: color 0.3s
+        background-color: $pink
+        color: $light
+  .authorization
+    &__button
+      &:hover
+        transition: color 0.3s
+        background-color: $dark
+    a
+      &:hover
+        transition: color 0.3s
+        color: $purple
+  .account
+    &__link
+      img
+        &:hover
+          transition: color 0.3s
+          filter: drop-shadow(0 0 3px rgba($pink,1))
+  .catalog
+    &__icon, &__icon--list
+        &:hover
+          transition: color 0.3s
+          filter: drop-shadow(0 0 3px rgba($pink,1))
+  .product
+    &__size
+      &--notdisabled
+        &:hover
+          transition: color 0.3s
+          filter: drop-shadow(0 0 3px rgba($pink,1))
+    &__favourite
+      &:hover
+        transition: size 0.3s
+        transform: scale(1.1)
+    &__colors
+      &:hover
+        transition: color 0.3s
+        filter: drop-shadow(0 0 3px rgba($pink,1))
+  .feedbacks
+    &__thumbsup,  &__thumbsdown
+      &:hover
+        transition: color 0.3s
+        filter: drop-shadow(0 0 3px rgba($pink,1))
+    &__rating-stars--new    
+      &:hover
+        transition: color 0.3s
+        filter: drop-shadow(0 0 3px rgba($pink,1))
+  .cart
+    &__delete
+      &:hover
+        transition: color 0.3s
+        filter: drop-shadow(0 0 3px rgba($pink,1))
+  .modalsearch
+    &__button
+      &:hover
+        transition: color 0.3s
+        transform: scale(0.8)
+  .footer
+    &__academy
+      &:hover
+        color: $pink
+  .scroll-up
+    &:hover
+      transition: background 0.3s
+      background: transparent url(../img/arrowup-hover.png)
+      width: 30px
+      height: 30px
+
+@media screen and ( min-width: 1354px )
+  .slide1
+    &-next
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-next.jpg') no-repeat center
+          transform: translate(-100px, 0)
+    &-prev
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-prev.jpg') no-repeat center
+          transform: translate(-100px, 0) rotate(180deg)
+  .slide2
+    &-next
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-prev.jpg') no-repeat center
+          transform: translate(-100px, 0)
+    &-prev
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-first.jpg') no-repeat center
+          transform: translate(-100px, 0) rotate(180deg)
+  .slide3
+    &-next
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-first.jpg') no-repeat center
+          transform: translate(-100px, 0)
+    &-prev
+      &:hover
+        transition: background 0.3s
+        &::before
+          content: ''
+          width: 100px
+          height: 100px
+          background-blend-mode: multiply 
+          background: $purple url('../img/hover-next.jpg') no-repeat center
+          transform: translate(-100px, 0) rotate(180deg)
+ 
 
 @media screen and ( max-height: 520px )
   .modalbasket
     &__dialog
-      height: 25rem
+      height: 18.5rem
       overflow: scroll
+  .authorization
+    height: 100%
+    overflow: scroll
+    &__close
+      right: -5rem
+      top: 5rem
+  
+  
     

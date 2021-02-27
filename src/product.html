@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Каталог Asos</title>
-    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/></head>
   </head>
   <body>
+    <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64720939, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64720939" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <header class="header">
       <div class="container">
         <div class="header__menu">
@@ -23,11 +25,11 @@
           </nav>
           <div class="account menu__account">
             <div class="menu__person">
-              <a href="#" class="account__link"><img src="img/catalog/person-icon.png" alt=""></a>
+              <a href="javascript:void(0);" class="account__link" data-toggle="auth"><img src="img/catalog/person-icon.png" alt=""></a>
             </div>
             <!-- /.menu__person -->  
             <div class="menu__basket">
-              <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/catalog/basket-icon.png" alt=""></a>
+              <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/catalog/basket-icon.png" class="account__link--basket" alt=""></a>
               <!-- КОРЗИНА -->
               <div class="modalbasket">
                 <div class="modalbasket__dialog">
@@ -109,7 +111,7 @@
       </section>
       <!-- /.section сataloghero -->
 
-      <section class="section product">
+      <div class="section product">
         <div class="container">
           <div class="product__block">
             <div class="product__photo">
@@ -123,17 +125,17 @@
                   <!-- Additional required wrapper -->
                   <div class="productswiper-wrapper swiper-wrapper">
                     <!-- Slides -->
-                    <div class="productswiper-slide swiper-slide" data-toggle="hover">
+                    <div class="productswiper-slide productslide1 swiper-slide productswiper-slide--active">
                       <div class="product__image-small">
                         <img src="img/product/photo1s.jpg" alt="" class="product__image--small">
                       </div>
                     </div>
-                    <div class="productswiper-slide swiper-slide" data-toggle="hover">
+                    <div class="productswiper-slide productslide2 swiper-slide" data-toggle="hover">
                       <div class="product__image-small">
                         <img src="img/product/photo2s.jpg" alt="" class="product__image--small">
                       </div>
                     </div>
-                    <div class="productswiper-slide swiper-slide" data-toggle="hover">
+                    <div class="productswiper-slide productslide3 swiper-slide" data-toggle="hover">
                       <div class="product__image-small">
                         <img src="img/product/photo3s.jpg" alt="" class="product__image--small">
                       </div>
@@ -204,22 +206,24 @@
                 <!-- /.product__colors -->
               </div>
               <!-- /.product__color -->
-              <div class="product__quantity">
-                <select class="product__select">
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                </select>
+              <div class="select product__select">
+                <input class="select__input" type="hidden">
+                <div class="select__head cart__quantity-head">1</div>
+                <ul class="select__list" style="display: none;">
+                    <li class="select__item">1</li>
+                    <li class="select__item">2</li>
+                    <li class="select__item">3</li>
+                </ul>
               </div>
               <!-- /.product__quantity -->
               <a href="javascript:void(0);" class="sizechart__link" data-toggle="sizechart">Открыть таблицу размеров</a>
               <div class="product__sizes">
-                <button class="product__size">XXS</button>
-                <button class="product__size">XS</button>
-                <button class="product__size">S</button>
-                <button class="product__size">M</button>
-                <button class="product__size">L</button>
-                <button class="product__size">XL</button>
+                <button class="product__size product__size--notdisabled">XXS</button>
+                <button class="product__size product__size--notdisabled">XS</button>
+                <button class="product__size product__size--notdisabled">S</button>
+                <button class="product__size product__size--notdisabled">M</button>
+                <button class="product__size product__size--notdisabled">L</button>
+                <button class="product__size product__size--notdisabled">XL</button>
                 <button class="product__size product__size--disabled">XXL</button>
               </div>
               <!-- /.product__sizes -->
@@ -263,10 +267,10 @@
           <!-- /.product__block -->
         </div>
         <!-- /.container -->
-      </section>
+      </div>
       <!-- /.section product -->
 
-      <section class="section description">
+      <div class="section description">
         <div class="container">
           <div class="description__menu">
             <span class="description__name description__name--active" id="description">Описание</span>
@@ -473,7 +477,7 @@
               <div class="feedbacks__blockname feedbacks__blockname--newfeedback">
                 <span class="feedbacks__infotext">Добавить свой отзыв</span>
               </div>
-              <form action="#" class="feedbacks__form">
+              <form method="POST" class="feedbacks__form">
                 <div class="input-group feedbacks__input-group">
                   <label for="nameuser" class="label form__label feedbacks__label">Ваше имя *</label>
                   <input type="text" name="username" class="input form__input feedbacks__input" id="nameuser">
@@ -491,7 +495,7 @@
                 <!-- /.newfeedback-group -->
                 <div class="feedbacks__newfeeback-block">
                   <div class="input-group feedbacks__input-group feedbacks__input-group--rating">
-                    <label for="ratinguser" class="label form__label">Оценка:</label>
+                    <label class="label form__label">Оценка:</label>
                     <div class="feedbacks__newrating" id="ratinguser">
                       <img src="img/feedback/star-grey.png" id="1" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
                       <img src="img/feedback/star-grey.png" id="2" alt="" class="feedbacks__rating-stars feedbacks__rating-stars--new">
@@ -572,7 +576,7 @@
           <!-- /.description__block -->
         </div>
         <!-- /.container -->
-      </section>
+      </div>
       <!-- /.section description -->
 
        <!-- ПОПУЛЯРНЫЕ ТОВАРЫ -->
@@ -598,7 +602,7 @@
                   </div>
                   <!-- /.popular__hover -->
                 </div>
-                <span class="popular__name">Жилет, A.Karina</span>
+                <a href="product.html" class="popular__name">Жилет, A.Karina</a>
                 <span class="popular__color">Цвет: серый</span>
                 <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 6 490</span>
               </div>
@@ -611,7 +615,7 @@
                     <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
                   </div>
                 </div>
-                <span class="popular__name">Юбка, Oodji</span>
+                <a href="product.html" class="popular__name">Юбка, Oodji</a>
                 <span class="popular__color">Цвет: синий</span>
                 <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 799</span>
               </div>
@@ -624,7 +628,7 @@
                     <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
                   </div>
                 </div>
-                <span class="popular__name">Брюки, ТВОЕ</span>
+                <a href="product.html" class="popular__name">Брюки, ТВОЕ</a>
                 <span class="popular__color">Цвет: темно-синий</span>
                 <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 599</span>
               </div>
@@ -637,7 +641,7 @@
                     <img src="img/popular/heart-icon.png" alt="" class="popular__iconheart">
                   </div>
                 </div>
-                <span class="popular__name">Пижама FORLIFE</span>
+                <a href="product.html" class="popular__name">Пижама FORLIFE</a>
                 <span class="popular__color">Цвет: коралловый, белый</span>
                 <span class="popular__price"><img src="img/ruble.png" alt="рубль"> 1 290</span>
               </div>
@@ -791,7 +795,7 @@
           <div class="col">
             <span class="footer__name">Полезное</span>
             <a href="#" class="footer__link">Услуги</a>
-            <a href="#" class="footer__link">Как проехать</a>
+            <a href="contacts.html" class="footer__link">Как проехать</a>
             <a href="#" class="footer__link">Статьи</a>
             <a href="#" class="footer__link">Условия и положения</a>
             <a href="#" class="footer__link">Блог</a>
@@ -803,7 +807,7 @@
             <a href="#" class="footer__link">О нас</a>
             <a href="#" class="footer__link">Карьера у нас</a>
             <a href="#" class="footer__link">Способы доставки</a>
-            <a href="#" class="footer__link">Контакты</a>
+            <a href="contacts.html" class="footer__link">Контакты</a>
             <a href="#" class="footer__link">Поддержка</a>
             <a href="#" class="footer__link">Оплата</a>
           </div>
@@ -811,9 +815,9 @@
           <div class="col footer__col--account">
             <span class="footer__name">Мой аккаунт</span>
             <a href="#" class="footer__link">Мой аккаунт</a>
-            <a href="#" class="footer__link">Корзина</a>
+            <a href="cart.html" class="footer__link">Корзина</a>
             <a href="#" class="footer__link">Избранное</a>
-            <a href="#" class="footer__link">Оформить заказ</a>
+            <a href="cart.html" class="footer__link">Оформить заказ</a>
             <a href="#" class="footer__link">Выход</a>
           
           </div>
@@ -821,18 +825,17 @@
         </div>
         <!-- /.row -->
         <div class="footer__copyright">
-          <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. Все права защищены.</span>
+          <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. <a href="https://glo.academy/" class="footer__academy" target="_blank" >Glo Academy</a>. Все права защищены.</span>
         </div>
         <!-- /.footer__copyright -->
       </div>
       <!-- /.container -->
-    </footer>
-    <!-- /.footer -->
-
-    <!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
+       <!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
     <div class="scrollup">
       <button class="button scroll-up"></button>
     </div>
+    </footer>
+    <!-- /.footer -->
 
     <!-- ПОИСК -->
     <div class="modalsearch">
@@ -959,10 +962,67 @@
     </div>
     <!-- /.sizechart -->
 
+    <!-- УВЕЛИЧЕНИЕ КАРТИНОК -->
+    <div class="modalzoom">
+      <div class="modalzoom__dialog">
+        <div class="modalzoom__close"></div>
+        <div class="modalzoom__photo">
+          <img src="img/zoom/zoom3.jpg" alt="" class="modalzoom__image">
+        </div>
+        
+      </div>
+      <!-- /.modalzoom__dialog -->
+    </div>
+    <!-- /.modalzoom -->
 
+    <!-- СООБЩЕНИЕ ОБ ОТПРАВКЕ ФОРМЫ -->
+    <div class="message">
+      <div class="message__dialog">
+        <h3 class="message__title">Отзыв отправлен!<br>Спасибо!</h3>
+        <button class="button button--primary message__button">Ок!</button>
+      </div>
+      <!-- /.message__dialog -->
+    </div>
+    <!-- /.message -->
+
+    <!-- СООБЩЕНИЕ ОБ ОТПРАВКЕ ФОРМЫ НА ПОДПИСКУ -->
+    <div class="submessage">
+      <div class="submessage__dialog">
+        <h3 class="submessage__title">Форма отправлена!<br> Спасибо!</h3>
+        <button class="button button--primary submessage__button">Ок!</button>
+      </div>
+      <!-- /.submessage__dialog -->
+    </div>
+    <!-- /.message -->
+
+    <!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+
+<div class="authorization">
+  <div class="authorization__dialog">
+    <button class="authorization__close"></button>
+    <h3 class="authorization__title">Войдите в свой аккаунт</h3>
+    <form class="form authorization__form">
+      <div class="input-group authorization__input-group">
+        <label for="emailofuser" class="label authorization__label">Email</label>
+        <input type="email" name="userofemail" class="input form__input authorization__input" id="emailofuser" placeholder="Email:">
+      </div>
+      <!-- /.input-group authorization__input-group -->
+      <div class="input-group authorization__input-group authorization__input-group--last">
+        <label for="passwordofuser" class="label authorization__label">Пароль</label>
+        <input type="password" name="passwordUser" class="input form__input authorization__input" id="passwordofuser" placeholder="Пароль:">
+      </div>
+      <!-- /.input-group authorization__input-group -->         
+      <button class="button button--primary authorization__button">войти</button>
+      <span class="authorization__text">У Вас нет учётной записи? <a href="#">Зарегистрироваться</a></span>
+    </form>
+    <!-- /.form authorization__form -->
+  </div>
+  <!-- /.authorization__dialog -->
+</div>
+<!-- /.authorization -->
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/wow.min.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/jquery.mask.min.js"></script>

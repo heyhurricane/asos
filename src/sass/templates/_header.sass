@@ -17,9 +17,6 @@
     margin-right: 2.5rem
     font-family: 'Gotham Pro-Medium' 
     cursor: pointer
-    &:hover
-      transition: color 0.3s
-      color: $pink
     &--active
       position: relative
       &::after
@@ -32,19 +29,6 @@
         margin-top: 0.5rem
         left: 0
         right: 0
-      &:hover
-        transition: background 0.3s
-        position: relative
-        &::after
-          content: ''
-          display: block
-          position: absolute
-          width: 100%
-          height: 2px
-          background-color: $pink
-          margin-top: 0.5rem
-          left: 0
-          right: 0
   &__menu
     display: flex
     justify-content: space-between
@@ -56,9 +40,6 @@
   &__logo
     margin-right: 19.74rem
     margin-left: 5.2rem
-    &:hover
-      transition: color 0.3s
-      filter: invert(1)
   &__basket
     position: relative
   &-button
@@ -70,11 +51,13 @@
       &::before 
         margin-top: 0
         transform: rotate(45deg) translateY(10px)
-        background-color: $dark
+        background-color: $dark !important
+        z-index: 299
       &::after 
         margin-top: 0
         transform: rotate(-45deg) translateY(-10px)
-        background-color: $dark
+        background-color: $dark  !important
+        z-index: 299
 
 
 .nav
@@ -88,9 +71,6 @@
     letter-spacing: 2.1px
     margin-right: 2.5rem
     cursor: pointer
-    &:hover
-      transition: color 0.3s
-      color: $pink
     &--active
       position: relative
       &::after
@@ -120,8 +100,7 @@
   top: 0 
   // box-shadow: inset 0 0 10px 3px rgba(34, 34, 34, 0.3)
   // padding: 1rem 0
-  background-color: $light
-    
+  background-color: $light 
   &__nav
     display: flex
     flex-direction: column

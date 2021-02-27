@@ -49,9 +49,6 @@
     font-weight: 400
     padding: 1rem 3.74rem
     margin-right: 5.07rem
-    &:hover
-      transition: background 0.3s
-      background-color: $pink
   &__price
     font-family: 'Gotham Pro Black'
     font-size: 4.14rem
@@ -96,84 +93,9 @@
     &-prev
       background: rgba($dark, 0.4) url('../img/arrow-prev.svg') no-repeat center
       left: 0
-      &:hover
-        transition: background 0.3s
-        background: $light url('../img/hover-arrow-next.svg') no-repeat center
-        transform: rotate(180deg)
     &-next
       right: 0
       background: rgba($dark, 0.4) url('../img/arrow-next.svg') no-repeat center
-      &:hover
-        transition: background 0.3s
-        background: $light url('../img/hover-arrow-next.svg') no-repeat center
+     
  
           
-
-.slide1
-  &-next
-    &:hover
-      transition: background 0.3s
-      &::before
-        content: ''
-        width: 100px
-        height: 100px
-        background-blend-mode: multiply 
-        background: $purple url('../img/hover-next.jpg') no-repeat center
-        transform: translate(-100px, 0)
-  &-prev
-    &:hover
-      transition: background 0.3s
-      &::before
-        content: ''
-        width: 100px
-        height: 100px
-        background-blend-mode: multiply 
-        background: $purple url('../img/hover-prev.jpg') no-repeat center
-        transform: translate(-100px, 0) rotate(180deg)
-  
-.slide2
-  &-next
-    &:hover
-      transition: background 0.3s
-      &::before
-        content: ''
-        width: 100px
-        height: 100px
-        background-blend-mode: multiply 
-        background: $purple url('../img/hover-prev.jpg') no-repeat center
-        transform: translate(-100px, 0)
-  &-prev
-    &:hover
-      transition: background 0.3s
-      &::before
-        content: ''
-        width: 100px
-        height: 100px
-        background-blend-mode: multiply 
-        background: $purple url('../img/hover-first.jpg') no-repeat center
-        transform: translate(-100px, 0) rotate(180deg)
-
-.slide3
-  &-next
-    &:hover
-      transition: background 0.3s
-      &::before
-        content: ''
-        width: 100px
-        height: 100px
-        background-blend-mode: multiply 
-        background: $purple url('../img/hover-first.jpg') no-repeat center
-        transform: translate(-100px, 0)
-  &-prev
-    &:hover
-      transition: background 0.3s
-      &::before
-        content: ''
-        width: 100px
-        height: 100px
-        background-blend-mode: multiply 
-        background: $purple url('../img/hover-next.jpg') no-repeat center
-        transform: translate(-100px, 0) rotate(180deg)
-      
-
-  

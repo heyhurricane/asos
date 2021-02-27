@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Каталог Asos</title>
   <link rel="stylesheet" href="css/style.css">
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/></head>
 </head>
 <body>
-  
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(64720939, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64720939" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
   <header class="header">
     <div class="container">
       <div class="header__menu">
@@ -23,11 +24,11 @@
         </nav>
         <div class="account menu__account">
           <div class="menu__person">
-            <a href="#" class="account__link"><img src="img/catalog/person-icon.png" alt=""></a>
+            <a href="javascript:void(0);" class="account__link" data-toggle="auth"><img src="img/catalog/person-icon.png" alt=""></a>
           </div>
           <!-- /.menu__person -->  
           <div class="menu__basket">
-            <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/catalog/basket-icon.png" alt=""></a>
+            <a href="javascript:void(0);" class="account__link" data-toggle="basket"><img src="img/catalog/basket-icon.png" class="account__link--basket" alt=""></a>
             <!-- КОРЗИНА -->
             <div class="modalbasket">
               <div class="modalbasket__dialog">
@@ -56,8 +57,8 @@
                   <span class="modalbasket__amount">Итого: 7 489 ₽</span>
                 </div>
                 <div class="modalbasket__buttons">
-                  <a href="cart.html" class="button buttonbasket modalbasket__buttonbasket">Корзина</a>
-                  <a href="cart.html" class="button buttonbuy modalbasket__buttonbuy">Оформить</a>
+                  <a href="cart.html" class="button buttonbasket modalbasket__buttonbasket" onclick="ym('64720939','reachGoal','buttoncart')">Корзина</a>
+                  <a href="cart.html" class="button buttonbuy modalbasket__buttonbuy" onclick="ym('64720939','reachGoal','buttoncart')">Оформить</a>
                 </div>
                 <!-- /.modalbasket__buttons -->
                 <!-- /.modalbasket__total -->
@@ -110,36 +111,43 @@
   <!-- /.section сataloghero -->
   <div class="section catalog">
     <div class="container">
-      <div class="catalog__settings">
-        <div class="catalog__show">
-          <span class="catalog__count">Показано 1 - 12 из 30 товаров</span>
-        </div>
-        <!-- /.catalog__show -->
-        <div class="catalog__filters">
-          <select class="catalog__quantity">
-            <option class="catalog__number">Показывать по 12</option>
-            <option class="catalog__number">Показывать по 50</option>
-            <option class="catalog__number">Показать все</option>
-          </select>
-          <select class="catalog__filter">
-            <option>Фильтр по</option>
-            <option>цене (🠕)</option>
-            <option>цене (🠗)</option>
-          </select>
-          <div class="icon-block">
-            <img src="img/catalog/filter.png" class="catalog__icon" alt="">
-            <img src="img/catalog/list.png" class="catalog__icon--list" alt="">
-          </div>
-        </div>
-        <!-- /.catalog__filters -->
-      </div>
-      <!-- /.catalog__settings -->
       <div class="row catalog__row">
+        <div class="catalog__settings">
+          <div class="catalog__show">
+            <span class="catalog__count">Показано 1 - 12 из 30 товаров</span>
+          </div>
+          <!-- /.catalog__show -->
+          <div class="catalog__filters">
+            <div class="select">
+              <input class="select__input" type="hidden">
+              <div class="select__head">Показывать по 12</div>
+              <ul class="select__list" style="display: none;">
+                  <li class="select__item">Показывать по 12</li>
+                  <li class="select__item">Показывать по 20</li>
+                  <li class="select__item">Показать все</li>
+              </ul>
+            </div>
+            <div class="select catalog__filter">
+              <input class="select__input" type="hidden">
+              <div class="select__head">Фильтр по</div>
+              <ul class="select__list" style="display: none;">
+                  <li class="select__item">по цене (🠕)</li>
+                  <li class="select__item">по цене (🠗)</li>
+              </ul>
+            </div>
+            <div class="icon-block">
+              <img src="img/catalog/filter.png" class="catalog__icon" alt="">
+              <img src="img/catalog/list.png" class="catalog__icon--list" alt="">
+            </div>
+          </div>
+          <!-- /.catalog__filters -->
+        </div>
+        <!-- /.catalog__settings -->
         <div class="card catalog__card">
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt1.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, ТВОЕ</span>
+          <a href="product.html" class="catalog__name">Юбка, ТВОЕ</a>
           <span class="catalog__color">Цвет: темно-синий</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
         </div>
@@ -151,11 +159,11 @@
               <img src="img/catalog/skirts/skirt2.jpg" alt="" class="catalog__image">
             </a>
           </div>
-          <span class="catalog__name">Юбка, ТВОЕ</span>
+          <a href="product.html" class="catalog__name">Юбка, ТВОЕ</a>
           <span class="catalog__color">Цвет: серый</span>
           <div class="catalog__prices">
             <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
-            <span class="catalog__price catalog__price--old"><img src="img/rubblack.png" alt="рубль"> 659</span>
+            <span class="catalog__price catalog__price--old"><s><img src="img/rubblack.png" alt="рубль">659</s></span>
           </div>
           <!-- /.catalog__prices -->
         </div>
@@ -164,7 +172,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt3.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, Oodji</span>
+          <a href="product.html" class="catalog__name">Юбка, Oodji</a>
           <span class="catalog__color">Цвет: бледно-розовый</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 499</span>
         </div>
@@ -173,7 +181,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt4.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, КАЛIНКА</span>
+          <a href="product.html" class="catalog__name">Юбка, КАЛIНКА</a>
           <span class="catalog__color">Цвет: синий</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 2 810</span>
         </div>
@@ -182,7 +190,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt5.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, ТВОЕ</span>
+          <a href="product.html" class="catalog__name">Юбка, ТВОЕ</a>
           <span class="catalog__color">Цвет: синий</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
         </div>
@@ -191,7 +199,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt6.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, Oodji</span>
+          <a href="product.html" class="catalog__name">Юбка, Oodji</a>
           <span class="catalog__color">Цвет: морская волна</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 399</span>
         </div>
@@ -200,7 +208,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt7.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">ARBOR VITAE</span>
+          <a href="product.html" class="catalog__name">ARBOR VITAE</a>
           <span class="catalog__color">Цвет: розовый</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 2 290</span>
         </div>
@@ -209,7 +217,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt8.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, Oodji</span>
+          <a href="product.html" class="catalog__name">Юбка, Oodji</a>
           <span class="catalog__color">Цвет: бирюзовый</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 799</span>
         </div>
@@ -218,7 +226,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt9.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">EMKA FASHION</span>
+          <a href="product.html" class="catalog__name">EMKA FASHION</a>
           <span class="catalog__color">Цвет: синий</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 1 495</span>
         </div>
@@ -227,7 +235,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt10.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, HELMIDGE</span>
+          <a href="product.html" class="catalog__name">Юбка, HELMIDGE</a>
           <span class="catalog__color">Цвет: синий, оранжевый, желтый</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 6 990</span>
         </div>
@@ -236,7 +244,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt11.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, Baon</span>
+          <a href="product.html" class="catalog__name">Юбка, Baon</a>
           <span class="catalog__color">Цвет: салатовый</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 991</span>
         </div>
@@ -245,7 +253,7 @@
           <div class="catalog__photo">
             <a href="product.html"><img src="img/catalog/skirts/skirt12.jpg" alt="" class="catalog__image"></a>
           </div>
-          <span class="catalog__name">Юбка, Oodji</span>
+          <a href="product.html" class="catalog__name">Юбка, Oodji</a>
           <span class="catalog__color">Цвет: персиковый</span>
           <span class="catalog__price"><img src="img/pinkrub.png" alt="рубль"> 599</span>
         </div>
@@ -286,8 +294,7 @@
         <h3 class="subtitle subscription__subtitle">Каждую неделю мы устраиваем приятные сюрпризы для наших клиентов.<br>Акции, скидки, распродажи - хотите узнавать о них первым? Подпишитесь на рассылку</h3>
       </div>
       <!-- /.subscription__heading -->
-      <!-- <form action="subscribe.php" method="POST" class="form subscription__form"> -->
-      <form class="form subscription__form">
+      <form action="subscribe.php" method="POST" class="form subscription__form">
         <input type="email" name="userEmail" class="input subscription__input" id="user-email" placeholder="Введите свой e-mail">
         <!-- /.input-group -->
         <button class="button button--primary subscription__button">Подписаться</button>
@@ -330,7 +337,7 @@
       <div class="col">
         <span class="footer__name">Полезное</span>
         <a href="#" class="footer__link">Услуги</a>
-        <a href="#" class="footer__link">Как проехать</a>
+        <a href="contacts.html" class="footer__link">Как проехать</a>
         <a href="#" class="footer__link">Статьи</a>
         <a href="#" class="footer__link">Условия и положения</a>
         <a href="#" class="footer__link">Блог</a>
@@ -342,7 +349,7 @@
         <a href="#" class="footer__link">О нас</a>
         <a href="#" class="footer__link">Карьера у нас</a>
         <a href="#" class="footer__link">Способы доставки</a>
-        <a href="#" class="footer__link">Контакты</a>
+        <a href="contacts.html" class="footer__link">Контакты</a>
         <a href="#" class="footer__link">Поддержка</a>
         <a href="#" class="footer__link">Оплата</a>
       </div>
@@ -350,9 +357,9 @@
       <div class="col footer__col--account">
         <span class="footer__name">Мой аккаунт</span>
         <a href="#" class="footer__link">Мой аккаунт</a>
-        <a href="#" class="footer__link">Корзина</a>
+        <a href="cart.html" class="footer__link">Корзина</a>
         <a href="#" class="footer__link">Избранное</a>
-        <a href="#" class="footer__link">Оформить заказ</a>
+        <a href="cart.html" class="footer__link">Оформить заказ</a>
         <a href="#" class="footer__link">Выход</a>
        
       </div>
@@ -360,18 +367,19 @@
     </div>
     <!-- /.row -->
     <div class="footer__copyright">
-      <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. Все права защищены.</span>
+      <span class="footer__copytext">© 2016 ASOS Интернет-магазин брендовой одежды. <a href="https://glo.academy/" class="footer__academy" target="_blank" >Glo Academy</a>. Все права защищены.</span>
     </div>
     <!-- /.footer__copyright -->
   </div>
   <!-- /.container -->
+  <!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
+  <div class="scrollup">
+    <button class="button scroll-up"></button>
+  </div>
 </footer>
 <!-- /.footer -->
 
-<!-- КНОПКА ПРОКРУТКИ ВВЕРХ -->
-<div class="scrollup">
-  <button class="button scroll-up"></button>
-</div>
+
 
  <!-- ПОИСК -->
 <div class="modalsearch">
@@ -387,8 +395,44 @@
 </div>
 <!-- /.modalsearch -->
 
+<!-- СООБЩЕНИЕ ОБ ОТПРАВКЕ ФОРМЫ -->
+<div class="submessage">
+  <div class="submessage__dialog">
+    <h3 class="submessage__title">Форма отправлена!<br> Спасибо!</h3>
+    <button class="button button--primary submessage__button">Ок!</button>
+  </div>
+  <!-- /.submessage__dialog -->
+</div>
+<!-- /.message -->
+
+<!-- МОДАЛЬНОЕ ОКНО АВТОРИЗАЦИИ -->
+
+<div class="authorization">
+  <div class="authorization__dialog">
+    <button class="authorization__close"></button>
+    <h3 class="authorization__title">Войдите в свой аккаунт</h3>
+    <form class="form authorization__form">
+      <div class="input-group authorization__input-group">
+        <label for="emailofuser" class="label authorization__label">Email</label>
+        <input type="email" name="userofemail" class="input form__input authorization__input" id="emailofuser" placeholder="Email:">
+      </div>
+      <!-- /.input-group authorization__input-group -->
+      <div class="input-group authorization__input-group authorization__input-group--last">
+        <label for="passwordofuser" class="label authorization__label">Пароль</label>
+        <input type="password" name="passwordUser" class="input form__input authorization__input" id="passwordofuser" placeholder="Пароль:">
+      </div>
+      <!-- /.input-group authorization__input-group -->         
+      <button class="button button--primary authorization__button">войти</button>
+      <span class="authorization__text">У Вас нет учётной записи? <a href="#">Зарегистрироваться</a></span>
+    </form>
+    <!-- /.form authorization__form -->
+  </div>
+  <!-- /.authorization__dialog -->
+</div>
+<!-- /.authorization -->
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
